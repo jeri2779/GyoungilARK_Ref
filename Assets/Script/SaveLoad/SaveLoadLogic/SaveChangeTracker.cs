@@ -1,9 +1,12 @@
 using System;
+using UnityEngine;
 using VContainer.Unity;
 
-// 낮에 일어난 자원·시민·영웅·강화 변경을 모아 한 프레임에 한 번만 저장한다
+// 낮에 일어난 자원·시민·영웅·강화 변경을 모아뒀다가, 일정 주기마다 한 번만 저장한다
 public class SaveChangeTracker : IStartable, ITickable, IDisposable
 {
+    private const float SaveIntervalSeconds = 30f; // 마지막 저장 이후 이만큼(실제 시간) 지나야 다음 저장을 시도한다
+
     private readonly SaveManager saveManager;
     private readonly ResourcesManager resourcesManager;
     private readonly CitizenManager citizenManager;
@@ -11,6 +14,7 @@ public class SaveChangeTracker : IStartable, ITickable, IDisposable
     private readonly HeroTierUpgradeState tierState;
     private readonly HeroClassUpgradeState classState;
     private bool changePending;
+    private float lastSaveTime;
 
     // 저장을 맡길 관리자와 변경 신호를 보내는 시스템들을 받아 둔다
     public SaveChangeTracker(
@@ -37,6 +41,7 @@ public class SaveChangeTracker : IStartable, ITickable, IDisposable
         heroRoster.Changed += MarkChanged;
         tierState.LevelChanged += MarkLevelChanged;
         classState.LevelChanged += MarkLevelChanged;
+        lastSaveTime = Time.unscaledTime;
     }
 
     // 감시하던 변경 신호 구독을 해제한다
@@ -49,7 +54,7 @@ public class SaveChangeTracker : IStartable, ITickable, IDisposable
         classState.LevelChanged -= MarkLevelChanged;
     }
 
-    // 모아 둔 변경이 있으면 낮 활동 상태를 한 번 저장한다
+    // 모아 둔 변경이 있고, 마지막 저장에서 일정 시간이 지났으면 낮 활동 상태를 저장한다
     public void Tick()
     {
         if (!changePending)
@@ -57,7 +62,13 @@ public class SaveChangeTracker : IStartable, ITickable, IDisposable
             return;
         }
 
+        if (Time.unscaledTime - lastSaveTime < SaveIntervalSeconds)
+        {
+            return;
+        }
+
         changePending = false;
+        lastSaveTime = Time.unscaledTime;
         saveManager.SaveDayActive();
     }
 
