@@ -113,7 +113,5 @@ Build.zip
 
 Assets/Firebase/
 
-/Docs/
-
 # Local Codex recovery snapshots
 /.codex-backups/
