@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60888df782d890b43a1a7b450486fb95, type: 3}
+  m_Name: ArchMageData
+  m_EditorClassIdentifier: Assembly-CSharp::HeroData
+  UnitId: 4001
+  Tier: 4
+  HeroName: ArchMage
+  HeroNameKey: Hero_ArchMage_Name
+  HeroDescriptionKey: Hero_ArchMage_Desc
+  HeroType: 1
+  Icon: {fileID: 21300000, guid: 0335fc981092b5d47ae6fee8f97004a0, type: 3}
+  HeroPrefab: {fileID: 5127629013743316858, guid: d8222e1855824a94db4f25facd3a7f9c, type: 3}
+  AttackDescriptions:
+  - icon: {fileID: 21300000, guid: fdf716dabd59c436ba5a1994e19b1345, type: 3}
+    attackDescriptionKey: Hero_Attack_Ranged_Desc
+  - icon: {fileID: 21300000, guid: 8aff7f0bcd39c4fdda2622fe6a50b331, type: 3}
+    attackDescriptionKey: Hero_ArchMage_Laser_Attack_Desc

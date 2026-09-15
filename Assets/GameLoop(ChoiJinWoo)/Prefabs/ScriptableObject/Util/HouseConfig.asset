@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1069cb2c59daca44783ae8dab9b8da58, type: 3}
+  m_Name: HouseConfig
+  m_EditorClassIdentifier: Assembly-CSharp::HouseConfig
+  maxCitizenAmount: 10
+  cost:
+  - Type: 0
+    Amount: 30
+  - Type: 4
+    Amount: 30
+  houseName: "\uC8FC\uD0DD"
+  houseInfo: "\uAC74\uC124 \uC2DC \uCD5C\uB300 \uC2DC\uBBFC \uC218\uAC00 \uC99D\uAC00\n\uC774
+    \uAC74\uBB3C\uC740 \uD55C \uBC88 \uC9C0\uC73C\uBA74 \uC81C\uAC70 \uD560 \uC218
+    \uC5C6\uB2E4. "
+  houseNameKey: House_Name
+  houseInfoKey: House_Info
+  citizenPerUpgrade: 10
+  upgradeCost:
+  - Type: 0
+    Amount: 40
+  - Type: 4
+    Amount: 40
+  - Type: 3
+    Amount: 20
+  - Type: 1
+    Amount: 40

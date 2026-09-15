@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e33bb2d68fcb5409867665e81d1a80, type: 3}
+  m_Name: FireZoneSkill
+  m_EditorClassIdentifier: Assembly-CSharp::FireZoneSO
+  skillName: Skill_FireZoneSkill
+  cooldown: 0
+  duration: 0
+  range: 1
+  tickInterval: 1
+  damage: 5
+  fireZoneEffectPrefab: {fileID: 2804681545109716167, guid: 071779768370f3f4a89ed2184ead6203, type: 3}
+  scaleAtRange1: 0
+  onlyWhileFlameEmpowered: 1
+  damageSourceDebuffId: Ignite_Basic
+  fallbackPercentPerTick: 1

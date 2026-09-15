@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4af555b5fc3b4469b4f64299447cc0, type: 3}
+  m_Name: StompStun
+  m_EditorClassIdentifier: Assembly-CSharp::StompStunSO
+  skillName: Skill_StompStun
+  cooldown: 15
+  duration: 0
+  range: 2
+  tickInterval: 0
+  value: 0
+  shockWaveEffect: {fileID: 441438723319184919, guid: ed8340903da698048b340d1c7c5de736, type: 3}

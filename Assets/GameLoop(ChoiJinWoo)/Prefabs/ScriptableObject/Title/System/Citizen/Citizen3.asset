@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda09b493337e504681411b80c3e5672, type: 3}
+  m_Name: Citizen3
+  m_EditorClassIdentifier: Assembly-CSharp::BaseUpgradeData
+  id: Citizen3
+  displayName: Upgrade_CitizenUpgrade3_Name
+  icon: {fileID: 21300000, guid: 7280e9a9fcb034f2e9b0c83dcb8c0eff, type: 3}
+  iconColor: {r: 1, g: 1, b: 1, a: 1}
+  cost: 4
+  description: Upgrade_CitizenUpgrade3_Desc
+  prerequisites:
+  - {fileID: 11400000, guid: 46139507f2663564189e0b654fbb7a2a, type: 2}
+  effectAmount: 4
+  isLast: 0

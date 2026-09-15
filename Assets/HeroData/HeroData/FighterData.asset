@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60888df782d890b43a1a7b450486fb95, type: 3}
+  m_Name: FighterData
+  m_EditorClassIdentifier: Assembly-CSharp::HeroData
+  UnitId: 2002
+  Tier: 2
+  HeroName: Fighter
+  HeroNameKey: Hero_Fighter_Name
+  HeroDescriptionKey: Hero_Fighter_Desc
+  HeroType: 0
+  Icon: {fileID: 21300000, guid: 7f89bdce82e4acf498a03638ab8843f3, type: 3}
+  HeroPrefab: {fileID: 6909807917171716251, guid: 51a86b1fc8ad66544a521a3536f697d3, type: 3}
+  AttackDescriptions:
+  - icon: {fileID: 21300000, guid: c7d41855fe4b14f50b9f3b902e1e66b7, type: 3}
+    attackDescriptionKey: Hero_Attack_Melee_Desc
+  - icon: {fileID: 21300000, guid: 9302c36852ba6449d9a7f476080c4377, type: 3}
+    attackDescriptionKey: Hero_Fighter_NHit_Heavy_Attack_Desc

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4422ef4841c4a347b3efbcb5ec22f11, type: 3}
+  m_Name: PhantomBlitz
+  m_EditorClassIdentifier: Assembly-CSharp::PhantomBlitz
+  skillName: Skill_PhantomBlitz
+  cooldown: 12
+  duration: 0
+  range: 3
+  tickInterval: 0.2
+  damage: 30
+  value: 12
+  valueScale: 2
+  phantomPrefab: {fileID: 219095362390391342, guid: 7cb945a346c992c47bb4f9ddeebc86fb, type: 3}
+  onSkillEffectPrefab: {fileID: 1899124290652023948, guid: 96fbedde7753c8b40adde61dc1881be3, type: 3}
+  onAttackEffectPrefab: {fileID: 5804613026791279529, guid: 55bbdb5a2211b6b499cd2b7adcf7b0ee, type: 3}
+  effectLifetime: 1
+  phantomHitDelay: 0.2
+  phantomDistance: 1.2
+  phantomHeightOffset: 0
+  hitSoundKey: 
+  suspendMovementWhileCasting: 1

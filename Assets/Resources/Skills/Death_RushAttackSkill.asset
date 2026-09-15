@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98eb4282065076444ba97c6fb3d0ea28, type: 3}
+  m_Name: Death_RushAttackSkill
+  m_EditorClassIdentifier: Assembly-CSharp::RushAttackSkillSO
+  skillName: Skill_DeathRushAttack
+  cooldown: 10
+  duration: 0
+  range: 1
+  tickInterval: 0
+  damage: 50
+  value: 18
+  valueScale: 2
+  animSpeedScale: 1
+  onSkillEffectPrefab: {fileID: 8818818828407575882, guid: b00247a72572e144b997120b828e6911, type: 3}
+  onAttackEffectPrefab: {fileID: 8741605326159751989, guid: d7314135c6a8e3b448504dd302633145, type: 3}
+  attackEffectLifetime: 1
+  attackEffectEulerOffset: {x: -20, y: 270, z: 0}
+  maxAnimSpeed: 3

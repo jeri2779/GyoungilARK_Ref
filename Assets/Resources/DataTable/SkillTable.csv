@@ -1,0 +1,14 @@
+SkillId,Category,Type,NameKey,Cooldown,Duration,Range,Damage,TickInterval,Value,ValueScale,Distance,Desc
+SpiderBite,Attack,None,Skill_SpiderBite,1,0,1,15,0.5,,,,Desc_SpiderBite
+SpiderToxin_Dash,Utility,Dash,Skill_SpiderToxin_Dash,5,0.3,0,,,,,10,Desc_SpiderToxin_Dash
+SpiderKing_Summon,Utility,Summon,Skill_SpiderKing_Summon,10,0,0,,,2,,,Desc_SpiderKing_Summon
+Scorpion_Shield,Utility,Shield,Skill_Scorpion_Shield,5,3,1,,,15,1,,Desc_Scorpion_Shield
+DamageZoneSkill,Attack,DamageZone,Skill_DamageZoneSkill,0,0,1,3,0.5,,,,Desc_DamageZoneSkill
+Heal,Utility,Heal,Skill_Heal,1.0,0,2,,,5,1,,Desc_Heal
+Spider_Split,Utility,Split,Skill_SpiderSplitSkill,0,0,0,,,3,0,,Desc_SpiderSplitSKill
+Explosived,Attack,Explosived,Skill_ExplosiveSkill,0,0,2,15,,,,,Desc_ExplosivedSkill
+FireZoneSkill,Attack,FireZone,Skill_FireZoneSkill,0,0,1,5,1,,,,Desc_FireZoneSkill
+Death_RushAttackSkill,Attack,RushAttack,Skill_DeathRushAttack,10,0,1,50,0,18,2,,Desc_DeathRushAttack
+PhantomBlitz,Attack,PhantomBlitz,Skill_PhantomBlitz,12,0,3,30,0.2,12,2,,Desc_PhantomBlitz
+SpiritofSnow,Utility,SpiritofSnow,Skill_SpiritofSnow,8,0,3,0,,,,,Desc_SpiritofSnow
+StompStun,Utility,StompStun,Skill_StompStun,15,0,2,0,,,,,Desc_StompStun

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e63ecebd4cd6e044a8a127ea3df05bc, type: 3}
+  m_Name: NinjaSpinAttackData
+  m_EditorClassIdentifier: Assembly-CSharp::AttackDataSO
+  range: 2
+  rangeShape: 1
+  unattackableTarget: 1
+  attackType: 0
+  attackPer: 0.7
+  attackCount: 6
+  targetMode: 1
+  targetCount: 6
+  shotInterval: 0.05
+  areaShape: 1
+  areaRange: 2
+  lineLength: 2
+  areaCenterOnTarget: 1
+  chainRange: 2
+  chainCount: 3
+  chainFalloff: 0.8
+  chainEffectPrefab: {fileID: 0}
+  chainEffectLifetime: 0.3
+  timingMode: 0
+  continuousDelivery: 0
+  continuousDuration: 2
+  continuousTickInterval: 0.2
+  beamEffectPrefab: {fileID: 0}
+  selectMode: 0
+  animTriggers:
+  - NinjaCast
+  projectilePrefab: {fileID: 6807546537330266764, guid: 35f803fa1d7a3d5488195d39210a9774, type: 3}
+  clipLength: 2.2
+  buffList: []
+  targetDebuffs: []
+  groundZonePrefab: {fileID: 0}
+  attackEffect: {fileID: 0}
+  attackEffectLifetime: 1
+  hitEffect: {fileID: 0}
+  hitEffectLifetime: 1
+  attackSoundKey: HeroThrow2
+  lifestealPercent: 0
+  allyHealAmount: 0
+  allyHealRange: 2
+  allyHealRangeShape: 0

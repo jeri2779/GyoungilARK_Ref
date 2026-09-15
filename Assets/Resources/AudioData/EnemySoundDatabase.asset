@@ -1,0 +1,597 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26c50497b19c534a83490372cb6a0f2, type: 3}
+  m_Name: EnemySoundDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySoundDataBase
+  entries:
+  - key: RushAttack
+    clip: {fileID: 8300000, guid: ec2cf6869352f4e80a32598bac708074, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: RushReady
+    clip: {fileID: 8300000, guid: 9504b4aa9cf004143bc43d4c315fd51e, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: RushAttackHit
+    clip: {fileID: 8300000, guid: 8297900351eb24ac6908e03c22952b72, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DeathNormalAttack
+    clip: {fileID: 8300000, guid: 8297900351eb24ac6908e03c22952b72, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DeathNormalAttack2
+    clip: {fileID: 8300000, guid: 9e0cd798c3ecc437dbc1fa1a6dc6a84e, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DashSkill
+    clip: {fileID: 8300000, guid: d2840f01c63214bc8987328545ac1079, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: SpiderAttack
+    clip: {fileID: 8300000, guid: e90c9029397f7403f923a3a38e8f3be6, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DebuffIgnite
+    clip: {fileID: 8300000, guid: 8db21a3a8c0821e498c36809e2d13cf2, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DebuffFrost
+    clip: {fileID: 8300000, guid: c57b0bfbbee3aa741adc1b7f41e3a988, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DebuffStun
+    clip: {fileID: 8300000, guid: 2963269f735f5ab46bf27e0d912e6493, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DebuffSandStom
+    clip: {fileID: 8300000, guid: 1c94c932aeeaeb24c8fb570246e1a33c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DebuffBleed
+    clip: {fileID: 8300000, guid: 3406476b91d07ec409a721a5bc77623e, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DebuffExhaust
+    clip: {fileID: 8300000, guid: 893c88e50867de64588fc60104c089c7, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: BookPage
+    clip: {fileID: 8300000, guid: 38a4a6e4bfe5c6e4a90b303025a95cdb, type: 3}
+    volume: 0.3
+    type: 2
+    loop: 0
+    soundTime: 0
+  - key: BookOpen
+    clip: {fileID: 8300000, guid: 976ba01eb4e65c447891a131d57b328d, type: 3}
+    volume: 0.3
+    type: 2
+    loop: 0
+    soundTime: 0
+  - key: BookClose
+    clip: {fileID: 8300000, guid: 41c8b399800aa7d4ba529c49a0f7fc0e, type: 3}
+    volume: 0.3
+    type: 2
+    loop: 0
+    soundTime: 0
+  - key: Warning!
+    clip: {fileID: 8300000, guid: 90afd6ec92d1549519e8ad0a06529995, type: 3}
+    volume: 0.5
+    type: 2
+    loop: 0
+    soundTime: 3
+  - key: HeroMeleeAttack1
+    clip: {fileID: 8300000, guid: a1e7d33cc2e09ae468f7ea1491618b7c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack2
+    clip: {fileID: 8300000, guid: fd4557b4c8d9f594b80f2c300dd46e4c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack3
+    clip: {fileID: 8300000, guid: 73b93713509323548b8b84320ce24872, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack4
+    clip: {fileID: 8300000, guid: 53aeb819507e77c418ff411a8233ca78, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack5
+    clip: {fileID: 8300000, guid: 2acd9208d35c4284abbc802ba8150903, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack5
+    clip: {fileID: 8300000, guid: 2acd9208d35c4284abbc802ba8150903, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicAttack1
+    clip: {fileID: 8300000, guid: 773518623e0bd4342b1b8b4ab2f50da4, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicAttack2
+    clip: {fileID: 8300000, guid: c2e2fad14ac3cec4c8be8c52cfc0c397, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowAttack1
+    clip: {fileID: 8300000, guid: 4c80ff250c885ea46a92472bd6af8dcd, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowHit1
+    clip: {fileID: 8300000, guid: 47d52e340baae594b94c5ce08ce45660, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicHit1
+    clip: {fileID: 8300000, guid: 4ad6b015139ac13408460d9afc0e7ced, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicHit2
+    clip: {fileID: 8300000, guid: eb2bdfc87849bef41955f7386d7468c6, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroHolyAttack1
+    clip: {fileID: 8300000, guid: 4a4fe764349292740ae1ec368b688c03, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroSpinAttack1
+    clip: {fileID: 8300000, guid: e0151db6800bbed488f0f9e8665444c1, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroFireAttack1
+    clip: {fileID: 8300000, guid: 7bc975b79e4d94443ab0103479e1d057, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroFireAttack2
+    clip: {fileID: 8300000, guid: 6d93be76a7bf18143a0066a504cf7a10, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroFireHit1
+    clip: {fileID: 8300000, guid: fa1ad9f91064e9c4c9ed96cf4f8210e8, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroFireHit2
+    clip: {fileID: 8300000, guid: 250deec16aa68a04eb4c1eb45c1bce78, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroFireLoop1
+    clip: {fileID: 8300000, guid: b8e6eb7e7fa4bc14c8a5365f7600578a, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 1
+    soundTime: 0
+  - key: HeroArrowAttack2
+    clip: {fileID: 8300000, guid: 804c57518115f8347be7d310b214b868, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowHit2
+    clip: {fileID: 8300000, guid: 48ff1aa7f92391149b883c4bb9356787, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroSpinAttack1
+    clip: {fileID: 8300000, guid: 9b59e2ed50dd849489243826618875ff, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack6
+    clip: {fileID: 8300000, guid: ce3960c8b6cffd04b8352c2192f5fd5d, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicAttack3
+    clip: {fileID: 8300000, guid: bc6e212dff5e7484f98324755663f6b3, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicHit3
+    clip: {fileID: 8300000, guid: 14b4cfaaf332db6409c8dbccd262c49d, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroThrow1
+    clip: {fileID: 8300000, guid: dc8ae15e1f8406444baaf3bf5ec61f06, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroThrow2
+    clip: {fileID: 8300000, guid: 3b59a3ebae441214f9ee786a21458d97, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroThrowHit1
+    clip: {fileID: 8300000, guid: a5208fec70183d84b89c9a416f7284ea, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroThunderAttack1
+    clip: {fileID: 8300000, guid: 456bf0f4e9fd9e84092a27b43b42b3d9, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroThunderHit1
+    clip: {fileID: 8300000, guid: 93b036cffe93cb34887f3856255e6607, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroLasterAttack1
+    clip: {fileID: 8300000, guid: 07ffd7d67ca0f2d4da98fd1003154957, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroLasterAttack2
+    clip: {fileID: 8300000, guid: d3ab2daa150ed9547b7c70d552544ade, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroWheelAttack1
+    clip: {fileID: 8300000, guid: 49a5604b1c975c7479d6ee6fece4609c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowAttack3
+    clip: {fileID: 8300000, guid: cfda3a4b3f661c7439c49faafd11f79c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowAttack4
+    clip: {fileID: 8300000, guid: 0d588150aa6404044b251597ab07b257, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowHit3
+    clip: {fileID: 8300000, guid: 49a5604b1c975c7479d6ee6fece4609c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroArrowProjectile3
+    clip: {fileID: 8300000, guid: 1036ac79b8e4e974a838089073648414, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroPoisonSpawn1
+    clip: {fileID: 8300000, guid: 87d088c24072a4f4fa8f51b48e5eb0dc, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroPoisonHit1
+    clip: {fileID: 8300000, guid: e3fe6d8fb00bc35489c22bc2d1f0b46c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroPoisonSustain1
+    clip: {fileID: 8300000, guid: 2cf3634985b3cd2499dba97d74fd4f26, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroGlassHit1
+    clip: {fileID: 8300000, guid: db4fc3c61f2c92e4dab3e1d9b40daf1b, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroRootHit1
+    clip: {fileID: 8300000, guid: 1647e8fae18307648af588f1a41728f1, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicAttack4
+    clip: {fileID: 8300000, guid: ad9291a389f77464b8bf25cd7bb20955, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMagicHit4
+    clip: {fileID: 8300000, guid: 4a4fe764349292740ae1ec368b688c03, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroJumpAttack2
+    clip: {fileID: 8300000, guid: 8cf430231674e194fa4fff6da13f24de, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroMeleeAttack7
+    clip: {fileID: 8300000, guid: c1497c3bcde3b4b498c9ef9c44a641bc, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroSwordWave2
+    clip: {fileID: 8300000, guid: 0471fc6740c5ae8489579f57c44afa24, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: PlayerBuff1
+    clip: {fileID: 8300000, guid: 470c69c0330ba0d439eba7c95e5c71f4, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: PlayerSlow1
+    clip: {fileID: 8300000, guid: 17b2ef2bd3fafb243be10faaeec3b9a9, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: PlayerHeal1
+    clip: {fileID: 8300000, guid: 731813395f112c84e94bede0e6a11a3c, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: BossBGM
+    clip: {fileID: 8300000, guid: a049908c7faff4c87a42ea4e7ec186ef, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: GolemAttack
+    clip: {fileID: 8300000, guid: 4cf0ce4126f72b34887f629bd82804a3, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: GhostDie
+    clip: {fileID: 8300000, guid: cabed4b6dbfab5c48b54fb244a966975, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: GolemDie
+    clip: {fileID: 8300000, guid: c4e83bbfe8bfa1d40b3cdf8af14e96b0, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: MiniSpiderDie
+    clip: {fileID: 8300000, guid: d55466ee0cbc2be42b91c31f12888d7a, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: SpiderKingDie
+    clip: {fileID: 8300000, guid: 8fe0cb7fbc516ac44acb6fded639cc1a, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: SporeDie
+    clip: {fileID: 8300000, guid: bfdc5167fc6d1344199c35a45cd48c34, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: SporeAttack
+    clip: {fileID: 8300000, guid: 03e9520d7bf1f0045968fc24cb98bbaa, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: ScorpionAttack
+    clip: {fileID: 8300000, guid: 068f8fa418b5c7b419c8cfee07534d59, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: BurrowUp
+    clip: {fileID: 8300000, guid: 1647e8fae18307648af588f1a41728f1, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: Burrow
+    clip: {fileID: 8300000, guid: 6d93be76a7bf18143a0066a504cf7a10, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: WormAttack
+    clip: {fileID: 8300000, guid: 73b93713509323548b8b84320ce24872, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: WormDie
+    clip: {fileID: 8300000, guid: d55466ee0cbc2be42b91c31f12888d7a, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: WormQueenDie
+    clip: {fileID: 8300000, guid: 8fe0cb7fbc516ac44acb6fded639cc1a, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: FlyDie
+    clip: {fileID: 8300000, guid: b2915139217cb7348a5c66b9c4c8492b, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: DeathDie
+    clip: {fileID: 8300000, guid: 82257ee0c44cbc645b23df181b074a35, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: TitleBGM
+    clip: {fileID: 8300000, guid: cd12e514a86f6244fa218ba48a76509f, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: DayBGM1
+    clip: {fileID: 8300000, guid: 27aa615c46106d0468977d2c2808dfc0, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: DayBGM2
+    clip: {fileID: 8300000, guid: 5b6c85a0cbac9534084790d8a8b8cd27, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: DayBGM3
+    clip: {fileID: 8300000, guid: b70be4768c4d64c4c996fcee81bc7d14, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: NightBGM1
+    clip: {fileID: 8300000, guid: 13ca8ef0ea7b1e24289389eb4bd5b3b9, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: NightBGM2
+    clip: {fileID: 8300000, guid: 7b6342688ed386240981588c9d63a712, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: NightBGM3
+    clip: {fileID: 8300000, guid: a7e7f8c97edd82044894815b6c44eefa, type: 3}
+    volume: 0.5
+    type: 1
+    loop: 1
+    soundTime: 0
+  - key: WarningHit
+    clip: {fileID: 8300000, guid: a7e7f8c97edd82044894815b6c44eefa, type: 3}
+    volume: 0
+    type: 2
+    loop: 0
+    soundTime: 0.1
+  - key: HeroCreateEvent
+    clip: {fileID: 8300000, guid: 192b584f1fd2d0a47a05852addba2bb4, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroCombineEvent
+    clip: {fileID: 8300000, guid: 534c58fc903badb4ea4446cf1899cceb, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroPlace
+    clip: {fileID: 8300000, guid: 67c374fc78dda1141b4fb6ef46593945, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: HeroRetrieve
+    clip: {fileID: 8300000, guid: 04f5044834bed8341912c6290787df99, type: 3}
+    volume: 0.3
+    type: 0
+    loop: 0
+    soundTime: 0
+  - key: UI_Click
+    clip: {fileID: 8300000, guid: b5820ced66c18b243b7be984b6bce51a, type: 3}
+    volume: 0.6
+    type: 2
+    loop: 0
+    soundTime: 0
+  - key: UI_Hover
+    clip: {fileID: 8300000, guid: 8c21ab3723420ce4083e135951ef1c60, type: 3}
+    volume: 0.35
+    type: 2
+    loop: 0
+    soundTime: 0

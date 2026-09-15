@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e63ecebd4cd6e044a8a127ea3df05bc, type: 3}
+  m_Name: MonkSpecialAttackData
+  m_EditorClassIdentifier: Assembly-CSharp::AttackDataSO
+  range: 3
+  rangeShape: 0
+  unattackableTarget: 3
+  attackType: 1
+  attackPer: 6
+  attackCount: 1
+  targetMode: 0
+  targetCount: 1
+  shotInterval: 0.1
+  areaShape: 0
+  areaRange: 1
+  lineLength: 2
+  areaCenterOnTarget: 1
+  chainRange: 2
+  chainCount: 3
+  chainFalloff: 0.8
+  chainEffectPrefab: {fileID: 0}
+  chainEffectLifetime: 0.3
+  timingMode: 0
+  continuousDelivery: 0
+  continuousDuration: 2
+  continuousTickInterval: 0.2
+  beamEffectPrefab: {fileID: 0}
+  selectMode: 0
+  animTriggers:
+  - Kamehameha
+  projectilePrefab: {fileID: 6320025365633140650, guid: a3935f437a8291b41a62284d13ae7acd, type: 3}
+  clipLength: 1.3333334
+  buffList: []
+  targetDebuffs: []
+  groundZonePrefab: {fileID: 0}
+  attackEffect: {fileID: 0}
+  attackEffectLifetime: 1
+  hitEffect: {fileID: 0}
+  hitEffectLifetime: 1
+  attackSoundKey: HeroMagicAttack3
+  lifestealPercent: 0
+  allyHealAmount: 0
+  allyHealRange: 2
+  allyHealRangeShape: 0

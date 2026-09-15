@@ -1,0 +1,1780 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Combat Map Editor</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts allow-downloads" referrerpolicy="no-referrer" title="Combat Map Editor" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Combat Map Editor&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --red: light-dark(rgb(186 38 35), rgb(250 66 62));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;combat-map-editor&quot;&gt;
+  &lt;div class=&quot;viz-controls&quot; aria-label=&quot;전투 구역 편집 도구&quot;&gt;
+    &lt;div class=&quot;viz-row&quot; role=&quot;group&quot; aria-label=&quot;모듈 선택&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-module=&quot;A&quot; aria-pressed=&quot;true&quot;&gt;Module A&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-module=&quot;B&quot; aria-pressed=&quot;false&quot;&gt;Module B&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-module=&quot;C&quot; aria-pressed=&quot;false&quot;&gt;Module C&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-module=&quot;D&quot; aria-pressed=&quot;false&quot;&gt;Module D&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-module=&quot;E&quot; aria-pressed=&quot;false&quot;&gt;Module E&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-module=&quot;F&quot; aria-pressed=&quot;false&quot;&gt;Module F&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;label class=&quot;form-label&quot; for=&quot;combat-brush&quot;&gt;
+      전투 타일
+      &lt;select id=&quot;combat-brush&quot; class=&quot;form-select&quot;&gt;
+        &lt;option value=&quot;ground&quot;&gt;지상&lt;/option&gt;
+        &lt;option value=&quot;high&quot;&gt;고지&lt;/option&gt;
+        &lt;option value=&quot;spawn&quot;&gt;스폰&lt;/option&gt;
+        &lt;option value=&quot;entry&quot;&gt;게이트 입구&lt;/option&gt;
+        &lt;option value=&quot;exit&quot;&gt;게이트 출구&lt;/option&gt;
+        &lt;option value=&quot;core&quot;&gt;코어&lt;/option&gt;
+        &lt;option value=&quot;empty&quot;&gt;비우기&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+
+    &lt;button id=&quot;combat-save&quot; type=&quot;button&quot; class=&quot;btn&quot;&gt;설계 저장&lt;/button&gt;
+
+    &lt;label class=&quot;form-label&quot; for=&quot;combat-load&quot;&gt;
+      설계 불러오기
+      &lt;input id=&quot;combat-load&quot; class=&quot;form-control&quot; type=&quot;file&quot; accept=&quot;application/json,.json&quot;&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;viz-row combat-summary&quot;&gt;
+    &lt;span id=&quot;combat-name&quot; class=&quot;viz-badge&quot;&gt;Module A · 전투 14×6&lt;/span&gt;
+    &lt;span id=&quot;combat-route&quot; aria-live=&quot;polite&quot;&gt;경로 계산 중&lt;/span&gt;
+    &lt;span id=&quot;combat-cell&quot; class=&quot;text-muted&quot;&gt;외곽 1줄은 장식으로 고정&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;combat-grid&quot; class=&quot;combat-grid&quot; role=&quot;grid&quot; aria-label=&quot;Module A 전투 구역 편집판&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;viz-row combat-legend text-small&quot; aria-label=&quot;타일 범례&quot;&gt;
+    &lt;span&gt;&lt;b&gt;장&lt;/b&gt; 고정 장식&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;지&lt;/b&gt; 지상&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;고&lt;/b&gt; 고지&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;S&lt;/b&gt; 스폰&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;I&lt;/b&gt; 입구&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;O&lt;/b&gt; 출구&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;C&lt;/b&gt; 코어&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;·&lt;/b&gt; 비움&lt;/span&gt;
+    &lt;span&gt;&lt;b&gt;●&lt;/b&gt; 계산 경로&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  #combat-map-editor {
+    color: var(--foreground);
+    width: 100%;
+  }
+
+  #combat-map-editor .combat-summary {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  #combat-map-editor .combat-grid {
+    display: grid;
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+    gap: 3px;
+    width: 100%;
+    touch-action: none;
+    user-select: none;
+  }
+
+  #combat-map-editor .combat-cell {
+    aspect-ratio: 1;
+    min-width: 0;
+  }
+
+  #combat-map-editor .combat-cell[data-type=&quot;decor&quot;] {
+    color: var(--muted-foreground);
+    background: color-mix(in srgb, var(--muted) 72%, transparent);
+  }
+
+  #combat-map-editor .combat-cell[data-type=&quot;empty&quot;] {
+    color: var(--muted-foreground);
+    background: color-mix(in srgb, var(--muted) 28%, transparent);
+  }
+
+  #combat-map-editor .combat-cell[data-type=&quot;ground&quot;] {
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--viz-series-1) 14%, transparent);
+  }
+
+  #combat-map-editor .combat-cell[data-type=&quot;high&quot;] {
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--viz-series-3) 22%, transparent);
+  }
+
+  #combat-map-editor .combat-cell[data-type=&quot;spawn&quot;],
+  #combat-map-editor .combat-cell[data-type=&quot;entry&quot;] {
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--viz-series-4) 24%, transparent);
+  }
+
+  #combat-map-editor .combat-cell[data-type=&quot;exit&quot;],
+  #combat-map-editor .combat-cell[data-type=&quot;core&quot;] {
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--viz-series-2) 24%, transparent);
+  }
+
+  #combat-map-editor .combat-cell.is-route {
+    box-shadow: inset 0 0 0 3px var(--viz-series-1);
+  }
+
+  #combat-map-editor .combat-legend {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  #combat-map-editor .combat-legend b {
+    color: var(--foreground);
+    font-weight: 500;
+  }
+
+  @media (max-width: 520px) {
+    #combat-map-editor .combat-grid {
+      gap: 1px;
+    }
+  }
+&lt;/style&gt;
+
+&lt;script&gt;
+  (() =&gt; {
+    const root = document.getElementById(&quot;combat-map-editor&quot;);
+    const grid = root.querySelector(&quot;#combat-grid&quot;);
+    const brush = root.querySelector(&quot;#combat-brush&quot;);
+    const nameLabel = root.querySelector(&quot;#combat-name&quot;);
+    const routeLabel = root.querySelector(&quot;#combat-route&quot;);
+    const cellLabel = root.querySelector(&quot;#combat-cell&quot;);
+    const save = root.querySelector(&quot;#combat-save&quot;);
+    const load = root.querySelector(&quot;#combat-load&quot;);
+    const moduleButtons = Array.from(root.querySelectorAll(&quot;[data-module]&quot;));
+
+    const cols = 16;
+    const rows = 8;
+    const typeInfo = {
+      decor: { label: &quot;고정 장식&quot;, mark: &quot;장&quot;, walkable: false },
+      empty: { label: &quot;비움&quot;, mark: &quot;·&quot;, walkable: false },
+      ground: { label: &quot;지상&quot;, mark: &quot;지&quot;, walkable: true },
+      high: { label: &quot;고지&quot;, mark: &quot;고&quot;, walkable: false },
+      spawn: { label: &quot;스폰&quot;, mark: &quot;S&quot;, walkable: true },
+      entry: { label: &quot;게이트 입구&quot;, mark: &quot;I&quot;, walkable: true },
+      exit: { label: &quot;게이트 출구&quot;, mark: &quot;O&quot;, walkable: true },
+      core: { label: &quot;코어&quot;, mark: &quot;C&quot;, walkable: true }
+    };
+    const codeType = {
+      G: &quot;ground&quot;,
+      H: &quot;high&quot;,
+      S: &quot;spawn&quot;,
+      I: &quot;entry&quot;,
+      O: &quot;exit&quot;,
+      C: &quot;core&quot;,
+      E: &quot;empty&quot;
+    };
+    const patterns = {
+      A: [
+        &quot;GGGGHHHGGGGSHS&quot;,
+        &quot;GGHGHHHGGGGGGG&quot;,
+        &quot;GGHGHHGGHGGHHG&quot;,
+        &quot;GGHGHGGGGGGHHG&quot;,
+        &quot;GGHGGGHGGGHGGS&quot;,
+        &quot;CGHGGGHGGSGGGS&quot;
+      ],
+      B: [
+        &quot;GGGGHGGGHGGSHS&quot;,
+        &quot;GGGGHGGGHGGGHG&quot;,
+        &quot;GGHGHGHGHGHGHG&quot;,
+        &quot;GGHGHGHGHGHGHG&quot;,
+        &quot;GGHGGGHGGGHGGG&quot;,
+        &quot;CGHGGGHGGGHGGG&quot;
+      ],
+      C: [
+        &quot;GGGGHGGGHGGGHS&quot;,
+        &quot;GGGGHGGGHGGGHG&quot;,
+        &quot;GGHGHGHGHGHGHG&quot;,
+        &quot;GGHGHGHGHGHGHG&quot;,
+        &quot;GGHGGGHGGGHGGG&quot;,
+        &quot;CGHGGGHGGGHGGG&quot;
+      ],
+      D: [
+        &quot;GGGGHGGGHGGGHS&quot;,
+        &quot;GGGGHGGGHGGGHG&quot;,
+        &quot;GGHGHGHGHGHGHG&quot;,
+        &quot;GGHGHGHGHGHGHG&quot;,
+        &quot;GGHGGGHGGGHGGG&quot;,
+        &quot;CGHGGGHGGGHGGG&quot;
+      ],
+      E: [
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;
+      ],
+      F: [
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;,
+        &quot;GGGGGGGGGGGGGG&quot;
+      ]
+    };
+
+    const moduleNames = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;];
+
+    let activeModule = &quot;A&quot;;
+    let drawing = false;
+    let routeCells = new Set();
+
+    function isBorder(x, y) {
+      return x === 0 || x === cols - 1 || y === 0 || y === rows - 1;
+    }
+
+    function makeMap(pattern) {
+      const map = [];
+
+      for (let y = 0; y &lt; rows; y += 1) {
+        const row = [];
+
+        for (let x = 0; x &lt; cols; x += 1) {
+          if (isBorder(x, y)) {
+            row.push(&quot;decor&quot;);
+            continue;
+          }
+
+          const code = pattern[y - 1][x - 1];
+          row.push(codeType[code]);
+        }
+
+        map.push(row);
+      }
+
+      return map;
+    }
+
+    const maps = Object.fromEntries(
+      moduleNames.map((name) =&gt; [name, makeMap(patterns[name])])
+    );
+
+    function cellKey(x, y) {
+      return x + &quot;,&quot; + y;
+    }
+
+    function mapCoord(x, y) {
+      return {
+        col: x + 7,
+        row: 7 - y
+      };
+    }
+
+    function getCells(map, types) {
+      const cells = [];
+
+      for (let y = 1; y &lt; rows - 1; y += 1) {
+        for (let x = 1; x &lt; cols - 1; x += 1) {
+          if (types.includes(map[y][x])) {
+            cells.push({ x, y });
+          }
+        }
+      }
+
+      return cells;
+    }
+
+    function buildPath(map, start, goal) {
+      const queue = [start];
+      const seen = new Set([cellKey(start.x, start.y)]);
+      const parent = new Map();
+      const moves = [
+        { x: 1, y: 0 },
+        { x: 0, y: 1 },
+        { x: -1, y: 0 },
+        { x: 0, y: -1 }
+      ];
+
+      for (let index = 0; index &lt; queue.length; index += 1) {
+        const current = queue[index];
+
+        if (current.x === goal.x &amp;&amp; current.y === goal.y) {
+          const path = [];
+          let cursor = cellKey(goal.x, goal.y);
+
+          while (cursor) {
+            path.push(cursor);
+            cursor = parent.get(cursor);
+          }
+
+          return path;
+        }
+
+        moves.forEach((move) =&gt; {
+          const nextX = current.x + move.x;
+          const nextY = current.y + move.y;
+          const nextKey = cellKey(nextX, nextY);
+          const inside = nextX &gt; 0 &amp;&amp; nextX &lt; cols - 1 &amp;&amp; nextY &gt; 0 &amp;&amp; nextY &lt; rows - 1;
+
+          if (!inside) {
+            return;
+          }
+
+          if (seen.has(nextKey)) {
+            return;
+          }
+
+          if (!typeInfo[map[nextY][nextX]].walkable) {
+            return;
+          }
+
+          seen.add(nextKey);
+          parent.set(nextKey, cellKey(current.x, current.y));
+          queue.push({ x: nextX, y: nextY });
+        });
+      }
+
+      return [];
+    }
+
+    function getRoutes(map) {
+      const starts = getCells(map, [&quot;spawn&quot;, &quot;entry&quot;]);
+      const goals = getCells(map, [&quot;exit&quot;, &quot;core&quot;]);
+      const cells = new Set();
+      let connected = 0;
+      let required = 0;
+
+      starts.forEach((start) =&gt; {
+        goals.forEach((goal) =&gt; {
+          required += 1;
+          const path = buildPath(map, start, goal);
+
+          if (path.length === 0) {
+            return;
+          }
+
+          connected += 1;
+          path.forEach((item) =&gt; {
+            cells.add(item);
+          });
+        });
+      });
+
+      return {
+        cells,
+        connected,
+        required,
+        starts: starts.length,
+        goals: goals.length
+      };
+    }
+
+    function showRoutes(result) {
+      routeCells = result.cells;
+
+      if (result.starts === 0 || result.goals === 0) {
+        routeLabel.textContent = &quot;스폰·입구와 출구·코어가 필요합니다&quot;;
+        return;
+      }
+
+      if (result.connected === result.required) {
+        routeLabel.textContent = &quot;모든 경로 연결 · &quot; + result.cells.size + &quot;칸&quot;;
+        return;
+      }
+
+      routeLabel.textContent = &quot;연결 &quot; + result.connected + &quot;/&quot; + result.required + &quot; · 끊긴 경로 있음&quot;;
+    }
+
+    function cellMark(type, x, y) {
+      const special = [&quot;spawn&quot;, &quot;entry&quot;, &quot;exit&quot;, &quot;core&quot;];
+
+      if (routeCells.has(cellKey(x, y)) &amp;&amp; !special.includes(type)) {
+        return &quot;●&quot;;
+      }
+
+      return typeInfo[type].mark;
+    }
+
+    function updateMap() {
+      const result = getRoutes(maps[activeModule]);
+      showRoutes(result);
+      renderGrid();
+    }
+
+    function editCell(x, y) {
+      if (isBorder(x, y)) {
+        return;
+      }
+
+      maps[activeModule][y][x] = brush.value;
+      const coord = mapCoord(x, y);
+      cellLabel.textContent =
+        &quot;Col &quot; + coord.col + &quot; · Row &quot; + coord.row + &quot; · &quot; + typeInfo[brush.value].label;
+      updateMap();
+    }
+
+    function renderGrid() {
+      const map = maps[activeModule];
+      grid.replaceChildren();
+      grid.setAttribute(&quot;aria-label&quot;, &quot;Module &quot; + activeModule + &quot; 전투 구역 편집판&quot;);
+
+      for (let y = 0; y &lt; rows; y += 1) {
+        for (let x = 0; x &lt; cols; x += 1) {
+          const type = map[y][x];
+          const cell = document.createElement(&quot;button&quot;);
+          const border = isBorder(x, y);
+          const route = routeCells.has(cellKey(x, y));
+
+          cell.type = &quot;button&quot;;
+          cell.className = &quot;btn viz-tile combat-cell&quot;;
+          cell.dataset.type = type;
+          cell.setAttribute(&quot;role&quot;, &quot;gridcell&quot;);
+          cell.textContent = cellMark(type, x, y);
+
+          if (border) {
+            cell.disabled = true;
+            cell.setAttribute(&quot;aria-label&quot;, &quot;고정 장식&quot;);
+          }
+          else {
+            const coord = mapCoord(x, y);
+            let routeText = &quot;&quot;;
+
+            if (route) {
+              routeText = &quot;, 계산 경로&quot;;
+              cell.classList.add(&quot;is-route&quot;);
+            }
+
+            cell.setAttribute(
+              &quot;aria-label&quot;,
+              &quot;Col &quot; + coord.col + &quot;, Row &quot; + coord.row + &quot;, &quot; + typeInfo[type].label + routeText
+            );
+
+            cell.addEventListener(&quot;pointerdown&quot;, (event) =&gt; {
+              if (event.button !== 0) {
+                return;
+              }
+
+              event.preventDefault();
+              drawing = true;
+              editCell(x, y);
+            });
+
+            cell.addEventListener(&quot;pointerenter&quot;, (event) =&gt; {
+              const leftDown = (event.buttons &amp; 1) === 1;
+
+              if (!leftDown) {
+                drawing = false;
+                return;
+              }
+
+              if (!drawing) {
+                return;
+              }
+
+              editCell(x, y);
+            });
+
+            cell.addEventListener(&quot;click&quot;, (event) =&gt; {
+              if (event.detail !== 0) {
+                return;
+              }
+
+              editCell(x, y);
+            });
+          }
+
+          grid.appendChild(cell);
+        }
+      }
+    }
+
+    function selectModule(moduleName) {
+      activeModule = moduleName;
+      nameLabel.textContent = &quot;Module &quot; + activeModule + &quot; · 전투 14×6&quot;;
+
+      moduleButtons.forEach((button) =&gt; {
+        const selected = button.dataset.module === activeModule;
+        button.classList.toggle(&quot;btn-primary&quot;, selected);
+        button.setAttribute(&quot;aria-pressed&quot;, String(selected));
+      });
+
+      cellLabel.textContent = &quot;외곽 1줄은 장식으로 고정&quot;;
+      updateMap();
+    }
+
+    function layoutText(moduleName) {
+      const codes = {
+        empty: &quot;E&quot;,
+        ground: &quot;G&quot;,
+        high: &quot;H&quot;,
+        spawn: &quot;S&quot;,
+        entry: &quot;I&quot;,
+        exit: &quot;O&quot;,
+        core: &quot;C&quot;
+      };
+      const output = [];
+
+      for (let y = 1; y &lt; rows - 1; y += 1) {
+        let line = &quot;&quot;;
+
+        for (let x = 1; x &lt; cols - 1; x += 1) {
+          line += codes[maps[moduleName][y][x]];
+        }
+
+        output.push(line);
+      }
+
+      return output.join(&quot;\n&quot;);
+    }
+
+    function getData() {
+      const savedMaps = {};
+
+      moduleNames.forEach((name) =&gt; {
+        savedMaps[name] = layoutText(name).split(&quot;\n&quot;);
+      });
+
+      return {
+        version: 2,
+        width: 14,
+        height: 6,
+        moduleCount: moduleNames.length,
+        order: &quot;Row 6 to Row 1&quot;,
+        maps: savedMaps
+      };
+    }
+
+    function validData(data) {
+      if (!data || !data.maps) {
+        return false;
+      }
+
+      const legacyRequired = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;];
+      const codes = new Set([&quot;G&quot;, &quot;H&quot;, &quot;E&quot;, &quot;S&quot;, &quot;I&quot;, &quot;O&quot;, &quot;C&quot;]);
+
+      for (const name of legacyRequired) {
+        if (!data.maps[name]) {
+          return false;
+        }
+      }
+
+      for (const name of moduleNames) {
+        const lines = data.maps[name];
+
+        if (!lines) {
+          continue;
+        }
+
+        if (!Array.isArray(lines) || lines.length !== 6) {
+          return false;
+        }
+
+        for (const line of lines) {
+          if (typeof line !== &quot;string&quot; || line.length !== 14) {
+            return false;
+          }
+
+          for (const code of line) {
+            if (!codes.has(code)) {
+              return false;
+            }
+          }
+        }
+      }
+
+      return true;
+    }
+
+    function applyData(data) {
+      moduleNames.forEach((name) =&gt; {
+        const source = data.maps[name] || patterns[name];
+
+        for (let y = 1; y &lt; rows - 1; y += 1) {
+          for (let x = 1; x &lt; cols - 1; x += 1) {
+            const code = source[y - 1][x - 1];
+            maps[name][y][x] = codeType[code];
+          }
+        }
+      });
+    }
+
+    moduleButtons.forEach((button) =&gt; {
+      button.addEventListener(&quot;click&quot;, () =&gt; {
+        selectModule(button.dataset.module);
+      });
+    });
+
+    window.addEventListener(&quot;pointerup&quot;, () =&gt; {
+      drawing = false;
+    });
+
+    window.addEventListener(&quot;pointercancel&quot;, () =&gt; {
+      drawing = false;
+    });
+
+    window.addEventListener(&quot;blur&quot;, () =&gt; {
+      drawing = false;
+    });
+
+    save.addEventListener(&quot;click&quot;, () =&gt; {
+      const content = JSON.stringify(getData(), null, 2);
+      const blob = new Blob([content], { type: &quot;application/json&quot; });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement(&quot;a&quot;);
+
+      link.href = url;
+      link.download = &quot;combat-map-layout.json&quot;;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() =&gt; {
+        URL.revokeObjectURL(url);
+      }, 0);
+      cellLabel.textContent = &quot;A~F 설계를 JSON으로 저장했습니다&quot;;
+    });
+
+    load.addEventListener(&quot;change&quot;, async () =&gt; {
+      const file = load.files[0];
+
+      if (!file) {
+        return;
+      }
+
+      try {
+        const text = await file.text();
+        const data = JSON.parse(text);
+
+        if (!validData(data)) {
+          cellLabel.textContent = &quot;지원하지 않는 설계 형식입니다&quot;;
+          return;
+        }
+
+        const legacyFile = !data.maps.E || !data.maps.F;
+        applyData(data);
+        cellLabel.textContent = legacyFile
+          ? &quot;구버전 A~D 설계를 불러왔습니다 · E/F는 기본 맵으로 생성했습니다&quot;
+          : &quot;A~F 설계를 불러왔습니다&quot;;
+        updateMap();
+      }
+      catch (error) {
+        cellLabel.textContent = &quot;설계 파일을 읽지 못했습니다&quot;;
+      }
+      finally {
+        load.value = &quot;&quot;;
+      }
+    });
+
+    updateMap();
+  })();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

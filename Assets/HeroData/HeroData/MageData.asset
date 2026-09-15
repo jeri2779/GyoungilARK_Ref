@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60888df782d890b43a1a7b450486fb95, type: 3}
+  m_Name: MageData
+  m_EditorClassIdentifier: Assembly-CSharp::HeroData
+  UnitId: 2004
+  Tier: 2
+  HeroName: Mage
+  HeroNameKey: Hero_Mage_Name
+  HeroDescriptionKey: Hero_Mage_Desc
+  HeroType: 1
+  Icon: {fileID: 21300000, guid: 24f8a02101b42c04c9af1f6afa260961, type: 3}
+  HeroPrefab: {fileID: 5127629013743316858, guid: bfa8d4dc241d67e40a7c739e98e17e95, type: 3}
+  AttackDescriptions:
+  - icon: {fileID: 21300000, guid: fdf716dabd59c436ba5a1994e19b1345, type: 3}
+    attackDescriptionKey: Hero_Attack_Ranged_Desc
+  - icon: {fileID: 21300000, guid: 458a158e5b7474d10bcd811bbcaf6b7a, type: 3}
+    attackDescriptionKey: Hero_Mage_NHit_Heavy_Attack_Desc

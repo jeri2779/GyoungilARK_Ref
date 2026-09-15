@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5e18a86bfa45cfb35a52192f0fe873, type: 3}
+  m_Name: HeroClassUpgradeConfig
+  m_EditorClassIdentifier: Assembly-CSharp::HeroClassUpgradeConfig
+  maxLevel: 50
+  classEntries:
+  - heroType: 0
+    baseCost:
+    - Type: 0
+      Amount: 10
+    - Type: 4
+      Amount: 10
+    - Type: 3
+      Amount: 10
+    - Type: 2
+      Amount: 10
+    costGrowthPerLevel: 10
+    milestoneLevelInterval: 5
+    milestoneGrowthMultiplier: 2.5
+    statGains:
+    - statType: 0
+      modifierType: 1
+      amountPerLevel: 0.108
+    - statType: 1
+      modifierType: 1
+      amountPerLevel: 0.05
+    - statType: 2
+      modifierType: 0
+      amountPerLevel: 0.5
+    - statType: 4
+      modifierType: 1
+      amountPerLevel: 0.02
+  - heroType: 1
+    baseCost:
+    - Type: 0
+      Amount: 10
+    - Type: 4
+      Amount: 10
+    - Type: 3
+      Amount: 10
+    - Type: 2
+      Amount: 10
+    costGrowthPerLevel: 15
+    milestoneLevelInterval: 5
+    milestoneGrowthMultiplier: 2.5
+    statGains:
+    - statType: 0
+      modifierType: 1
+      amountPerLevel: 0.04
+    - statType: 1
+      modifierType: 1
+      amountPerLevel: 0.08
+    - statType: 2
+      modifierType: 0
+      amountPerLevel: 0.2
+    - statType: 4
+      modifierType: 1
+      amountPerLevel: 0.02
+  upgradeCostUpgrades:
+  - {fileID: 11400000, guid: 47055b3a1f5c68244a1c75f40a998b33, type: 2}
+  - {fileID: 11400000, guid: 66fbb3934b60ac84bbe4b50106a53f92, type: 2}
+  - {fileID: 11400000, guid: 566d35772d5540846b9ad2b656e7ff73, type: 2}
+  - {fileID: 11400000, guid: 1ed8b17e3e930be4092ea94b0b7ca6d5, type: 2}
+  - {fileID: 11400000, guid: 478127b61da881940b4145e81862f335, type: 2}

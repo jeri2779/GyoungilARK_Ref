@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e63ecebd4cd6e044a8a127ea3df05bc, type: 3}
+  m_Name: SmasherJumpAttackData
+  m_EditorClassIdentifier: Assembly-CSharp::AttackDataSO
+  range: 1
+  rangeShape: 0
+  unattackableTarget: 3
+  attackType: 1
+  attackPer: 3
+  attackCount: 1
+  targetMode: 0
+  targetCount: 1
+  shotInterval: 0.1
+  areaShape: 0
+  areaRange: 1
+  lineLength: 4
+  areaCenterOnTarget: 0
+  chainRange: 2
+  chainCount: 3
+  chainFalloff: 0.8
+  chainEffectPrefab: {fileID: 0}
+  chainEffectLifetime: 0.3
+  timingMode: 0
+  continuousDelivery: 0
+  continuousDuration: 2
+  continuousTickInterval: 0.2
+  beamEffectPrefab: {fileID: 0}
+  selectMode: 0
+  animTriggers:
+  - JumpAttack
+  projectilePrefab: {fileID: 0}
+  clipLength: 0.6666667
+  buffList: []
+  targetDebuffs:
+  - debuff: {fileID: 11400000, guid: 443d60ceaf842b9448ff23b155cd7920, type: 2}
+    durationOverride: 3
+    scale: 1
+  groundZonePrefab: {fileID: 0}
+  attackEffect: {fileID: 1210069404974878, guid: 27d00a313624b3a4a8476eef5a96457d, type: 3}
+  attackEffectLifetime: 1
+  hitEffect: {fileID: 217993222680584950, guid: 1414f6532e62a4b499790923c3d0120a, type: 3}
+  hitEffectLifetime: 1
+  attackSoundKey: HeroJumpAttack2
+  lifestealPercent: 0
+  allyHealAmount: 0
+  allyHealRange: 2
+  allyHealRangeShape: 0

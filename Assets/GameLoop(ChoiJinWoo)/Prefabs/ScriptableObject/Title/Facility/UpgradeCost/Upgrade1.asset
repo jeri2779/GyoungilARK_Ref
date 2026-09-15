@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda09b493337e504681411b80c3e5672, type: 3}
+  m_Name: Upgrade1
+  m_EditorClassIdentifier: Assembly-CSharp::BaseUpgradeData
+  id: UpgradeCost1
+  displayName: Upgrade_BuildingUpgradeCost1_Name
+  icon: {fileID: 21300000, guid: accc7a41eb5ff447787d42f55056e9b0, type: 3}
+  iconColor: {r: 1, g: 1, b: 1, a: 1}
+  cost: 1
+  description: Upgrade_BuildingUpgradeCost1_Desc
+  prerequisites: []
+  effectAmount: 0.05
+  isLast: 0

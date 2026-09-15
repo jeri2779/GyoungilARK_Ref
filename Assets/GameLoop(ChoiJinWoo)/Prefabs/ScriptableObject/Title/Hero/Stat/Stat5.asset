@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda09b493337e504681411b80c3e5672, type: 3}
+  m_Name: Stat5
+  m_EditorClassIdentifier: Assembly-CSharp::BaseUpgradeData
+  id: Stat5
+  displayName: Upgrade_HeroStat5_Name
+  icon: {fileID: 21300000, guid: 678a0ad4be47340d49403da6b930716c, type: 3}
+  iconColor: {r: 1, g: 1, b: 1, a: 1}
+  cost: 16
+  description: Upgrade_HeroStat5_Desc
+  prerequisites:
+  - {fileID: 11400000, guid: 29fcb58731e9de84ba10d989c8f256f9, type: 2}
+  effectAmount: 0.1
+  isLast: 1

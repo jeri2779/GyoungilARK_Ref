@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0c3eab65d35774cb5cb8b750efe53b, type: 3}
+  m_Name: Explosived
+  m_EditorClassIdentifier: Assembly-CSharp::ExplosiveSkillSO
+  skillName: Skill_ExplosiveSkill
+  cooldown: 0
+  duration: 0
+  range: 2
+  tickInterval: 0
+  damage: 15
+  effectPrefab: {fileID: 6614231603359903959, guid: e38f529eba155fc489414427536aaf29, type: 3}
+  effectLifetime: 0.8

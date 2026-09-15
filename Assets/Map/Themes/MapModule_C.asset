@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb156cd169601604bb887213fa2c2840, type: 3}
+  m_Name: MapModule_C
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::TileTheme
+  Label: MapModule_C
+  Modules:
+  - {fileID: 8328397223932432046, guid: a5413b75826bdc04bbd29c7deac04aba, type: 3}
+  Slots:
+  - Brush: 1
+    Prefabs:
+    - {fileID: 8956926750305851295, guid: b91266aa14ae4e64f8269d3a29ebdc0e, type: 3}
+    - {fileID: 372462858132512526, guid: a331dee4b1cee474381604fec62f0999, type: 3}
+    - {fileID: 8448389041845265891, guid: fdc0bbfa7c653f94abb8a5eafc031c13, type: 3}
+    - {fileID: 1989060081637774, guid: fbad092f1d1a85a46bce42018ecd385a, type: 3}
+    - {fileID: 1242668763550728726, guid: c8e5fd67dedf96b42be3cc086a19d96a, type: 3}
+    - {fileID: 1334589669622068, guid: 2ddb9d7094bb182459807bd48f42aef9, type: 3}
+    - {fileID: 1122104685373948, guid: a2f99574e5018724d887482eda9b2892, type: 3}
+    - {fileID: 5639399991819552292, guid: df409c6f22ed705498fc21370bfede65, type: 3}
+    - {fileID: 1607524423326496, guid: 817024b1ff2a61d45a6c13ec55b045f3, type: 3}
+    - {fileID: 1867525808040082, guid: 17603c803b01ef24bb294ed5b6879a77, type: 3}
+  - Brush: 2
+    Prefabs:
+    - {fileID: 1972576606893996, guid: 74e38e208253d0a43867e63a089223bd, type: 3}
+    - {fileID: 1475416798796124, guid: 24c3e0445ffdd30459627a14d75c48f5, type: 3}
+    - {fileID: 1223550646659804, guid: cb1bd305621af62428e52659bf4310f0, type: 3}
+    - {fileID: 1242668763550728726, guid: c8e5fd67dedf96b42be3cc086a19d96a, type: 3}
+  - Brush: 4
+    Prefabs:
+    - {fileID: 8956926750305851295, guid: b91266aa14ae4e64f8269d3a29ebdc0e, type: 3}
+    - {fileID: 1242668763550728726, guid: c8e5fd67dedf96b42be3cc086a19d96a, type: 3}
+  - Brush: 3
+    Prefabs:
+    - {fileID: 1607524423326496, guid: 817024b1ff2a61d45a6c13ec55b045f3, type: 3}
+  - Brush: 10
+    Prefabs:
+    - {fileID: 1984751809945080, guid: 9bfebde0c96b6f64294a7ea344dd56d9, type: 3}
+    - {fileID: 1408557511486530, guid: f4fc059027d65664aa74efb6a4c1ae32, type: 3}
+    - {fileID: 1223711927860524, guid: 926e6e091c9fbb441aeaf5e4e1ed3769, type: 3}
+    - {fileID: 8638224853575398780, guid: 74a518c06b3c25546a896791cf959415, type: 3}
+    - {fileID: 7460296598462570123, guid: dab706f8eb045f6499421b855f6309d9, type: 3}
+    - {fileID: 3928780024031296064, guid: afe19497c5cbb864d8ab0cbd403c27dc, type: 3}
+    - {fileID: 3928780024031296064, guid: 05cd981acac0f3648a1778c76cd2dba1, type: 3}
+    - {fileID: 1395774817124655186, guid: 263050c6e8b34ad49c67442d1c5545bf, type: 3}
+    - {fileID: 1194229060638603132, guid: 6f722c902ebf6f54fa8ec68a9e4f7c30, type: 3}
+  CampfirePrefab: {fileID: 0}
+  WindwallPrefab: {fileID: 0}

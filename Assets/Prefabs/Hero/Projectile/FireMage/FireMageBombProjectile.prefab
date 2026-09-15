@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2342617360802728243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8403809627960842765}
+  - component: {fileID: 7429404962705459058}
+  m_Layer: 0
+  m_Name: FireMageBombProjectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8403809627960842765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2342617360802728243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.77449, y: 0, z: 7.58564}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6819891724089019622}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7429404962705459058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2342617360802728243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee49f8a335ef40b088467b71b1ce3570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  speed: 15
+  hitDistance: 0.3
+  maxLifetime: 5
+  turnSpeed: 720
+  flashEffectPrefab: {fileID: 0}
+  flashEffectLifetime: 1
+  hitEffectPrefab: {fileID: 205755435292188065, guid: 1d5f55fe73a81274da37ab433337f8db, type: 3}
+  hitEffectLifetime: 1
+  projectileEffect: {fileID: 9005100641529562657}
+  projectileSoundKey: 
+  hitSoundKey: HeroFireHit2
+--- !u!1 &4811278599980917624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6819891724089019622}
+  m_Layer: 0
+  m_Name: Visuals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6819891724089019622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811278599980917624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9005100641515370671}
+  m_Father: {fileID: 8403809627960842765}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3855701899870543467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6819891724089019622}
+    m_Modifications:
+    - target: {fileID: 5294754463028411108, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_Name
+      value: FireMissileNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+--- !u!4 &9005100641515370671 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5294754463028831940, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+  m_PrefabInstance: {fileID: 3855701899870543467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9005100641529562657 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5294754463009347658, guid: b2acce243be6db7499a76bc0fe779b42, type: 3}
+  m_PrefabInstance: {fileID: 3855701899870543467}
+  m_PrefabAsset: {fileID: 0}

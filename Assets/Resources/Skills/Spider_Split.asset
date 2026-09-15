@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b4949d34ab674aa975fa345b8d267, type: 3}
+  m_Name: Spider_Split
+  m_EditorClassIdentifier: Assembly-CSharp::SplitSkillDataSO
+  skillName: Skill_SpiderSplitSkill
+  cooldown: 0
+  duration: 0
+  range: 0
+  tickInterval: 0
+  value: 3
+  hpPercent: 0.5
+  splitEffect: {fileID: 5825396839801914567, guid: a79f0b67d0e756841a0d178f0edd4c9a, type: 3}
+  maxGeneration: 1
+  stateName: Spawn

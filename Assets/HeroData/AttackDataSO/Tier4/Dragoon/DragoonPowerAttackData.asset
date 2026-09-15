@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e63ecebd4cd6e044a8a127ea3df05bc, type: 3}
+  m_Name: DragoonPowerAttackData
+  m_EditorClassIdentifier: Assembly-CSharp::AttackDataSO
+  range: 7
+  rangeShape: 2
+  unattackableTarget: 1
+  attackType: 1
+  attackPer: 3
+  attackCount: 1
+  targetMode: 0
+  targetCount: 1
+  shotInterval: 0.1
+  areaShape: 2
+  areaRange: 0
+  lineLength: 7
+  areaCenterOnTarget: 0
+  chainRange: 2
+  chainCount: 3
+  chainFalloff: 0.8
+  chainEffectPrefab: {fileID: 0}
+  chainEffectLifetime: 0.3
+  timingMode: 0
+  continuousDelivery: 0
+  continuousDuration: 2
+  continuousTickInterval: 0.2
+  beamEffectPrefab: {fileID: 0}
+  selectMode: 0
+  animTriggers:
+  - ChargeAttack
+  projectilePrefab: {fileID: 5170870206001728237, guid: 5fe32cc2c389ce24f9e1954bc56f2fae, type: 3}
+  clipLength: 1.2222222
+  buffList: []
+  targetDebuffs: []
+  groundZonePrefab: {fileID: 0}
+  attackEffect: {fileID: 0}
+  attackEffectLifetime: 1
+  hitEffect: {fileID: 0}
+  hitEffectLifetime: 1
+  attackSoundKey: HeroArrowAttack4
+  lifestealPercent: 0
+  allyHealAmount: 0
+  allyHealRange: 2
+  allyHealRangeShape: 0

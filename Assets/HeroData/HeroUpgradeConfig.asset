@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac643fb952f983342907edb71da544b1, type: 3}
+  m_Name: HeroUpgradeConfig
+  m_EditorClassIdentifier: Assembly-CSharp::HeroUpgradeConfig
+  maxLevel: 50
+  tierEntries:
+  - tier: 1
+    baseCost:
+    - Type: 0
+      Amount: 10
+    - Type: 2
+      Amount: 10
+    - Type: 3
+      Amount: 10
+    - Type: 4
+      Amount: 10
+    costGrowthPerLevel: 10
+    milestoneLevelInterval: 5
+    milestoneGrowthMultiplier: 2
+    statGains:
+    - statType: 0
+      modifierType: 1
+      amountPerLevel: 0.08
+    - statType: 1
+      modifierType: 1
+      amountPerLevel: 0.078
+    - statType: 2
+      modifierType: 0
+      amountPerLevel: 0.5
+    - statType: 4
+      modifierType: 1
+      amountPerLevel: 0.03
+  - tier: 2
+    baseCost:
+    - Type: 0
+      Amount: 30
+    - Type: 2
+      Amount: 30
+    - Type: 3
+      Amount: 30
+    - Type: 4
+      Amount: 30
+    costGrowthPerLevel: 25
+    milestoneLevelInterval: 5
+    milestoneGrowthMultiplier: 2.5
+    statGains:
+    - statType: 0
+      modifierType: 1
+      amountPerLevel: 0.085
+    - statType: 1
+      modifierType: 1
+      amountPerLevel: 0.08
+    - statType: 2
+      modifierType: 0
+      amountPerLevel: 0.5
+    - statType: 4
+      modifierType: 1
+      amountPerLevel: 0.03
+  - tier: 3
+    baseCost:
+    - Type: 0
+      Amount: 100
+    - Type: 2
+      Amount: 100
+    - Type: 3
+      Amount: 100
+    - Type: 4
+      Amount: 100
+    costGrowthPerLevel: 50
+    milestoneLevelInterval: 5
+    milestoneGrowthMultiplier: 2.5
+    statGains:
+    - statType: 0
+      modifierType: 1
+      amountPerLevel: 0.1
+    - statType: 1
+      modifierType: 1
+      amountPerLevel: 0.087
+    - statType: 2
+      modifierType: 0
+      amountPerLevel: 0.5
+    - statType: 4
+      modifierType: 1
+      amountPerLevel: 0.03
+  - tier: 4
+    baseCost:
+    - Type: 0
+      Amount: 300
+    - Type: 2
+      Amount: 300
+    - Type: 3
+      Amount: 300
+    - Type: 4
+      Amount: 300
+    costGrowthPerLevel: 80
+    milestoneLevelInterval: 5
+    milestoneGrowthMultiplier: 2.5
+    statGains:
+    - statType: 0
+      modifierType: 1
+      amountPerLevel: 0.11
+    - statType: 1
+      modifierType: 1
+      amountPerLevel: 0.09
+    - statType: 2
+      modifierType: 0
+      amountPerLevel: 0.5
+    - statType: 4
+      modifierType: 1
+      amountPerLevel: 0.03
+  upgradeCostUpgrades:
+  - {fileID: 11400000, guid: 47055b3a1f5c68244a1c75f40a998b33, type: 2}
+  - {fileID: 11400000, guid: 66fbb3934b60ac84bbe4b50106a53f92, type: 2}
+  - {fileID: 11400000, guid: 566d35772d5540846b9ad2b656e7ff73, type: 2}
+  - {fileID: 11400000, guid: 1ed8b17e3e930be4092ea94b0b7ca6d5, type: 2}
+  - {fileID: 11400000, guid: 478127b61da881940b4145e81862f335, type: 2}

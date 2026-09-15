@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5e97d04dfb2e149aee99cd8016f217, type: 3}
+  m_Name: Scorpion_Shield
+  m_EditorClassIdentifier: Assembly-CSharp::ShieldSkillDataSO
+  skillName: Skill_Scorpion_Shield
+  cooldown: 5
+  duration: 3
+  range: 1
+  tickInterval: 0
+  value: 15
+  domePrefab: {fileID: 231045212756228339, guid: bf5f16c61f9351444b196960180ab1ee, type: 3}
+  domeScaleMul: 1
+  shieldStateName: Shield
+  animTimeout: 5

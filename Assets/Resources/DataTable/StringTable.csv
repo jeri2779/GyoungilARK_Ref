@@ -1,0 +1,534 @@
+ID,Kr,En,Jp
+HelloWorld,안녕,Hello,こんにちは
+Ui_MainMenu,메인 메뉴,Main Menu,メインメニュー
+Ui_Setting,설정,Setting,設定
+Ui_MasterVolume,마스터 볼륨,Master Volume,マスター音量
+Ui_SfxVolume,효과음,Sound Effects,効果音
+Ui_BgmVolume,배경음,Music,BGM
+Ui_SystemVolume,시스템,System,システム
+Ui_Exit,나가기,Exit,終了
+Ui_Close,닫기,Close,閉じる
+Ui_Pause,일시 정지,Pause,一時停止
+Ui_Start,게임 시작,Game Start,ゲーム開始
+Ui_EnemyArchive,적 도감,Enemy Archive,敵図鑑
+Ui_ArchiveButton,도감,Archive,図鑑
+Ui_Type,타입,Type,タイプ
+Ui_Attribute,특성,Attribute,属性
+Ui_Boss,보스,Boss,ボス
+Ui_Add,증원,Reinforcement,増援
+Ui_StageHeader,{0}지역 {1}일차,Region {0} - Day {1},{0}地域 {1}日目
+Ui_PlaceModeRemove,회수할 영웅을 선택 해주세요.\nesc키로 취소,Please select a hero to recall.\nPress ESC to cancel,回収する英雄を選択してください。\nESCキーでキャンセル
+Ui_PlaceModeReplace,재배치할 영웅을 선택 해주세요.\nesc키로 취소,Please select a hero to relocate.\nPress ESC to cancel,再配置する英雄を選択してください。\nESCキーでキャンセル
+Ui_PlaceModeReplaceHold,배치할 칸을 선택해주세요\nesc키로 취소.,Please select a tile to place.\nPress ESC to cancel.,配置するマスを選択してください。\nESCキーでキャンセル。
+Melee,근접,Melee,近接
+Ranged,원거리,Ranged,遠距離
+LanguageKr,한국어,한국어,한국어
+LanguageEn,English,English,English
+LanguageJp,日本語,日本語,日本語
+SpiderNormal,거미,Spider,蜘蛛
+SpiderNormal_Desc,펠루시아 대륙에서 가장 흔하게 보이는 거미이다,The most common spider seen across the continent of Felucia.,フェルシア大陸で最もよく見かける蜘蛛だ。
+SpiderToxin,독거미,Toxic Spider,毒蜘蛛
+SpiderToxin_Desc,펠루시아 대륙에는 강력한 독을가진 거미가 있다.\n하지만 그 모습을 보기 힘들다.,A spider with potent venom dwells in Felucia.\nYet its form is rarely ever seen.,フェルシア大陸には強力な毒を持つ蜘蛛がいる。\nしかしその姿を見ることは難しい。
+SpiderKing,여왕 거미,Queen Spider,女王蜘蛛
+SpiderKing_Desc,거미들의 어머니 대륙에 침입한 인간들로 인해 분노하여 직접 나선다.,The mother of all spiders. Enraged by the humans who invaded the continent she takes the field herself.,蜘蛛たちの母。大陸に侵入した人間たちに怒り、自ら乗り出す。
+Scorpion,전갈,Scorpion,サソリ
+Scorpion_Desc,평범한 대륙의 전갈과는 다르게 펠루시아 대륙의 생명체들에게는 온화한거 같다.,Unlike the scorpions of ordinary lands it seems gentle toward the creatures of Felucia.,普通の大陸のサソリとは違い、フェルシア大陸の生き物たちには穏やかなようだ。
+Bat,박쥐,Bat,コウモリ
+Bat_Desc,펠루시아 동굴에서 무리지어 사는 박쥐 초음파를 이용해 공격을 한다.,A bat that lives in swarms deep in the caves of Felucia. It attacks using ultrasonic waves.,フェルシアの洞窟で群れをなして暮らすコウモリ。超音波を使って攻撃する。
+Golem,골렘,Golem,ゴーレム
+Golem_Desc,펠루시아를 수호하는 고대병기 대륙을 침입한 인간들을 향해 분노한거 같다.,An ancient weapon that guards Felucia. It seems enraged at the humans who invaded the continent.,フェルシアを守護する古代兵器。大陸に侵入した人間たちに怒っているようだ。
+Worm,웜,Worm,ワーム
+Worm_Desc,주변에 모래가 많다면 조심해야 할것입니다. 보이지 않는곳에서 갑작스런 습격이 있을것이니..,Beware where the sand runs deep. The ambush comes from out of sight.,周りに砂が多いなら気をつけたほうがいい。見えない所から突然の襲撃があるだろう。
+FireGolem,화염 골렘,Fire Golem,炎のゴーレム
+FireGolem_Desc,불타는 대지에 출현하는 화염 골렘 강력한 불의 기운이 담겨 모든 불에 면역이 되며 주변에 화염피해를 준다.,A golem that appears on the burning lands. Filled with potent flame it is immune to all fire and scorches everything around it.,燃える大地に出現する炎のゴーレム。強い炎の力を宿し、全ての炎に免疫を持ち周囲に火炎ダメージを与える。
+Spore,포자,Spore,胞子
+Spore_Desc,작지만 많은물량으로 물을 지나다닐수있다,Small but overwhelming in number. It can cross over water,小さいが数で押し寄せ、水の上も渡っていける
+Wraith,망령,Wraith,亡霊
+Wraith_Desc,펠루시아 대륙을 떠도는 망령 어떤 이유인진 모르겠으나 인간에게 적대적이다.,A wraith drifting across the continent of Felucia. For reasons unknown it is hostile to humans.,フェルシア大陸をさまよう亡霊。理由は分からないが、人間に敵対的だ。
+IceGolem,얼음 골렘,Ice Golem,氷のゴーレム
+IceGolem_Desc,얼음 지역에서 출현하는 얼음 골렘 빙결의 기운을 통해 영웅에게 빙결 디버프를 건다.,An ice golem that appears in the frozen region. Its chill inflicts Frost on heroes.,氷の地域に出現する氷のゴーレム。氷結の力で英雄に氷結デバフをかける。
+Chicken,닭,Chicken,ニワトリ
+Chicken_Desc,펠루시아 대륙에서 가장 처음 본 생명체 기름이 있다면 튀기면 맛있을 거 같다.,The first food ever found on the continent of Felucia. With some oil it would fry up nicely.,フェルシア大陸で最初に見つけた食料。油があれば、揚げると美味しそうだ。
+DeathAttacker,죽음의 분쇄자,Death Crusher,死の粉砕者
+DeathAttacker_Desc,펠루시아 대륙의 강자 그의 주먹에 닿은자는 먼지처럼 사라진다고 한다.,The mightiest of the continent of Felucia. Those touched by his fist are said to vanish like dust.,フェルシア大陸の強者。その拳に触れた者は塵のように消えるという。
+ScorpionKing,전갈 왕,Scorpion King,サソリ王
+ScorpionKing_Desc,모든 전갈중 가장 강력한 개체 독성을 가지진 않았지만 힘이 강력하다.,The mightiest of all scorpions. It carries no venom but its raw strength is overwhelming.,全てのサソリの中で最も強力な個体。毒は持たないが、力が非常に強い。
+GrimReaper,사신,Grim Reaper,死神
+GrimReaper_Desc,빠르고 강력한 공격을 하는 사신 이다.,A reaper whose strikes are both swift and devastating.,素早く強力な攻撃を放つ死神だ。
+FireBird,화염 새,Fire Bird,炎の鳥
+FireBird_Desc,화염지대에서 출현하는 새 생긴것과 다르게 맷집이 단단하다.,A bird that appears in the flame zone. Far tougher than it looks.,火炎地帯に出現する鳥。見た目とは違い、打たれ強い。
+Spook,유령,Ghost,幽霊
+Spook_Desc,여러지역을 떠도는 유령 엄청 빠르고 만질수가 없다.,A ghost that wanders from region to region. Blindingly fast and impossible to lay a hand on.,いくつもの地域をさまよう幽霊。非常に素早く、触れることすらできない。
+WormQueen,웜 여왕,Worm Queen,ワーム女王
+WormQueen_Desc,펠루시아의 사막 지역에서 볼 수 있다. 발 아래에 보이지않는 공포가 영웅들을 덮쳐온다.,Found in the deserts of Felucia. An unseen terror underfoot surges up at the heroes.,フェルシアの砂漠地帯で見られる。足元に潜む見えない恐怖が英雄たちに襲いかかる。
+Skill_SpiderBite,물기,Bite,噛みつき
+Skill_SpiderSplitSkill,분열,Split,分裂
+Skill_SpiderToxin_Dash,독거미 대시,Toxic Spider Dash,毒蜘蛛ダッシュ
+Skill_SpiderKing_Summon,여왕 거미 소환,Queen Spider Summon,女王蜘蛛召喚
+Skill_Heal,치유,Heal,回復
+Skill_Scorpion_Shield,보호막,Shield,バリア
+Skill_DeathRushAttack,수라,Asura,修羅
+Skill_DamageZoneSkill,초음파,Ultrasonic Pulse,超音波
+Skill_ExplosiveSkill,자폭,Self-Destruct,自爆
+Skill_FireZoneSkill,화염의 오라,Flame Aura,炎のオーラ
+Skill_PhantomBlitz,팬텀 블리츠,Phantom Blitz,ファントムブリッツ
+Skill_SpiritofSnow,눈의 정령,Spirit of Snow,雪の精霊
+Skill_StompStun,발 구르기,Stomp,踏みつけ
+Desc_SpiderBite,적을 물어 피해를 준다,Bites the enemy to deal damage,敵を噛んでダメージを与える
+Desc_SpiderSplitSKill,거미가 사망시 분열을 한다.,The spider splits apart when it dies.,蜘蛛は死亡時に分裂する。
+Desc_SpiderToxin_Dash,독거미가 일정거리 빠르게 이동을 한다,The toxic spider dashes a set distance quickly,毒蜘蛛が一定距離を素早く移動する
+Desc_SpiderKing_Summon,여왕 거미가 거미를 소환한다,The Spider Queen summons spiders,女王蜘蛛が蜘蛛を召喚する
+Desc_Heal,일정 범위 내 아군을 지속 회복시킨다,Continuously heals allies within range,範囲内の味方を継続的に回復する
+Desc_Scorpion_Shield,펠루시아 의 전갈이 보호막을 둘러 주변 적 들의 받는 피해를 감소 시킨다.,The scorpion of Felucia raises a barrier that reduces damage taken by nearby enemies.,フェルシアのサソリがバリアを張り、周囲の敵が受けるダメージを軽減する。
+Desc_DeathRushAttack,죽음의 분쇄자가 강력한 의지를 담아 영웅을 향하여 연속으로 공격을 한다.,The Death Crusher charges the heroes and strikes repeatedly with overwhelming will.,死の粉砕者が強い意志を込めて英雄に向かって連続で攻撃する。
+Desc_DamageZoneSkill,박쥐가 주변 영웅에게 초음파를 이용해 일정 주기마다 피해를 입힌다.,The bat uses ultrasonic waves to damage nearby heroes at regular intervals.,コウモリが超音波を使って周囲の英雄に一定周期でダメージを与える。
+Desc_ExplosivedSkill,고대 병기 골렘이 사망시 골렘의 핵이 폭발해 주변 영웅에게 자폭데미지를 입힌다.,When the ancient weapon golem dies its core detonates and damages nearby heroes.,古代兵器ゴーレムが死亡すると核が爆発し、周囲の英雄にダメージを与える。
+Desc_FireZoneSkill,주변에 화염을 둘러 영웅들에게 피해를 준다,Wreathes itself in flame to damage nearby heroes,周囲に炎をまとい英雄たちにダメージを与える
+Desc_PhantomBlitz,분신을 흩뿌려 사거리 안의 영웅들을 하나씩 스치고 지나가며 연속으로 베어낸다.,Scatters afterimages that graze each hero in range and cut them down in sequence.,分身を放ち、射程内の英雄を一人ずつすれ違いざまに連続で斬りつける。
+Desc_SpiritofSnow,주변에 냉기를 퍼뜨려 사거리 안의 영웅들을 빙결시킨다. 빙결된 영웅은 공격속도와 이동속도 방어력이 떨어진다.,Spreads chill that Frosts heroes in range lowering attack speed move speed and defense.,周囲に冷気を広げ射程内の英雄を氷結させる。氷結した英雄は攻撃速度と移動速度、防御力が下がる。
+Desc_StompStun,바닥을 내려찍어 주변 영웅에게 기절을 건다.,Slams the ground to stun nearby heroes.,地面を踏みつけ、周囲の英雄を気絶させる。
+Stat_Attack,공격력,Attack,攻撃力
+Stat_AttackSpeed,공격속도,AttackSpeed,攻撃速度
+Stat_Health,체력,Health,体力
+Stat_MoveSpeed,이동속도,MoveSpeed,移動速度
+Stat_Defense,방어력,Defense,防御力
+Stat_Range,사거리,Range,射程
+LockEnemyText,아직 해금되지 않은 적 입니다.,This enemy has not been unlocked yet.,まだ解放されていない敵です。
+None,특성 없음,None,特性なし
+Cloaking,은신,Stealth,隠密
+Fly,공중,Flying,飛行
+UnJudged,저지 불가,Unblockable,阻止不可
+Berserk,폭주,Berserk,暴走
+Regeneration,재생,Regeneration,再生
+HitsShield,타수 보호막,Hit Shield,打数バリア
+Burrow,잠복,Burrow,潜伏
+Flame,화염족,Flame,炎族
+Swim,수영,Swim,遊泳
+Cloaking_Desc,외부로부터 외형을 숨겨 공격 대상에서 제외된다. 저지 했을 시에만 공격 할 수 있다.,Hides its form and is excluded from targeting. It can only be attacked while blocked.,姿を隠して攻撃対象から外れる。阻止されている時のみ攻撃できる。
+Fly_Desc,원거리 유닛만 공격할 수 있다. 그리고 지형지물을 무시하고 이동한다,Only ranged units can attack it. It also ignores terrain and moves freely.,遠距離ユニットのみ攻撃できる。また地形を無視して移動する。
+UnJudged_Desc,저지할 수 없어 막는 유닛을 통과한다,Cannot be blocked and passes through blockers,阻止できずブロックユニットを通り抜ける
+Berserk_Desc,체력 50% 이하일 때 이동속도와 공격력이 증가한다,Gains move speed and attack below 50% HP,HPが50%以下で移動速度と攻撃力が上昇する
+Regeneration_Desc,체력을 계속 회복한다.,Rapidly regenerates HP over time,時間経過でHPが急速に回復する
+HitsShield_Desc,받는 피해가 1로 고정되며 일정 타수만큼만 피해를 받는다,Takes 1 fixed damage per hit for a set number of hits,被ダメージが1に固定され一定の打数だけダメージを受ける
+Burrow_Desc,땅속에 숨어 이동을 하며 공격대상에서 제외된다. 저지 했을 시 영웅에게 피해를 주며 기절을 걸고 밖으로 나온다.,Moves hidden underground and is excluded from targeting. When blocked it damages and stuns the hero then surfaces.,地中に隠れて移動し攻撃対象から外れる。阻止された時は英雄にダメージと気絶を与えて地上に出る。
+Flame_Desc,모든 불 데미지에 면역이며 불에 닿으면 고유 특성으로 화염의 오라 를 사용 한다.,Immune to all fire damage. On contact with fire it uses its innate Flame Aura.,全ての火炎ダメージに免疫を持ち、炎に触れると固有特性の炎のオーラを使用する。
+Swim_Desc,물 타일에서 수영으로 지나 갈 수 있으며 물 에서는 이동속도가 증가한다.,Can swim across water tiles and moves faster while in water.,水タイルを泳いで渡ることができ、水中では移動速度が上がる。
+ToolTip_HeroIcon,영웅 소환 (단축키: C),HeroSpawn (Shortcut: C),英雄召喚 (ショートカット: C)
+ToolTip_Upgrade,업그레이드 (단축키: U),Upgrade (Shortcut: U),アップグレード (ショートカット: U)
+Melee_Hero_Create,근거리 영웅 생성,Create Melee Hero,近接英雄生成
+Ranged_Hero_Create,원거리 영웅 생성,Create Ranged Hero,遠距離英雄生成
+Hero_BraveCitizen_Name,용감한 시민,Brave Citizen,勇敢な市民
+Hero_Volunteer_Name,의용병,Volunteer,義勇兵
+Hero_Warrior_Name,전사,Warrior,戦士
+Hero_Archer_Name,궁수,Archer,弓兵
+Hero_Mage_Name,마법사,Mage,魔法使い
+Hero_Fighter_Name,격투가,Fighter,格闘家
+Hero_Lancer_Name,창기병,Lancer,槍騎兵
+Hero_Berserker_Name,광전사,Berserker,狂戦士
+Hero_Mercenary_Name,용병,Mercenary,傭兵
+Hero_Monk_Name,수도사,Monk,修道士
+Hero_FireMage_Name,화염술사,Fire Mage,火炎術師
+Hero_Hunter_Name,사냥꾼,Hunter,狩人
+Hero_Knight_Name,기사,Knight,騎士
+Hero_ThunderMage_Name,번개술사,Thunder Mage,雷術師
+Hero_Ninja_Name,닌자,Ninja,忍者
+Hero_Samurai_Name,사무라이,Samurai,侍
+Hero_Vagabond_Name,방랑자,Vagabond,放浪者
+Hero_ArchMage_Name,대마법사,Archmage,大魔法使い
+Hero_Destroyer_Name,파괴자,Destroyer,破壊者
+Hero_Seeker_Name,진리 탐구자,Seeker,真理探究者
+Hero_Babarian_Name,바바리안,Barbarian,バーバリアン
+Hero_BowMaster_Name,신궁,Bow Master,弓聖
+Hero_DragonSlayer_Name,용살자,Dragon Slayer,竜殺し
+Hero_Dragoon_Name,용기병,Dragoon,竜騎兵
+Hero_Inquisitor_Name,심문관,Inquisitor,審問官
+Hero_MadScientist_Name,미친 과학자,Mad Scientist,狂った科学者
+Hero_Penetrator_Name,꿰뚫는 기사,Penetrator,貫く騎士
+Hero_Smasher_Name,분쇄자,Smasher,粉砕者
+Hero_Usurper_Name,찬탈자,Usurper,簒奪者
+Hero_BraveCitizen_Desc,대충만든 장비를 들고 무모하게 전장에 뛰쳐나온 용감한 시민이다. 아무 능력이 없다.,A brave citizen who rushed recklessly into battle with crudely made gear. Has no special abilities.,粗末な装備を持って無謀にも戦場に飛び出した勇敢な市民だ。特別な能力は持っていない。
+Hero_Volunteer_Desc,성을 지키기 위해 군에 자원한 시민이다. 빈약한 화살로 원거리 공격을 한다.,A citizen who volunteered for the army to defend the castle. Attacks from range with feeble arrows.,城を守るために軍に志願した市民だ。貧弱な矢で遠距離攻撃を行う。
+Hero_Warrior_Desc,기초 훈련 과정을 통과한 병사다. 체력과 방어력이 상대적으로 높다. 땅을 강하게 내려찍어 적을 기절시킨다.,A soldier who has completed basic training. Has relatively high health and defense. Slams the ground hard to stun enemies.,基礎訓練課程を終えた兵士だ。体力と防御力が比較的高い。地面を強く叩きつけて敵を気絶させる。
+Hero_Archer_Desc,기초 훈련 과정을 통과한 궁병이다. 화살을 빠르게 쏠 수 있는 능력을 가지고 있다. 가끔 화살 3발을 연속으로 쏜다.,An archer who has completed basic training. Can fire arrows quickly. Occasionally fires 3 arrows in a row.,基礎訓練課程を終えた弓兵だ。矢を素早く放つ能力を持つ。時々矢を3発連続で放つ。
+Hero_Mage_Desc,마법을 익힌지 얼마 안 된 초보 마법사이다. 아직 마법을 빠르게 쓸 수는 없지만 강한 마법을 쓸 때가 있다. 제법 재능이 있는 모양이다.,"A novice mage who has only recently learned magic. Cannot yet cast spells quickly, but occasionally unleashes powerful magic. Seems to have real talent.",魔法を覚えたばかりの見習い魔法使いだ。まだ素早く魔法を使うことはできないが、時折強力な魔法を放つ。かなりの才能があるようだ。
+Hero_Fighter_Desc,뒷골목에서 주먹으로 이름 좀 날렸던 싸움꾼이다. 무기가 없어서 공격 사거리가 매우 짧다. 발차기 공격이 강력하다.,"A brawler who made a name for himself with his fists in back alleys. Has no weapon, so his attack range is very short. His kick attacks are powerful.",裏路地で拳の腕前を轟かせた喧嘩師だ。武器がないため攻撃射程が非常に短い。蹴り攻撃が強力だ。
+Hero_Lancer_Desc,기초 훈련 과정을 통과한 창병이다. 날카로운 창으로 뒤에 있는 적들까지 모두 꿰뚫을 수 있다. 평소엔 느리지만 힘을 내면 빠르게 찌르는 공격을 할 수 있다.,"A spearman who has completed basic training. His sharp spear can pierce through enemies standing behind the target. Normally slow, but can unleash a quick thrusting attack when he musters his strength.",基礎訓練課程を終えた槍兵だ。鋭い槍で後ろにいる敵まで貫くことができる。普段は遅いが、力を込めれば素早い突き攻撃を繰り出せる。
+Hero_Berserker_Desc,"싸움과 피에 미친 광전사다. 적을 공격할 때마다 공격 속도가 빨라지고, 적이 흘린 피를 흡수해 자신의 체력을 회복한다.","A berserker crazed by battle and blood. His attack speed increases with every strike, and he absorbs the enemy's spilled blood to heal himself.",戦いと血に狂った狂戦士だ。敵を攻撃するたびに攻撃速度が上がり、敵が流した血を吸収して自らの体力を回復する。
+Hero_Mercenary_Desc,셀 수 없이 많은 의뢰를 완수한 베테랑 용병이다. 직접 고용되어 전장에 참여하였다. 적들을 위압하여 이동속도를 늦춘다.,A veteran mercenary who has completed countless contracts. Hired directly to join the battlefield. Intimidates enemies to slow their movement speed.,数え切れないほどの依頼をこなしたベテラン傭兵だ。直接雇われて戦場に参加した。敵を威圧して移動速度を落とす。
+Hero_Monk_Desc,오랜 세월의 수행 덕에 깨달음을 얻은 수도사이다. 무기 없이도 강하며 가끔 기를 발사할 때가 있다.,"A monk who attained enlightenment through years of training. Strong even without a weapon, and occasionally fires bolts of energy.",長年の修行の末に悟りを開いた修道士だ。武器がなくとも強く、時折気弾を放つことがある。
+Hero_FireMage_Desc,화염 마법을 전문으로 사용하는 마법사이다. 범위 공격에 특화되어 있다. 강력한 마법은 불 장판을 남긴다.,A mage specializing in fire magic. Specialized in area attacks. His powerful spells leave a burning field behind.,炎の魔法を専門とする魔法使いだ。範囲攻撃に特化している。強力な魔法は炎の地帯を残す。
+Hero_Hunter_Desc,펠루시아 대륙 생물 전문 사냥꾼이다. 화살에 독을 발라 적을 확실히 처리하며 한 번에 화살 3발을 발사한다.,"A hunter specializing in the creatures of Felucia. Coats his arrows with poison to finish off enemies for certain, and fires 3 arrows at once.",フェルシア大陸の生物を専門とする狩人だ。矢に毒を塗って確実に敵を仕留め、一度に矢を3発放つ。
+Hero_Knight_Desc,개척자 왕에게 충성을 맹세한 기사이다. 전문 훈련을 받아 체력과 방어력이 뛰어나다. 주위를 검으로 강하게 휘둘러 적을 기절시킨다. ,"A knight who has sworn loyalty to the Pioneer King. Professionally trained, with excellent health and defense. Swings his sword hard around him to stun enemies.",開拓者の王に忠誠を誓った騎士だ。専門的な訓練を受け、体力と防御力に優れる。周囲を剣で強く振り払い敵を気絶させる。
+Hero_ThunderMage_Desc,번개 마법을 전문으로 사용하는 마법사이다. 영창이 빨라 빠르게 공격한다. 번개 마법으로 공격했을 때 피격된 적 근처의 적을 연쇄적으로 타격한다. ,"A mage specializing in lightning magic. Her chanting is fast, allowing her to attack quickly. When her lightning magic strikes, it chains to enemies near the target.",雷の魔法を専門とする魔法使いだ。詠唱が速く素早く攻撃する。雷魔法で攻撃すると、被弾した敵の近くの敵にも連鎖的に命中する。
+Hero_Ninja_Desc,동양의 닌자를 따라하는 괴짜이지만 실력은 뛰어나다. 수리검을 던져 공격한다. 높이 뛰어올라 적들을 향해 수리검 여러 개를 던진다.,"An eccentric who imitates the ninjas of the East, but his skills are excellent. Attacks by throwing shuriken. Leaps high into the air and throws multiple shuriken at enemies.",東洋の忍者を真似る変わり者だが、腕前は優れている。手裏剣を投げて攻撃する。高く跳び上がり敵に向けて手裏剣を複数投げつける。
+Hero_Samurai_Desc,동양의 사무라이를 따라하는 괴짜이지만 실력은 뛰어나다. 카타나를 휘둘러 공격하며 검기를 날려 공격할 수 있다.,"An eccentric who imitates the samurai of the East, but his skills are excellent. Attacks by swinging his katana, and can also unleash slashing energy waves.",東洋の侍を真似る変わり者だが、腕前は優れている。刀を振るって攻撃し、剣気を飛ばして攻撃することもできる。
+Hero_Vagabond_Desc,펠루시아 대륙을 떠돌던 방랑자이다. 홀로 떠돌며 여러 적들과 싸우며 터득한 전투술과 생존기술을 가지고 있다. 창으로 적을 공격하여 출혈을 일으킬 수 있다.,"A vagabond who has wandered the continent of Felucia. Through countless solitary battles, he has mastered combat and survival skills. Attacks enemies with his spear to inflict bleeding.",フェルシア大陸をさすらう放浪者だ。一人でさすらいながら数々の敵と戦い、戦闘術と生存技術を身につけた。槍で敵を攻撃し出血を引き起こすことができる。
+Hero_ArchMage_Desc,마법사들의 정점에 선 대마법사이다. 여타 마법사들보다 강력한 마법을 시전할 수 있다. 시전되는 동안 지속적으로 피해를 입힐 수 있는 마법 레이저를 3개 쏠 수 있다. ,An archmage standing at the pinnacle of all mages. Can cast far more powerful magic than other mages. Can fire 3 magic lasers that continuously deal damage while active.,魔法使いたちの頂点に立つ大魔法使いだ。他の魔法使いよりも強力な魔法を詠唱できる。詠唱中持続的にダメージを与える魔法のレーザーを3本放つことができる。
+Hero_Destroyer_Desc,금지된 마법을 다뤄 마법계에서 퇴출된 마법사이다. 금지 마법은 강력한 파괴력으로 모든 것을 소멸시킨다. ,A mage expelled from the magic world for wielding forbidden magic. His forbidden magic annihilates everything with tremendous destructive power.,禁じられた魔法を扱い、魔法界から追放された魔法使いだ。禁忌の魔法は強力な破壊力で全てを消滅させる。
+Hero_Seeker_Desc,"마법의 근원, 진리를 집요하게 연구하는 마법사이다. 오랜 연구 끝에 진리에 발을 담구자 정신이 나가버렸다. 괴상한 옷차림으로 항상 웃고 다닌다.","A mage who relentlessly researches the source of magic, the truth itself. After years of research, the moment he touched upon the truth, he lost his mind. He wanders about in bizarre clothing, always smiling.",魔法の根源、真理を執拗に研究する魔法使いだ。長年の研究の末、真理に足を踏み入れた瞬間、正気を失ってしまった。奇妙な服装でいつも笑いながら歩き回る。
+Hero_Babarian_Desc,날카로운 도끼 두 자루로 적을 도륙내는 전사이다. 적을 공격할 수록 공격 속도가 빨라지며 주위에 도끼를 휘둘러 적을 믹서기처럼 갈아버린다.,"A warrior who slaughters enemies with two sharp axes. His attack speed increases the more he attacks, and he swings his axes around him, grinding enemies like a blender.",鋭い斧2本で敵を切り刻む戦士だ。敵を攻撃するほど攻撃速度が上がり、周囲に斧を振り回して敵をミキサーのように粉砕する。
+Hero_BowMaster_Desc,활의 정점에 선 자이다. 쉬지 않고 연속으로 활을 쏠 수 있다. ,One who stands at the pinnacle of archery. Can fire his bow continuously without rest.,弓の頂点に立つ者だ。休むことなく連続で弓を放つことができる。
+Hero_DragonSlayer_Desc,드래곤을 죽인 경험이 있는 강력한 전사이다. 대검을 강하게 휘두르면 공중에 있는 적들도 무참히 썰어버릴 수 있다.,"A powerful warrior who has slain a dragon before. When he swings his greatsword with force, he can mercilessly cut down even airborne enemies.",ドラゴンを倒した経験を持つ強力な戦士だ。大剣を強く振るえば、空中の敵さえも無慈悲に切り裂くことができる。
+Hero_Dragoon_Desc,전장을 누비며 수많은 공훈을 세운 기병이다. 활로 직선 방향의 모든 것을 꿰뚫는 강력한 화살을 발사한다.,A cavalryman who has earned countless honors across the battlefield. Fires a powerful arrow from his bow that pierces through everything in a straight line.,戦場を駆け巡り数多くの功績を打ち立てた騎兵だ。弓で直線上の全てを貫く強力な矢を放つ。
+Hero_Inquisitor_Desc,타협이 없는 이단 심문관이다. 펠루시아 생물들을 모두 섬멸당해야 마땅한 악마들로 여긴다. 주위의 적들을 잠시 속박할 수 있다.,An uncompromising inquisitor of heresy. He considers all creatures of Felucia to be demons deserving total annihilation. Can briefly bind nearby enemies.,妥協のない異端審問官だ。フェルシアの生物たちを全て滅ぼされるべき悪魔だと見なしている。周囲の敵を一時的に拘束することができる。
+Hero_MadScientist_Desc,위험한 실험을 즐기는 과학자이다. 펠루시아 대륙의 생태와 환경에 대해 박식하며 그들에게 치명적인 요소도 모두 파악하고 있다. 약병을 던져 생물들에게 치명적인 영역을 생성한다.,"A scientist who enjoys dangerous experiments. Highly knowledgeable about the ecology and environment of Felucia, and fully aware of everything lethal to its creatures. Throws vials to create a lethal zone for enemies.",危険な実験を楽しむ科学者だ。フェルシア大陸の生態と環境に精通しており、生物にとって致命的な要素も全て把握している。薬瓶を投げて生物に致命的な領域を作り出す。
+Hero_Penetrator_Desc,자신의 창에 적들을 꼬챙이로 만드는 것을 즐기는 잔인한 창기사이다. 날카로운 창이 빠른 속도로 적들의 몸에 구멍을 만든다.,A cruel lancer who enjoys skewering enemies on his spear. His sharp spear pierces holes through enemies' bodies at great speed.,自分の槍で敵を串刺しにすることを好む残忍な槍騎士だ。鋭い槍が高速で敵の体に穴を開ける。
+Hero_Smasher_Desc,거대한 망치를 휘두루는 전사다. 거대한 망치로 땅을 내려치면 지진을 일으킬 수 있을 정도로 강력하다. 공격 한 번 한 번이 적들을 정신차리지 못하게 한다.,"A warrior who wields a massive hammer. When he slams it into the ground, it is powerful enough to cause an earthquake. Each of his attacks leaves enemies reeling.",巨大なハンマーを振るう戦士だ。巨大なハンマーで地面を叩きつけると地震を起こせるほど強力だ。一撃一撃が敵を立ち直れなくさせる。
+Hero_Usurper_Desc,나약한 지도자를 밀어내고 정점의 자리에 앉은 찬탈자이다. 절대적인 힘이 있어야 펠루시아 대륙을 정복하고 인류를 구원할 수 있다고 굳게 믿고 있다. 대검을 휘두를 때마다 전방의 적들을 쓸어버릴 수 있는 강력한 검기를 발사한다.,A usurper who pushed aside a weak leader to sit at the summit of power. He firmly believes that only absolute power can conquer the continent of Felucia and save humanity. Every swing of his greatsword unleashes a powerful blade wave that sweeps away enemies ahead of him.,軟弱な指導者を追い落とし頂点の座に就いた簒奪者だ。絶対的な力があってこそフェルシア大陸を征服し人類を救えると固く信じている。大剣を振るうたびに前方の敵を薙ぎ払う強力な剣気を放つ。
+Hero_Archive,영웅 도감,Hero Archive,英雄図鑑
+Guide_GamePlayButton,게임 플레이,GamePlay,ゲームプレイ
+Guide_HeroButton,영웅,Hero,英雄
+Guide_BaseButton,거점,Base,拠点
+Guide_EnemyButton,적,Enemy,敵
+Guide_ResourceButton,자원,Resource,資源
+Guide_CitizenButton,시민,Citizen,市民
+Guide_DayNIghtButton,낮/밤,Day/Night,昼/夜
+Guide_HeroTypeButton,영웅 종류,Hero Type,英雄の種類
+Guide_HeroMergeButton,합성,Merge,合成
+Guide_HeroCreateAndPlaceButton,생성과 배치,Create & Place,生成と配置
+Guide_BaseBuildButton,건설,Build,建設
+Guide_BaseMainButton,중앙 거점,Central Base,中央拠点
+Guide_BaseUnlockButton,해금,Unlock,解放
+Guide_ResourceInfo,게임 전반에 걸쳐 필요한 요소이다.\n거점의 생산 건물을 건설 후 시민을 배치하면 자원을 생산할 수 있다.,An element needed throughout the entire game.\nBuild a production building at a base and assign citizens to it to produce resources.,ゲーム全体を通して必要な要素だ。\n拠点に生産建物を建設した後、市民を配置すると資源を生産できる。
+Guide_SpecialResourceButton,펠리움,Fellium,フェリウム
+Guide_SpecialResourceInfo,하루를 피해 없이 방어에 성공할 경우 얻을 수 있다.\n중앙 거점에서 기본 자원이랑 교환 할 수 있다.,Obtained when you successfully defend a day without taking damage.\nCan be exchanged for basic resources at the central base.,1日を被害なく防衛に成功すると獲得できる。\n中央拠点で基本資源と交換できる。
+Guide_HeroCreateAndPlaceInfo,좌측 아이콘을 클릭하여 영웅을 생성하거나 배치된 영웅을 재배치 및 제거를 할 수 있다.\n영웅 생성 시 자원 및 시민을 소모한다.\n영웅 생성 시 영웅 인벤토리가 열리고 영웅의 아이콘을 클릭 시 배치 할 수 있다.\n확률로 상위 티어의 영웅이 나올 수 있다.,"Click the icon on the left to create a hero, or to reposition and remove a placed hero.\nCreating a hero consumes resources and citizens.\nWhen a hero is created, the hero inventory opens, and clicking the hero's icon lets you place it.\nThere is a chance a higher-tier hero may appear.",左側のアイコンをクリックすると、英雄を生成したり、配置済みの英雄を再配置・削除したりできる。\n英雄生成時に資源と市民を消費する。\n英雄生成時、英雄インベントリが開き、英雄のアイコンをクリックすると配置できる。\n確率で上位ティアの英雄が出現することがある。
+Guide_HeroTypeInfo,영웅은 근접과 원거리로 나뉘어진다.\n근접 영웅은 평지에만 원거리 영웅은 언덕에만 배치 가능하다.\n근접 영웅은 공중 적을 공격 할 수 없다.,"Heroes are divided into melee and ranged types.\nMelee heroes can only be placed on flat ground, while ranged heroes can only be placed on hills.\nMelee heroes cannot attack airborne enemies.",英雄は近接と遠距離に分けられる。\n近接英雄は平地にのみ、遠距離英雄は丘にのみ配置できる。\n近接英雄は空中の敵を攻撃できない。
+Guide_HeroMergeInfo,같은 영웅이 3명 있으면 합성이 가능하다.\n근접 영웅을 합성하면 근접 영웅의 상위 티어가 나오고 원거리 영웅은 원거리 영웅의 상위 티어가 나온다.,"If you have 3 of the same hero, you can merge them.\nMerging melee heroes produces a higher-tier melee hero, and merging ranged heroes produces a higher-tier ranged hero.",同じ英雄が3人いれば合成が可能だ。\n近接英雄を合成すると上位ティアの近接英雄が、遠距離英雄を合成すると上位ティアの遠距離英雄が出現する。
+Guide_HeroTierButton,티어,Tier,ティア
+Guide_HeroTierInfo,영웅은 1티어에서 4티어까지 있으며 티어가 높을 수록 영웅의 능력치가 강해진다.,"Heroes range from Tier 1 to Tier 4, and the higher the tier, the stronger the hero's stats.",英雄はティア1からティア4まであり、ティアが高いほど能力値が強くなる。
+Guide_BaseMainInfo,중앙 거점에서 자원의 하루 생산량을 확인할 수 있으며 특수 자원을 기본 자원으로 교환 할 수 있다.\n시민 추가 또한 중앙 거점에서 할 수 있다.,"At the central base, you can check the daily resource production and exchange special resources for basic resources.\nYou can also add citizens at the central base.",中央拠点では資源の1日の生産量を確認でき、特殊資源を基本資源と交換できる。\n市民の追加も中央拠点で行える。
+Guide_HeroUpgradeButton,업그레이드,Upgrade,アップグレード
+Guide_HeroUpgrade,자원을 소모하여 영웅들의 스탯을 업그레이드 할 수 있다.\n업그레이드는 근접 영웅과 원거리 영웅이 나뉘어져 있다.,Consume resources to upgrade heroes' stats.\nUpgrades are separated into melee heroes and ranged heroes.,資源を消費して英雄たちのステータスをアップグレードできる。\nアップグレードは近接英雄と遠距離英雄に分かれている。
+Guide_HeroBook,도감,Archive,図鑑
+Guide_HeroBookInfo,도감을 열면 영웅들의 정보에 대해 자세히 알 수 있다.,Opening the archive lets you see detailed information about your heroes.,図鑑を開くと英雄たちの情報について詳しく知ることができる。
+Guide_BaseBuildInfo,중앙 거점을 제외한 각 거점에는 건물을 건설할 수 있는 칸이 있으며 클릭하여 건설할 건물의 종류를 선택할 수 있다.,Every base except the central one has slots where you can build buildings; click a slot to choose which building to construct.,中央拠点を除く各拠点には建物を建設できる枠があり、クリックして建設する建物の種類を選択できる。
+Guide_BaseUnlockInfo,게임의 전투 지역이 확장될 때 마다 거점의 지역도 활성화 된다.,"Each time the game's battle area expands, the corresponding region of the base is also activated.",ゲームの戦闘地域が拡張されるたびに、拠点の地域も活性化される。
+Guide_BaseBuildingButton,건물,Building,建物
+Guide_BaseBuildingInfo,자원 별로 별도의 생산 건물이 있다.\n최대 시민을 증가시켜주는 건물은 한 번 설치 시 회수 할 수 없다.\n생산 건물은 시민을 배치하지 않으면 자원을 생산하지 않는다.\n건물들은 업그레이드를 할 수 있다.,Each resource has its own dedicated production building.\nA building that increases the maximum number of citizens cannot be reclaimed once installed.\nA production building will not produce resources unless citizens are assigned to it.\nBuildings can be upgraded.,資源ごとに専用の生産建物がある。\n最大市民数を増やす建物は一度設置すると回収できない。\n生産建物は市民を配置しないと資源を生産しない。\n建物はアップグレードすることができる。
+Guide_EnemyPathButton,경로,Path,経路
+Guide_EnemyPathInfo,적들은 맵에 보이는 빨간 선을 따라서 이동한다.,Enemies move along the red lines shown on the map.,敵はマップに表示される赤い線に沿って移動する。
+Guide_EnemySpawnButton,스폰,Spawn,出現
+Guide_EnemySpawnInfo,적들은 특정 위치에서 나타나기 시작하며 나오는 위치를 클릭 하면 나오는 적들의 정보를 확인 할 수 있다.,Enemies begin appearing from specific locations; click a spawn location to check information about the enemies that appear there.,敵は特定の位置から出現し始め、出現位置をクリックすると出現する敵の情報を確認できる。
+Guide_EnemyTypeButton,종류,Type,種類
+Guide_EnemyTypeInfo,"적은 지상, 공중 적으로 나뉘어져 있다.\n또한 일반, 엘리트, 보스로 적의 등급 또한 나뉘어져 있다.\n적의 등급은 도감의 테두리를 통해 알 수 있다.","Enemies are divided into ground and airborne types.\nThey are also ranked into Normal, Elite, and Boss grades.\nYou can tell an enemy's grade by the border around its icon in the archive.",敵は地上、空中の敵に分けられている。\nまた、雑魚、エリート、ボスと敵のランクも分けられている。\n敵のランクは図鑑の枠で確認できる。
+Guide_CitizenInfo,"자원 생산 및 영웅 생성에 필수불가결인 요소이다.\n우 상단에 현재 시민 수, 전체 시민 수, 배치 가능한 시민 수, 병력으로 빠진 시민 수를 확인 할 수 있다. ","An indispensable element for resource production and hero creation.\nIn the top right, you can check the current citizen count, total citizen count, number of citizens available for assignment, and the number of citizens taken as troops.",資源生産と英雄生成に不可欠な要素だ。\n右上で現在の市民数、全体の市民数、配置可能な市民数、兵力として抜けた市民数を確認できる。
+Guide_DayNIghtInfo,시간대가 낮과 밤으로 나뉘어져 낮에는 영웅 생성과 배치 및 건물 건설 및 시민 배치를 할 수 있고 밤에는 전투가 시작된다.\n밤에는 스킬 사용을 제외한 모든 행동이 불가능하다.\n우 하단의 아이콘을 클릭하여 밤으로 넘어갈 수 있다.,"Time is divided into day and night. During the day, you can create and place heroes, construct buildings, and assign citizens; at night, combat begins.\nAt night, all actions are disabled except using skills.\nClick the icon in the bottom right to switch to night.",時間帯は昼と夜に分かれており、昼には英雄の生成と配置、建物の建設、市民の配置ができ、夜には戦闘が始まる。\n夜にはスキルの使用を除く全ての行動ができない。\n右下のアイコンをクリックすると夜に移行できる。
+Guide_MonsterBookButton,도감,Archive,図鑑
+Guide_MonsterBookInfo,도감에서는 마주한 적 있는 적에 대한 정보가 적혀있다.,The archive contains information about enemies you have already encountered.,図鑑には遭遇したことのある敵の情報が記載されている。
+Guide_PlayerSkillButton,스킬,Skill,スキル
+Guide_PlayerSkill,전투 중 스킬을 사용하여 영웅들의 전투에 도움을 줄 수 있다.\n스킬에는 영웅을 강력하게 해주는 버프와 적들의 이동속도를 낮추는 스킬과 영웅들의 체력을 회복시켜주는 스킬이 있다.,"You can use skills during combat to help your heroes fight.\nSkills include buffs that strengthen heroes, skills that slow enemies' movement speed, and skills that restore heroes' health.",戦闘中にスキルを使用して英雄たちの戦闘を助けることができる。\nスキルには英雄を強化するバフ、敵の移動速度を低下させるスキル、英雄の体力を回復させるスキルがある。
+ToolTip_Replace,재배치 (단축키: R),Reposition (Shortcut: R),再配置（ショートカット：R）
+ToolTip_Remove,제거 (단축키: E),Remove (Shortcut: E),削除（ショートカット：E）
+ToolTip_Hp,거점 체력(0이 되면 게임 오버),Base HP (Game Over at 0),拠点体力（0になるとゲームオーバー）
+ToolTip_Cancel,취소,Cancel,キャンセル
+ToolTip_DayCount,진행 날짜,Day Progress,経過日数
+ToolTip_Wood,목재,Wood,木材
+ToolTip_curmaxCitizen,현재 시민 수/전체 시민 수,Current Citizens / Total Citizens,現在の市民数／全体の市民数
+ToolTip_canUseCitizen,배치 가능한 시민 수,Citizens Available for Assignment,配置可能な市民数
+ToolTip_heroCitizen,영웅이 차지하고 있는 인구 수,Population Occupied by Heroes,英雄が占めている人口数
+ToolTip_Stone,석재,Stone,石材
+ToolTip_Iron,철,Iron,鉄
+ToolTip_Gold,금,Gold,金
+ToolTip_Food,식량,Food,食料
+ToolTip_Special,펠리움,Fellium,フェリウム
+ToolTip_BaseOpen,거점 화면 (단축키: B),Base Screen (Shortcut: B),拠点画面（ショートカット：B）
+ToolTip_NightButton,밤으로 변경 (단축키: N),Switch to Night (Shortcut: N),夜に変更（ショートカット：N）
+ToolTip_MonsterBook,몬스터 도감 (단축키: O),Monster Archive (Shortcut: O),モンスター図鑑（ショートカット：O）
+ToolTip_HeroList,영웅 리스트,Hero List,英雄リスト
+ToolTip_Menu,메뉴 (단축키: ESC),Menu (Shortcut: ESC),メニュー（ショートカット：ESC）
+ToolTip_Help,가이드 (단축키: G),Guide (Shortcut: G),ガイド（ショートカット：G）
+Ui_NewGame,새 게임 시작,New Game,新しいゲーム
+Ui_Load,불러오기,Load,ロード
+Ui_SlotLabel,슬롯 {0},Slot {0},スロット{0}
+Ui_SlotDay,{0}일차,Day {0},{0}日目
+Ui_PlayTimeFormat,플레이 시간 {0}시간 {1}분,Playtime {0}h {1}m,プレイ時間 {0}時間{1}分
+Ui_SlotSaveTime,저장 {0},Save {0},保存 {0}
+Ui_SlotEmpty,비어있음,Empty,空き
+Ui_NewGamePanelTitle,새 게임 슬롯 선택,Select New Game Slot,新規ゲームスロット選択
+Ui_LoadPanelTitle,불러올 슬롯 선택,Select Slot to Load,ロードするスロット選択
+Ui_NewGameConfirm,슬롯 {0}에서 새 게임을 시작하시겠습니까?,Start a new game in slot {0}?,スロット{0}で新しいゲームを開始しますか?
+Ui_OverwriteWarning,기존 데이터가 삭제됩니다.\n새 게임을 진행하시겠습니까?,The existing save data will be deleted.\nStart a new game?,既存のセーブデータが削除されます。\n新しいゲームを開始しますか?
+Ui_LoadConfirm,{0} 슬롯을 불러오시겠습니까?,Load slot {0}?,スロット{0}をロードしますか?
+Ui_Confirm,확인,Confirm,確認
+Ui_SlotEmptyAction,새 게임 시작,Start New Game,ニューゲーム開始
+Ui_Delete,삭제,Delete,削除
+Ui_DeleteConfirm,슬롯 {0}의 저장 데이터를 삭제하시겠습니까? 삭제한 데이터는 복구할 수 없습니다.,Delete the save data in slot {0}? Deleted data cannot be recovered.,スロット{0}のセーブデータを削除しますか？削除したデータは復元できません。
+Ui_HeroCount,보유 영웅 {0}명,Heroes {0},英雄{0}人
+Ui_LoadOptionPanelTitle,불러오기 방식을 선택해주세요,Select how to load,ロード方法を選択してください
+Ui_LoadOptionContinue,이어하기,Continue,続ける
+Ui_LoadOptionPastDay,이전 일차,Past day,過去の日
+Ui_DaySelectPanelTitle,불러올 일차 선택,Select Day to Load,ロードする日を選択
+Ui_DaySelectRow,{0}일차,Day {0},{0}日目
+Ui_DaySelectEmpty,저장된 과거 일차가 없습니다,No past days saved,保存された過去の日はありません
+Ui_DaySelectWarning,선택일자 이후의 일자는 불러올 수 없습니다. 해당 일차를 정말 불러오시겠습니까?,Days after this one can no longer be loaded. Load this day anyway?,この日以降のデータは読み込めなくなります。この日をロードしますか?
+Hero_Attack_Melee_Desc,이 영웅은 근거리 공격을 합니다. 지상 타일에만 배치할 수 있습니다. 은신 적을 저지할 수 있습니다.,This hero attacks at close range. Can only be placed on ground tiles. Can block stealthed enemies.,この英雄は近接攻撃を行います。地上タイルにのみ配置できます。隠密の敵を阻止できます。
+Hero_Attack_Ranged_Desc,이 영웅은 원거리 공격을 합니다. 언덕 타일에만 배치할 수 있습니다. 공중 적을 타격할 수 있습니다.,This hero attacks at long range. Can only be placed on hill tiles. Can strike airborne enemies.,この英雄は遠距離攻撃を行います。丘タイルにのみ配置できます。空中の敵を攻撃できます。
+Hero_Archer_Chance_Heavy_Attack_Desc,30%의 확률로 화살을 연속으로 3발 쏩니다.,30% chance to fire 3 arrows in a row.,30%の確率で矢を3発連続で放ちます。
+Hero_Fighter_NHit_Heavy_Attack_Desc,3번 공격할 때마다 강한 발차기 공격을 합니다.,Every 3rd attack unleashes a powerful kick.,3回攻撃するごとに強力な蹴り攻撃を行います。
+Hero_Lancer_Chance_Heavy_Attack_Desc,40%의 확률로 빠르게 4번 찌릅니다.,40% chance to quickly thrust 4 times.,40%の確率で素早く4回突きます。
+Hero_Mage_NHit_Heavy_Attack_Desc,4번 공격할 때마다 커다란 구체를 발사합니다. 구체의 착탄 지점 주위의 모든 적이 피해를 입습니다.,Every 4th attack fires a large orb. All enemies around the orb's impact point take damage.,4回攻撃するごとに大きな球体を発射します。球体の着弾地点の周囲にいる全ての敵にダメージを与えます。
+Hero_Warrior_NHit_Heavy_Attack_Desc,4번 공격할 때마다 직선 방향의 모든 적을 기절시킵니다.,Every 4th attack stuns all enemies in a straight line.,4回攻撃するごとに直線方向の全ての敵を気絶させます。
+Hero_Berserker_NHit_Heavy_Attack_Desc,4번 공격할 때마다 주위의 모든 적을 공격합니다.,Every 4th attack strikes all nearby enemies.,4回攻撃するごとに周囲の全ての敵を攻撃します。
+Hero_Berserker_Drain_Desc,적에게 가한 데미지의 일정 비율만큼 회복합니다.,Recovers a fixed percentage of the damage dealt to enemies.,敵に与えたダメージの一定割合を回復します。
+Hero_Berserker_AS_Buff_Desc,적을 공격할 때마다 공격 속도가 빨라집니다.,Attack speed increases with each attack on an enemy.,敵を攻撃するたびに攻撃速度が上がります。
+Hero_FireMage_Area_Attack_Desc,공격한 타일 내 모든 적이 피해를 입습니다.,All enemies within the attacked tile take damage.,攻撃したタイル内の全ての敵がダメージを受けます。
+Hero_FireMage_NHit_Heavy_Attack_Desc,5번 공격할 때마다 커다란 화염 구체를 발사합니다. 구체의 착탄 지점에 화염 지대가 잠시 형성됩니다.,Every 5th attack fires a large fireball. A field of flame briefly forms at the impact point.,5回攻撃するごとに大きな火炎球を発射します。球体の着弾地点に一時的に炎の地帯が形成されます。
+Hero_FireMage_Ignite_Desc,공격 대상에게 불을 붙힙니다.,Sets the attack target on fire.,攻撃対象に火をつけます。
+Hero_Hunter_Triple_Attack_Desc,한 번에 3발의 화살을 발사합니다.,Fires 3 arrows at once.,一度に矢を3発発射します。
+Hero_Hunter_Posion_Desc,피격된 대상을 중독시킵니다.,Poisons the target it hits.,被弾した対象を中毒させます。
+Hero_Knight_NHit_Heavy_Attack_Desc,6번 공격할 때마다 주위의 적들을 기절시킵니다.,Every 6th attack stuns nearby enemies.,6回攻撃するごとに周囲の敵を気絶させます。
+Hero_Mercenary_Area_Attack_Desc,공격한 타일 내 모든 적이 피해를 입습니다.,All enemies within the attacked tile take damage.,攻撃したタイル内の全ての敵がダメージを受けます。
+Hero_Mercenary_Aura_Desc,주위의 적을 둔화시키는 오라를 발산합니다.,Emits an aura that slows nearby enemies.,周囲の敵を鈍化させるオーラを放ちます。
+Hero_Monk_Chance_Attack_Desc,20% 확률로 에너지탄을 쏩니다. 에너지탄의 착탄 지점 주위의 모든 적이 피해를 입습니다.,20% chance to fire an energy bolt. All enemies around the bolt's impact point take damage.,20%の確率でエネルギー弾を放ちます。エネルギー弾の着弾地点の周囲にいる全ての敵にダメージを与えます。
+Hero_Ninja_NHit_Attack_Desc,7번 공격할 때마다 점프하여 주위의 적들에게 5개의 수리검을 던집니다.,"Every 7th attack, jumps and throws 5 shuriken at nearby enemies.",7回攻撃するごとにジャンプし、周囲の敵に手裏剣を5本投げつけます。
+Hero_Samurai_NHit_Attack_Desc,5번 공격할 때마다 직선 방향의 모든 적들에게 피해를 주는 검기를 발사합니다.,Every 5th attack fires a blade wave that damages all enemies in a straight line.,5回攻撃するごとに直線方向の全ての敵にダメージを与える剣気を放ちます。
+Hero_ThunderMage_Chain_Attack_Desc,적들에게 최대 4번 튕기는 전기 구체를 발사합니다.,Fires an electric orb that chains to enemies up to 4 times.,敵に最大4回跳ね返る電気の球を発射します。
+Hero_Vagabond_Chance_Attack_Desc,30%의 확률로 주위의 모든 적을 공격합니다.,30% chance to attack all nearby enemies.,30%の確率で周囲の全ての敵を攻撃します。
+Hero_Vagabond_Bleed_Desc,피격된 대상에게 출혈을 일으킵니다.,Inflicts bleeding on the target it hits.,被弾した対象に出血を引き起こします。
+Hero_ArchMage_Laser_Attack_Desc,레이저를 발사하여 최대 3마리의 적들에게 지속적으로 피해를 입힙니다.,Fires a laser that continuously damages up to 3 enemies.,レーザーを発射し、最大3体の敵に持続的にダメージを与えます。
+Hero_Babarian_AS_Buff_Desc,적을 공격할 때마다 공격 속도가 빨라집니다.,Attack speed increases with each attack on an enemy.,敵を攻撃するたびに攻撃速度が上がります。
+Hero_Babarian_Stance_Change_Desc,적을 20번 공격하면 15초동안 휠윈드 공격을 합니다. 주위의 모든 적에게 지속적으로 피해를 입힙니다. 피격된 대상에게 출혈을 일으킵니다.,"After attacking enemies 20 times, unleashes a whirlwind attack for 15 seconds. Continuously damages all nearby enemies and inflicts bleeding on those hit.",敵を20回攻撃すると15秒間ワールウィンド攻撃を行います。周囲の全ての敵に持続的にダメージを与えます。被弾した対象に出血を引き起こします。
+Hero_Babarian_Aura_Desc,주위의 적들의 방어력을 낮추는 오라를 발산합니다.,Emits an aura that lowers the defense of nearby enemies.,周囲の敵の防御力を下げるオーラを放ちます。
+Hero_BowMaster_Attack_Desc,매우 빠른 속도로 적들에게 화살을 쏩니다.,Fires arrows at enemies at extremely high speed.,非常に速い速度で敵に矢を放ちます。
+Hero_Destroyer_Laser_Attack_Desc,레이저를 발사하여 1마리의 적에게 지속적으로 피해를 입힙니다.,Fires a laser that continuously damages a single enemy.,レーザーを発射し、1体の敵に持続的にダメージを与えます。
+Hero_Destroyer_Chain_Attack_Desc,레이저 공격이 최대 5마리의 적들에게 튕깁니다.,The laser attack chains to up to 5 enemies.,レーザー攻撃が最大5体の敵に跳ね返ります。
+Hero_Destroyer_Ignite_Desc,공격 대상에게 불을 붙힙니다.,Sets the attack target on fire.,攻撃対象に火をつけます。
+Hero_DragonSlayer_NHit_Attack_Desc,『용살』\n4번 공격할 때마다 검을 강하게 휘둘러 직선 방향의 모든 적에게 피해를 입힙니다. 공중 적도 공격합니다.,"『Dragon Slay』\nEvery 4th attack, swings the sword hard to damage all enemies in a straight line. Also strikes airborne enemies.",『竜殺し』\n4回攻撃するごとに剣を強く振るい、直線方向の全ての敵にダメージを与えます。空中の敵も攻撃します。
+Hero_DragonSlayer_Stance_Change_Desc,『용살』을 3번 발동하게 되면 『용살』이 기본 공격이 됩니다.,"When 『Dragon Slay』 is triggered 3 times, it becomes the basic attack.",『竜殺し』を3回発動すると、『竜殺し』が基本攻撃になります。
+Hero_Dragoon_Pierce_Attack_Desc,직선 상의 적들을 모두 공격하는 관통 화살을 쏩니다.,Fires a piercing arrow that hits all enemies in a straight line.,直線上の敵を全て攻撃する貫通の矢を放ちます。
+Hero_Dragoon_NHit_Attack_Desc,5번 공격할 때마다 더 강력한 관통 화살을 쏩니다.,Every 5th attack fires an even more powerful piercing arrow.,5回攻撃するごとにさらに強力な貫通の矢を放ちます。
+Hero_Inquisitor_NHit_Attack_Desc,『심문』\n5번 공격할 때마다 주위의 모든 적을 공격하고 속박합니다.,『Interrogation』\nEvery 5th attack strikes and binds all nearby enemies.,『尋問』\n5回攻撃するごとに周囲の全ての敵を攻撃し拘束します。
+Hero_Inquisitor_Rechance_Attack_Desc,『심문』을 발동하면 50%의 확률로 다시 한 번 『심문』을 발동합니다.,"When 『Interrogation』 is triggered, there is a 50% chance to trigger 『Interrogation』 again.",『尋問』を発動すると、50%の確率でもう一度『尋問』を発動します。
+Hero_Inquisitor_Aura_Desc,주위의 적들을 잠시 속박시키는 오라를 발산합니다.,Emits an aura that briefly binds nearby enemies.,周囲の敵を一時的に拘束するオーラを放ちます。
+Hero_MadScientist_Area_Attack_Desc,치명적인 약물이 담긴 약병을 던집니다. 약병은 착탄 범위 내 모든 적들을 공격하고 지속 피해를 입히는 맹독 지대를 형성합니다.,Throws a vial containing a lethal drug. The vial attacks all enemies within its impact radius and forms a toxic zone that deals continuous damage.,致命的な薬物が入った薬瓶を投げます。薬瓶は着弾範囲内の全ての敵を攻撃し、持続ダメージを与える猛毒地帯を形成します。
+Hero_MadScientist_Poison_Desc,피격된 대상을 중독시킵니다.,Poisons the target it hits.,被弾した対象を中毒させます。
+Hero_Penetrator_Chance_Attack_Desc,30%의 확률로 5번 연속으로 찌릅니다.,30% chance to thrust 5 times in a row.,30%の確率で5回連続で突きます。
+Hero_Penetrator_NHit_Attack_Desc,3번 공격할 때마다 강하게 찌릅니다.,Every 3rd attack thrusts with great force.,3回攻撃するごとに強く突きます。
+Hero_Seeker_Attack_Desc,최대 7마리의 적들을 지속 공격합니다.,Continuously attacks up to 7 enemies.,最大7体の敵を持続的に攻撃します。
+Hero_Smasher_Stun_Desc,피격된 대상을 기절시킵니다.,Stuns the target it hits.,被弾した対象を気絶させます。
+Hero_Smasher_NHit_Attack_Desc,7번 공격할 때마다 뛰어올라 지면을 강하게 내려찍습니다. 주위의 모든 적을 기절시킵니다.,"Every 7th attack, leaps up and slams the ground with force. Stuns all nearby enemies.",7回攻撃するごとに跳び上がり地面を強く叩きつけます。周囲の全ての敵を気絶させます。
+Hero_Usurper_Attack_Desc,전방의 모든 적에게 피해를 주는 검기를 발사합니다.,Fires a blade wave that damages all enemies ahead.,前方の全ての敵にダメージを与える剣気を放ちます。
+Tutorial_Resource,게임 전반에 사용될 자원들 입니다. 오른쪽에 떨어져 있는 자원은 적의 공세를 피해 없이 막아내는데 성공하거나 강력한 적을 쓰러트리면 얻을 수 있는 희귀 자원 입니다.,"These are the resources used throughout the game. The resource shown separately on the right is a rare resource obtained by successfully defending against an enemy assault without taking damage, or by defeating a powerful enemy.",ゲーム全体で使用される資源です。右側に離れて表示されている資源は、敵の攻勢を被害なく防ぎきるか、強力な敵を倒すことで入手できるレア資源です。
+Tutorial_AssignWorker_Step1,다음으로 생산 건물을 건설하고 시민을 배치해 봅시다. 먼저 아이콘을 눌러 거점 화면을 열어봅시다.,"Next, let's build a production building and assign a citizen. First, press the icon to open the base screen.",次に生産建物を建設して市民を配置してみましょう。まずアイコンを押して拠点画面を開いてみましょう。
+Tutorial_AssignWorker_Step2,열려있는 지역을 클릭해 봅시다.,Click on an unlocked region.,開放されている地域をクリックしてみましょう。
+Tutorial_AssignWorker_Step3,건물을 지을 수 있는 칸을 클릭해 봅시다.,Click on a slot where you can build a building.,建物を建てられる枠をクリックしてみましょう。
+Tutorial_AssignWorker_Step4,지을 수 있는 건물들이 보입니다. 그 중 농장을 선택하여 봅시다.,You can see the buildings available to build. Let's select the farm among them.,建設できる建物が表示されます。その中から農場を選んでみましょう。
+Tutorial_AssignWorker_Step5,건물에 대한 정보가 보입니다. 버튼을 눌러 건설해 봅시다.,You can see information about the building. Press the button to build it.,建物についての情報が表示されます。ボタンを押して建設してみましょう。
+Tutorial_AssignWorker_Step6,칸에 건물이 생성된 것이 보입니다. 건물이 있는 칸을 다시 클릭 해 봅시다.,You can see the building has been constructed in the slot. Click on the slot with the building again.,枠に建物が建てられたのが見えます。建物のある枠をもう一度クリックしてみましょう。
+Tutorial_AssignWorker_Step7,건물의 세부정보가 보입니다. 시민이 배치되지 않으면 자원을 생산하지 않습니다. 시민을 한 번 배치해 봅시다.,You can see the building's details. It will not produce resources unless a citizen is assigned. Let's assign a citizen.,建物の詳細情報が表示されます。市民が配置されないと資源を生産しません。市民を一度配置してみましょう。
+Tutorial_BuildingUpgrade,건물을 업그레이드 하면 생산하는 자원량이 늘어납니다. 버튼을 눌러서 업그레이드 할 수 있습니다. 건물 업그레이드에는 자원이 소모됩니다.,Upgrading a building increases the amount of resources it produces. You can upgrade it by pressing the button. Upgrading a building consumes resources.,建物をアップグレードすると生産する資源量が増えます。ボタンを押してアップグレードできます。建物のアップグレードには資源が消費されます。
+Tutorial_BuildHouse_Step1,다음으로 주택을 지어 봅시다. 빈 칸을 클릭해 봅시다.,"Next, let's build a house. Click on an empty slot.",次に住宅を建ててみましょう。空いている枠をクリックしてみましょう。
+Tutorial_BuildHouse_Step2,주택을 선택해 봅시다.,Let's select the house.,住宅を選んでみましょう。
+Tutorial_BuildHouse_Step3,주택은 건설하면 최대 주민 수를 늘려주지만 제거할 수 없습니다. 건설 할 때는 신중히 건설하시기 바랍니다. 버튼을 눌러 건설 해 봅시다.,"Building a house increases the maximum number of residents, but it cannot be removed. Please build carefully. Press the button to build it.",住宅を建設すると最大住民数が増えますが、撤去することはできません。建設する際は慎重に建設してください。ボタンを押して建設してみましょう。
+Tutorial_AddCitizen_Step1,최대 시민 수가 늘어났으니 주민을 한 번 추가해 봅시다. 먼저 닫기 버튼을 눌러 지역을 나가봅시다.,"Now that the maximum number of citizens has increased, let's add a resident. First, press the close button to leave the region.",最大市民数が増えたので、住民を一度追加してみましょう。まず閉じるボタンを押して地域から出てみましょう。
+Tutorial_AddCitizen_Step2,가운데 본거점을 클릭 해 봅시다.,Click on the central main base.,中央の本拠点をクリックしてみましょう。
+Tutorial_AddCitizen_Step3,본거점에서는 하루마다 생산되는 자원의 양과 희귀 자원을 기본 자원으로 교환 할 수 있습니다. 버튼을 눌러봅시다.,"At the main base, you can check the amount of resources produced each day and exchange rare resources for basic resources. Let's press the button.",本拠点では1日ごとに生産される資源の量を確認でき、レア資源を基本資源と交換できます。ボタンを押してみましょう。
+Tutorial_AddCitizen_Step4,버튼을 누르거나 가운데 숫자가 적혀있는 칸에 수치를 직접 입력하여 추가할 주민의 수를 조절 할 수 있습니다. 시민을 추가 할 때 자원이 소모됩니다. 추가하고 싶은 만큼의 시민 수를 조절한 후 아래의 버튼을 눌러 추가해봅시다.,"You can press the button or directly enter a number in the field showing the number in the middle to adjust how many residents to add. Adding citizens consumes resources. Adjust the number of citizens to the amount you want, then press the button below to add them.",ボタンを押すか、中央の数字が書かれた欄に数値を直接入力して追加する住民の数を調整できます。市民を追加する際は資源が消費されます。追加したい市民数を調整した後、下のボタンを押して追加してみましょう。
+Tutorial_PlaceHero_Step1,시민을 추가했으니 시민을 영웅으로 바꿔봅시다. 먼저 버튼을 눌러 거점에서 나가 봅시다.,"Now that you've added citizens, let's turn a citizen into a hero. First, press the button to leave the base.",市民を追加したので、市民を英雄に変えてみましょう。まずボタンを押して拠点から出てみましょう。
+Tutorial_PlaceHero_Step2,버튼을 눌러 봅시다.,Let's press the button.,ボタンを押してみましょう。
+Tutorial_PlaceHero_Step3,영웅은 근접 영웅과 원거리 영웅으로 나뉘어집니다. 원하는 타입의 영웅을 선택해 봅시다.,Heroes are divided into melee heroes and ranged heroes. Select the type of hero you want and create it.,英雄は近接英雄と遠距離英雄に分かれます。お好みのタイプの英雄を選んで生成してみましょう。
+Tutorial_PlaceHero_Step4,슬라이더를 조절하여 원하는 만큼 영웅을 생성할 수 있습니다. 원하는 만큼 영웅을 생성해 봅시다.,You can adjust the slider to create as many heroes as you want. Let's create as many heroes as you'd like.,スライダーを調整して好きなだけ英雄を生成できます。好きなだけ英雄を生成してみましょう。
+Tutorial_PlaceHero_Step5,생성된 영웅은 영웅 인벤토리에서 아이콘으로 생성됩니다. 아이콘을 클릭하여 영웅을 배치해 봅시다. 근접 영웅은 평지에만 원거리 영웅은 언덕에만 배치가 가능합니다.,"The created hero appears as an icon in the hero inventory. Click the icon to place the hero. Melee heroes can only be placed on flat ground, and ranged heroes can only be placed on hills.",生成された英雄は英雄インベントリにアイコンとして表示されます。アイコンをクリックして英雄を配置してみましょう。近接英雄は平地にのみ、遠距離英雄は丘にのみ配置可能です。
+Tutorial_RelocateHero_Step1,영웅을 엉뚱한 곳에 배치했다면 재배치 버튼으로 위치를 옮길 수 있습니다. 재배치 버튼을 눌러봅시다.,"If you placed a hero in the wrong spot, you can move it with the Reposition button. Let's press the Reposition button.",英雄を間違った場所に配置してしまったら、再配置ボタンで位置を移動できます。再配置ボタンを押してみましょう。
+Tutorial_RelocateHero_Step2,옮기고 싶은 영웅을 클릭해 집고 새로운 칸을 클릭해 내려놓아 봅시다.,"Click the hero you want to move to pick it up, then click a new tile to place it down.",移動させたい英雄をクリックして持ち上げ、新しい枠をクリックして下ろしてみましょう。
+Tutorial_HeroUpgrade,해당 버튼을 누르면 영웅을 업그레이드 할 수 있는 창이 나타납니다. 업그레이드에는 자원이 소모됩니다.,Pressing this button opens a window where you can upgrade the hero. Upgrading consumes resources.,このボタンを押すと英雄をアップグレードできるウィンドウが表示されます。アップグレードには資源が消費されます。
+Tutorial_HeroMerge,같은 종류의 영웅이 3명 있으면 아이콘을 더블 클릭해서 상위 티어로 조합할 수 있습니다. 근접 영웅은 상위 티어의 근접 영웅이 원거리 영웅은 상위 티어의 원거리 영웅이 나옵니다.,"If you have 3 heroes of the same type, you can double-click the icon to combine them into a higher tier. Melee heroes produce a higher-tier melee hero, and ranged heroes produce a higher-tier ranged hero.",同じ種類の英雄が3人いれば、アイコンをダブルクリックして上位ティアに合成できます。近接英雄は上位ティアの近接英雄が、遠距離英雄は上位ティアの遠距離英雄になります。
+Tutorial_NightButton,준비가 다 됐으니 적의 공격을 막아봅시다. 아이콘을 눌러 시간대를 밤으로 변경해 봅시다.,"Now that preparations are complete, let's defend against the enemy attack. Press the icon to change the time to night.",準備が整ったので、敵の攻撃を防いでみましょう。アイコンを押して時間帯を夜に変更してみましょう。
+Tutorial_NextButton,다음으로,Next,次へ
+Tooltip_Hero_Inventory,영웅 목록 (단축키: I),Hero List (Shortcut: I),英雄リスト（ショートカット：I）
+Title_StartButton,시작,Start,スタート
+Title_UpgradeButton,업그레이드,Upgrade,アップグレード
+Title_SettingButton,설정,Settings,設定
+UI_QuitButton,종료,Quit,終了
+UI_TitleButton,타이틀로,To Title,タイトルへ
+UI_CloseButton,닫기,Close,閉じる
+UI_CancelButton,취소,Cancel,キャンセル
+UI_QuitAlert,게임을 종료하시겠습니까?,Are you sure you want to quit the game?,ゲームを終了しますか？
+Upgrade_FacilityAmount1_Name,자원 기초 생산량 증가 Lv1,Base Resource Production Increase Lv1,資源基礎生産量増加 Lv1
+Upgrade_FacilityAmount1_Desc,자원 생산 건물들의 기초 생산량이 증가한다.,Increases the base production of resource-producing buildings.,資源生産建物の基礎生産量が増加する。
+Upgrade_FacilityAmount2_Name,자원 기초 생산량 증가 Lv2,Base Resource Production Increase Lv2,資源基礎生産量増加 Lv2
+Upgrade_FacilityAmount2_Desc,자원 생산 건물들의 기초 생산량이 증가한다.,Increases the base production of resource-producing buildings.,資源生産建物の基礎生産量が増加する。
+Upgrade_FacilityAmount3_Name,자원 기초 생산량 증가 Lv3,Base Resource Production Increase Lv3,資源基礎生産量増加 Lv3
+Upgrade_FacilityAmount3_Desc,자원 생산 건물들의 기초 생산량이 증가한다.,Increases the base production of resource-producing buildings.,資源生産建物の基礎生産量が増加する。
+Upgrade_FacilityAmount4_Name,자원 기초 생산량 증가 Lv4,Base Resource Production Increase Lv4,資源基礎生産量増加 Lv4
+Upgrade_FacilityAmount4_Desc,자원 생산 건물들의 기초 생산량이 증가한다.,Increases the base production of resource-producing buildings.,資源生産建物の基礎生産量が増加する。
+Upgrade_FacilityAmount5_Name,자원 기초 생산량 증가 Lv5,Base Resource Production Increase Lv5,資源基礎生産量増加 Lv5
+Upgrade_FacilityAmount5_Desc,자원 생산 건물들의 기초 생산량이 증가한다.,Increases the base production of resource-producing buildings.,資源生産建物の基礎生産量が増加する。
+Upgrade_BuildCost1_Name,건물 건설 비용 감소 Lv1,Building Construction Cost Reduction Lv1,建物建設コスト減少 Lv1
+Upgrade_BuildCost1_Desc,건물의 건설 비용이 감소한다.,Reduces the construction cost of buildings.,建物の建設コストが減少する。
+Upgrade_BuildCost2_Name,건물 건설 비용 감소 Lv2,Building Construction Cost Reduction Lv2,建物建設コスト減少 Lv2
+Upgrade_BuildCost2_Desc,건물의 건설 비용이 감소한다.,Reduces the construction cost of buildings.,建物の建設コストが減少する。
+Upgrade_BuildCost3_Name,건물 건설 비용 감소 Lv3,Building Construction Cost Reduction Lv3,建物建設コスト減少 Lv3
+Upgrade_BuildCost3_Desc,건물의 건설 비용이 감소한다.,Reduces the construction cost of buildings.,建物の建設コストが減少する。
+Upgrade_BuildCost4_Name,건물 건설 비용 감소 Lv4,Building Construction Cost Reduction Lv4,建物建設コスト減少 Lv4
+Upgrade_BuildCost4_Desc,건물의 건설 비용이 감소한다.,Reduces the construction cost of buildings.,建物の建設コストが減少する。
+Upgrade_BuildCost5_Name,건물 건설 비용 감소 Lv5,Building Construction Cost Reduction Lv5,建物建設コスト減少 Lv5
+Upgrade_BuildCost5_Desc,건물의 건설 비용이 감소한다.,Reduces the construction cost of buildings.,建物の建設コストが減少する。
+Upgrade_BuildingUpgradeCost1_Name,건물 업그레이드 비용 감소 Lv1,Building Upgrade Cost Reduction Lv1,建物アップグレードコスト減少 Lv1
+Upgrade_BuildingUpgradeCost1_Desc,건물의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of buildings.,建物のアップグレードコストが減少する。
+Upgrade_BuildingUpgradeCost2_Name,건물 업그레이드 비용 감소 Lv2,Building Upgrade Cost Reduction Lv2,建物アップグレードコスト減少 Lv2
+Upgrade_BuildingUpgradeCost2_Desc,건물의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of buildings.,建物のアップグレードコストが減少する。
+Upgrade_BuildingUpgradeCost3_Name,건물 업그레이드 비용 감소 Lv3,Building Upgrade Cost Reduction Lv3,建物アップグレードコスト減少 Lv3
+Upgrade_BuildingUpgradeCost3_Desc,건물의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of buildings.,建物のアップグレードコストが減少する。
+Upgrade_BuildingUpgradeCost4_Name,건물 업그레이드 비용 감소 Lv4,Building Upgrade Cost Reduction Lv4,建物アップグレードコスト減少 Lv4
+Upgrade_BuildingUpgradeCost4_Desc,건물의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of buildings.,建物のアップグレードコストが減少する。
+Upgrade_BuildingUpgradeCost5_Name,건물 업그레이드 비용 감소 Lv5,Building Upgrade Cost Reduction Lv5,建物アップグレードコスト減少 Lv5
+Upgrade_BuildingUpgradeCost5_Desc,건물의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of buildings.,建物のアップグレードコストが減少する。
+Upgrade_HeroCost1_Name,영웅 생성 비용 감소 Lv1,Hero Creation Cost Reduction Lv1,英雄生成コスト減少 Lv1
+Upgrade_HeroCost1_Desc,영웅의 생성 비용이 감소한다.,Reduces the creation cost of heroes.,英雄の生成コストが減少する。
+Upgrade_HeroCost2_Name,영웅 생성 비용 감소 Lv2,Hero Creation Cost Reduction Lv2,英雄生成コスト減少 Lv2
+Upgrade_HeroCost2_Desc,영웅의 생성 비용이 감소한다.,Reduces the creation cost of heroes.,英雄の生成コストが減少する。
+Upgrade_HeroCost3_Name,영웅 생성 비용 감소 Lv3,Hero Creation Cost Reduction Lv3,英雄生成コスト減少 Lv3
+Upgrade_HeroCost3_Desc,영웅의 생성 비용이 감소한다.,Reduces the creation cost of heroes.,英雄の生成コストが減少する。
+Upgrade_HeroCost4_Name,영웅 생성 비용 감소 Lv4,Hero Creation Cost Reduction Lv4,英雄生成コスト減少 Lv4
+Upgrade_HeroCost4_Desc,영웅의 생성 비용이 감소한다.,Reduces the creation cost of heroes.,英雄の生成コストが減少する。
+Upgrade_HeroCost5_Name,영웅 생성 비용 감소 Lv5,Hero Creation Cost Reduction Lv5,英雄生成コスト減少 Lv5
+Upgrade_HeroCost5_Desc,영웅의 생성 비용이 감소한다.,Reduces the creation cost of heroes.,英雄の生成コストが減少する。
+Upgrade_HeroStat1_Name,영웅 능력치 증가 Lv1,Hero Stat Increase Lv1,英雄能力値増加 Lv1
+Upgrade_HeroStat1_Desc,영웅의 기초 능력치가 증가한다.,Increases the base stats of heroes.,英雄の基礎能力値が増加する。
+Upgrade_HeroStat2_Name,영웅 능력치 증가 Lv2,Hero Stat Increase Lv2,英雄能力値増加 Lv2
+Upgrade_HeroStat2_Desc,영웅의 기초 능력치가 증가한다.,Increases the base stats of heroes.,英雄の基礎能力値が増加する。
+Upgrade_HeroStat3_Name,영웅 능력치 증가 Lv3,Hero Stat Increase Lv3,英雄能力値増加 Lv3
+Upgrade_HeroStat3_Desc,영웅의 기초 능력치가 증가한다.,Increases the base stats of heroes.,英雄の基礎能力値が増加する。
+Upgrade_HeroStat4_Name,영웅 능력치 증가 Lv4,Hero Stat Increase Lv4,英雄能力値増加 Lv4
+Upgrade_HeroStat4_Desc,영웅의 기초 능력치가 증가한다.,Increases the base stats of heroes.,英雄の基礎能力値が増加する。
+Upgrade_HeroStat5_Name,영웅 능력치 증가 Lv5,Hero Stat Increase Lv5,英雄能力値増加 Lv5
+Upgrade_HeroStat5_Desc,영웅의 기초 능력치가 증가한다.,Increases the base stats of heroes.,英雄の基礎能力値が増加する。
+Upgrade_HeroUpgradeCost1_Name,영웅 업그레이드 비용 감소 Lv1,Hero Upgrade Cost Reduction Lv1,英雄アップグレードコスト減少 Lv1
+Upgrade_HeroUpgradeCost1_Desc,영웅의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of heroes.,英雄のアップグレードコストが減少する。
+Upgrade_HeroUpgradeCost2_Name,영웅 업그레이드 비용 감소 Lv2,Hero Upgrade Cost Reduction Lv2,英雄アップグレードコスト減少 Lv2
+Upgrade_HeroUpgradeCost2_Desc,영웅의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of heroes.,英雄のアップグレードコストが減少する。
+Upgrade_HeroUpgradeCost3_Name,영웅 업그레이드 비용 감소 Lv3,Hero Upgrade Cost Reduction Lv3,英雄アップグレードコスト減少 Lv3
+Upgrade_HeroUpgradeCost3_Desc,영웅의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of heroes.,英雄のアップグレードコストが減少する。
+Upgrade_HeroUpgradeCost4_Name,영웅 업그레이드 비용 감소 Lv4,Hero Upgrade Cost Reduction Lv4,英雄アップグレードコスト減少 Lv4
+Upgrade_HeroUpgradeCost4_Desc,영웅의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of heroes.,英雄のアップグレードコストが減少する。
+Upgrade_HeroUpgradeCost5_Name,영웅 업그레이드 비용 감소 Lv5,Hero Upgrade Cost Reduction Lv5,英雄アップグレードコスト減少 Lv5
+Upgrade_HeroUpgradeCost5_Desc,영웅의 업그레이드 비용이 감소한다.,Reduces the upgrade cost of heroes.,英雄のアップグレードコストが減少する。
+Upgrade_CitizenUpgrade1_Name,기초 시민 수 증가 Lv1,Base Citizen Count Increase Lv1,基礎市民数増加 Lv1
+Upgrade_CitizenUpgrade1_Desc,기초 시민 수가 증가한다.,Increases the base number of citizens.,基礎市民数が増加する。
+Upgrade_CitizenUpgrade2_Name,기초 시민 수 증가 Lv2,Base Citizen Count Increase Lv2,基礎市民数増加 Lv2
+Upgrade_CitizenUpgrade2_Desc,기초 시민 수가 증가한다.,Increases the base number of citizens.,基礎市民数が増加する。
+Upgrade_CitizenUpgrade3_Name,기초 시민 수 증가 Lv3,Base Citizen Count Increase Lv3,基礎市民数増加 Lv3
+Upgrade_CitizenUpgrade3_Desc,기초 시민 수가 증가한다.,Increases the base number of citizens.,基礎市民数が増加する。
+Upgrade_CitizenUpgrade4_Name,기초 시민 수 증가 Lv4,Base Citizen Count Increase Lv4,基礎市民数増加 Lv4
+Upgrade_CitizenUpgrade4_Desc,기초 시민 수가 증가한다.,Increases the base number of citizens.,基礎市民数が増加する。
+Upgrade_CitizenUpgrade5_Name,기초 시민 수 증가 Lv5,Base Citizen Count Increase Lv5,基礎市民数増加 Lv5
+Upgrade_CitizenUpgrade5_Desc,기초 시민 수가 증가한다.,Increases the base number of citizens.,基礎市民数が増加する。
+Upgrade_HpUpgrade1_Name,거점 기초 체력 증가 Lv1,Base HP Increase Lv1,拠点基礎体力増加 Lv1
+Upgrade_HpUpgrade1_Desc,거점의 기초 체력이 증가한다.,Increases the base HP of the base.,拠点の基礎体力が増加する。
+Upgrade_HpUpgrade2_Name,거점 기초 체력 증가 Lv2,Base HP Increase Lv2,拠点基礎体力増加 Lv2
+Upgrade_HpUpgrade2_Desc,거점의 기초 체력이 증가한다.,Increases the base HP of the base.,拠点の基礎体力が増加する。
+Upgrade_HpUpgrade3_Name,거점 기초 체력 증가 Lv3,Base HP Increase Lv3,拠点基礎体力増加 Lv3
+Upgrade_HpUpgrade3_Desc,거점의 기초 체력이 증가한다.,Increases the base HP of the base.,拠点の基礎体力が増加する。
+Upgrade_HpUpgrade4_Name,거점 기초 체력 증가 Lv4,Base HP Increase Lv4,拠点基礎体力増加 Lv4
+Upgrade_HpUpgrade4_Desc,거점의 기초 체력이 증가한다.,Increases the base HP of the base.,拠点の基礎体力が増加する。
+Upgrade_HpUpgrade5_Name,거점 기초 체력 증가 Lv5,Base HP Increase Lv5,拠点基礎体力増加 Lv5
+Upgrade_HpUpgrade5_Desc,거점의 기초 체력이 증가한다.,Increases the base HP of the base.,拠点の基礎体力が増加する。
+Upgrade_StartResource1_Name,기초 자원량 증가 Lv1,Base Resource Amount Increase Lv1,基礎資源量増加 Lv1
+Upgrade_StartResource1_Desc,기초 자원의 수량이 증가한다.,Increases the base amount of starting resources.,基礎資源の数量が増加する。
+Upgrade_StartResource2_Name,기초 자원량 증가 Lv2,Base Resource Amount Increase Lv2,基礎資源量増加 Lv2
+Upgrade_StartResource2_Desc,기초 자원의 수량이 증가한다.,Increases the base amount of starting resources.,基礎資源の数量が増加する。
+Upgrade_StartResource3_Name,기초 자원량 증가 Lv3,Base Resource Amount Increase Lv3,基礎資源量増加 Lv3
+Upgrade_StartResource3_Desc,기초 자원의 수량이 증가한다.,Increases the base amount of starting resources.,基礎資源の数量が増加する。
+Upgrade_StartResource4_Name,기초 자원량 증가 Lv4,Base Resource Amount Increase Lv4,基礎資源量増加 Lv4
+Upgrade_StartResource4_Desc,기초 자원의 수량이 증가한다.,Increases the base amount of starting resources.,基礎資源の数量が増加する。
+Upgrade_StartResource5_Name,기초 자원량 증가 Lv5,Base Resource Amount Increase Lv5,基礎資源量増加 Lv5
+Upgrade_StartResource5_Desc,기초 자원의 수량이 증가한다.,Increases the base amount of starting resources.,基礎資源の数量が増加する。
+UI_Setting_WindowMode,창 모드,Window Mode,ウィンドウモード
+UI_Setting_Visual,해상도,Resolution,解像度
+UI_Setting_Language,언어,Language,言語
+UI_Setting_Vloume,소리 설정,Sound Settings,サウンド設定
+UI_Setting_Vloume_Master,마스터 볼륨,Master Volume,マスター音量
+UI_Setting_Vloume_BGM,배경음,Music,BGM
+UI_Setting_Vloume_SFX,효과음,Sound Effects,効果音
+UI_Setting_Vloume_System,시스템,System,システム
+UI_Setting_FullScreen,전체 화면,Fullscreen,フルスクリーン
+UI_Setting_BorderlessWindow,테두리 없는 창,Borderless Window,枠なしウィンドウ
+UI_Setting_Window,창 모드,Windowed,ウィンドウモード
+UI_Guide_Title,가이드,Guide,ガイド
+Tutorial_PlayerSkill,전투 동안 스킬을 활용하여 영웅들이 적을 더 쉽게 쓰러트릴 수 있도록 도와 줄 수 있습니다.,You can use skills during battle to help your heroes defeat enemies more easily.,戦闘中にスキルを活用して、英雄たちが敵をより簡単に倒せるように助けることができます。
+Tutorial_CheckSkip,튜토리얼을 보시겠습니까?,Would you like to view the tutorial?,チュートリアルをご覧になりますか？
+Tutorial_SeeTutorial,네,Yes,はい
+Tutorial_SkipTutorial,아니요,No,いいえ
+Tutorial_GameSpeed,"이 버튼으로 게임의 진행 속도를 조절할 수 있습니다. 정지, 배속을 상황에 맞게 활용해 보세요.",This button lets you adjust the game's speed. Use pause and fast-forward as needed for the situation.,このボタンでゲームの進行速度を調整できます。状況に合わせて一時停止や倍速を活用してみましょう。
+Tutorial_Complete,"축하합니다! 튜토리얼을 모두 마쳤습니다. 지금까지 배운 내용을 활용해 마을을 지키고 키워나가 보세요.",Congratulations! You have completed the tutorial. Use what you've learned so far to defend and grow your village.,おめでとうございます！チュートリアルを全て終えました。これまで学んだ内容を活かして村を守り、育てていきましょう。
+Hero_Buy,구매,BUY,購入
+Player_ActiveSkill_AttackBuff,영역 내 모든 영웅들의 공격력과 공격속도가 증가합니다. (사용 마나: {0}) (단축키: 1),Increases the attack power and attack speed of all heroes in the area. (Mana Cost: {0}) (Shortcut: 1),範囲内の全ての英雄の攻撃力と攻撃速度が上昇します。（消費マナ：{0}）（ショートカット：1）
+Player_ActiveSkill_EnemySlow,영역 내 모든 적들의 이동속도가 감소합니다. (사용 마나: {0}) (단축키: 2),Decreases the movement speed of all enemies in the area. (Mana Cost: {0}) (Shortcut: 2),範囲内の全ての敵の移動速度が低下します。（消費マナ：{0}）（ショートカット：2）
+Player_ActiveSkill_Heal,영역 내 모든 영웅들의 체력을 점차 회복시킵니다. (사용 마나: {0}) (단축키: 3),Gradually restores the health of all heroes in the area. (Mana Cost: {0}) (Shortcut: 3),範囲内の全ての英雄の体力を徐々に回復させます。（消費マナ：{0}）（ショートカット：3）
+ToolTip_HeroBook,영웅 도감 (단축키: P),Hero Archive (Shortcut: P),英雄図鑑（ショートカット：P）
+UI_BaseUpgrade_ResetButton,초기화,Reset,リセット
+UI_BaseUPgrade_UpgradeButton,업그레이드,Upgrade,アップグレード
+Ui_EmptySlot,+,+,+
+Ui_PerDay,/일,/day,/日
+Ui_LevelFormat,Lv. {0},Lv. {0},Lv. {0}
+Ui_MaxLevel,최대,Max,最大
+Ui_ProductionResource,생산 자원,Production Resource,生産資源
+Ui_ConstructionCost,건설 소모 자원,Construction Cost,建設消費資源
+Ui_UpgradeInfo_ProductAmount,자원 생산량 증가,Increased Resource Production,資源生産量増加
+Ui_UpgradeInfo_Worker,시민 배치 수 증가,Increased Worker Capacity,配置可能な市民数増加
+Ui_UpgradeInfo_MaxUpgrade,최대 업그레이드,Max Upgrade,最大アップグレード
+Ui_UpgradeInfo_MaxCitizen,최대 시민 수 증가,Increased Max Citizens,最大市民数増加
+Facility_Wood_Name,제재소,Sawmill,製材所
+Facility_Wood_Info,목재를 생산하는 건물,A building that produces wood,木材を生産する建物
+Facility_Stone_Name,채석장,Quarry,採石場
+Facility_Stone_Info,석재를 생산하는 건물,A building that produces stone,石材を生産する建物
+Facility_Iron_Name,제철소,Ironworks,製鉄所
+Facility_Iron_Info,철을 생산하는 건물,A building that produces iron,鉄を生産する建物
+Facility_Gold_Name,광산,Mine,鉱山
+Facility_Gold_Info,금을 생산하는 건물,A building that produces gold,金を生産する建物
+Facility_Food_Name,농장,Farm,農場
+Facility_Food_Info,식량을 생산하는 건물,A building that produces food,食料を生産する建物
+House_Name,주택,House,住宅
+House_Info,건설 시 최대 시민 수가 증가\n이 건물은 한 번 지으면 제거 할 수 없다.,Increases max citizens when built.\nThis building cannot be removed once built.,建設すると最大市民数が増加する。\nこの建物は一度建てると撤去できない。
+Ui_RegionName,{0} 지역,Region {0},{0}地域
+UI_Hub_ResourceAmount,자원 생산량,Resource Production,資源生産量
+UI_Hub_ResourceChange,자원 교환,Resource Exchange,資源交換
+UI_Hub_AddCitizen,시민 추가,Add Citizen,市民追加
+UI_Hub_ResourceUse,소모 자원,Resources Used,消費資源
+UI_Hub_AddCitizenFinal,추가,Add,追加
+UI_Base_Return,돌아가기,Back,戻る
+UI_Hub_Buy,교환,Exchange,交換
+UI_Base_Close,닫기,Close,閉じる
+UI_Base_Build,건설하기,Build,建設する
+UI_Base_Upgrade,업그레이드,Upgrade,アップグレード
+UI_Base_Remove,철거하기,Demolish,撤去する
+Hero_Inventory_All,전체,All,全体
+Hero_Inventory_Placed,배치됨,Placed,配置完了
+Hero_Inventory_Unplaced,미배치,Unplaced,未配置
+Hero_Inventory_Tier,티어,Tier,ティア
+Hero_Inventory_TierFormat,{0}티어,Tier {0},ティア{0}
+Gimmick_Fire_Name,불 지대,Fire Zone,炎地帯
+Gimmick_Fire_Desc,이 위에 올라선 유닛은 지속 피해를 입는다.,Units standing here take damage over time.,この上に乗ったユニットは継続ダメージを受ける。
+Gimmick_Campfire_Name,모닥불,Campfire,焚き火
+Gimmick_Campfire_Desc,추위 디버프를 막아주는 고정 모닥불이다.,A fixed campfire that blocks the cold debuff.,寒さデバフを防いでくれる固定の焚き火だ。
+Gimmick_Windwall_Name,바람막이,Windwall,風よけ
+Gimmick_Windwall_Desc,언덕 위 바위 가림막이다. 바람이 불어가는 쪽 몇 칸의 바람 효과를 막아준다.,A rock windbreak on high ground. It blocks the wind effect for a few tiles downwind.,丘の上の岩の風よけだ。風下側の数マスの風効果を防いでくれる。
+Gimmick_Water_Name,물길,Water,水路
+Gimmick_Water_Desc,아군을 배치할 수 없는 칸이다. 수영 속성을 가진 적이 이 칸을 타고 온다.,Allies cannot be placed here. Enemies with the swim attribute cross this tile.,味方を配置できないマスだ。水泳属性を持つ敵がこのマスを渡ってくる。
+Guide_GimmickButton,기믹,Gimmick,ギミック
+Guide_FireButton,불 지대,Fire Zone,炎地帯
+Guide_CampfireButton,모닥불,Campfire,焚き火
+Guide_WindwallButton,바람막이,Windwall,風よけ
+Guide_WaterButton,물길,Water,水路
+Guide_FireInfo,밤이 되면 이 칸에 불이 붙는다.\n칸에 서 있는 아군과 지상 적은 1초마다\n최대 체력의 1%만큼 화상 피해를 입는다.\n칸을 벗어난 뒤에도 3초 동안 더 타오른다.\n공중을 나는 적에게는 불이 붙지 않는다.,"This tile catches fire at night.\nAllies and ground enemies standing on it take 1% of their max HP as burn damage every second, and keep burning for 3 more seconds after leaving.\nFlying enemies are never set alight.",夜になるとこのマスに火がつく。\nマスに立っている味方と地上の敵は1秒ごとに最大体力の1%の火傷ダメージを受け、マスを離れた後も3秒間燃え続ける。\n空を飛ぶ敵には火がつかない。
+Guide_CampfireInfo,얼음 지역은 밤이 되면 아군 전원의\n공격 속도와 방어력이 절반으로 떨어진다.\n모닥불에서 2칸 안(마름모 모양)에 선 아군은\n이 추위를 받지 않는다.\n모닥불 칸에는 아무것도 배치할 수 없다.,In the ice region every ally loses half their attack speed and defense at nightfall.\nAllies within 2 tiles of a campfire (a diamond shape) are immune to that cold.\nNothing can be placed on a campfire tile.,氷の地域では夜になると味方全員の攻撃速度と防御力が半分に下がる。\n焚き火から2マス以内（ひし形）に立つ味方はこの寒さを受けない。\n焚き火のマスには何も配置できない。
+Guide_WindwallInfo,사막 지역은 밤이 되면 바람 맞은 아군이\n0.5초마다 최대 체력의 1%씩 깎인다.\n모래폭풍이라 방어력으로 막지 못한다.\n바람 방향은 낮마다 바뀌며 화살표로 알린다.\n언덕 위 바람막이는 바람 불어가는 쪽\n2칸을 막아준다. 옆 칸의 언덕이나\n바로 뒤의 아군도 바람을 막는다.,"In the desert region allies caught in the wind take 1% of their max HP as sandstorm damage every 0.5 seconds, and defense does not reduce it.\nThe wind direction changes each day and is shown with an arrow.\nA windwall on high ground shields 2 tiles downwind. An adjacent hill or an ally standing right behind also blocks the wind.",砂漠の地域では夜になると風にさらされた味方が0.5秒ごとに最大体力の1%の砂嵐ダメージを受ける。防御力では防げない。\n風向きは昼ごとに変わり、矢印で知らせてくれる。\n丘の上の風よけは風下側2マスを守る。隣のマスの丘や真後ろに立つ味方も風を防ぐ。
+Guide_WaterInfo,아군 영웅을 이 칸에 배치할 수 없다.\n걸어오는 적은 이 칸을 지나갈 수 없다.\n수영 특성을 가진 적만 잠수해 헤엄쳐\n이 물길로 들어온다.,Allied heroes cannot be placed on this tile.\nWalking enemies cannot cross it.\nOnly enemies with the swim trait dive in and swim up this waterway.,味方のヒーローはこのマスに配置できない。\n歩いてくる敵はこのマスを通れない。\n水泳属性を持つ敵だけが潜って泳ぎ、この水路から入ってくる。
+Hero_Melee_Upgrade,근거리 영웅 업그레이드,Melee Hero Upgrade,近接ヒーローのアップグレード
+Hero_Ranged_Upgrade,원거리 영웅 업그레이드,Ranged Hero Upgrade,遠距離ヒーローのアップグレード
+UI_Base_UpgradeCost,업그레이드 비용,Upgrade Cost,アップグレードコスト
+Ui_GameOverSurviveDay,생존 일수 : {0}일차,Days Survived : {0},生存日数：{0}日目
+UI_Setting,세팅,Settings,設定
+UI_System_Setting,시스템 설정,System Settings,システム設定
+UI_Base_CheckDemolish,정말 철거하시겠습니까?,Are you sure you want to demolish this?,本当に撤去しますか?
+UI_Base_Demolish,철거,Demolish,撤去
+UI_Base_NotEnoughResources,자원이 부족합니다,Not enough resources,資源が足りません
+UI_Hero_NotEnoughPopulation,인구가 부족합니다,Not enough population,人口が足りません
+Hero_Inventory_All_Combine,일괄합성,Combine All,一括合成
+Hero_Melee_Create,근거리 영웅 생성,Create Melee Hero,近接ヒーロー生成
+Hero_Ranged_Create,원거리 영웅 생성,Create Ranged Hero,遠距離ヒーローの生成
+Hero_Create,영웅 생성,Create Hero,ヒーロー生成
+Ui_Continue,이어하기,Continue,つづきから
+Hero_Retrieve,회수,Retrieve,回收

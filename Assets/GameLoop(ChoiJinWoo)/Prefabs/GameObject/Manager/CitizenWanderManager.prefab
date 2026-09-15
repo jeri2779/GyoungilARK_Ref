@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2490968808612731900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140729539889143900}
+  - component: {fileID: 3371740108421390900}
+  m_Layer: 0
+  m_Name: CitizenWanderManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140729539889143900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490968808612731900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3371740108421390900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490968808612731900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47f9aea2755483f96fc36d07c267f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CitizenWanderManager
+  citizenPrefabs:
+  - {fileID: 792370378026291511, guid: 0b217aac559b21846a3a9feb45eb168f, type: 3}
+  - {fileID: 792370378026291511, guid: 55eb3c43491eb1c4a8d3a4aca641dca5, type: 3}
+  - {fileID: 792370378026291511, guid: a65a74ba823f34548bde1ac93f46bb0f, type: 3}
+  - {fileID: 792370378026291511, guid: da4454b0ed533534484e12cd366822e1, type: 3}
+  wanderRadius: 6
+  visibleCap: 60
+  estimatedMaxCitizenCeiling: 200
+  greetCheckInterval: 3
+  greetRadius: 1
+  greetChance: 0.15
+  greetResponseDelay: 0.6
+  greetDuration: 2.5
+  greetAnimTrigger: Greet
+  groupCheckInterval: 6
+  groupChance: 0.2
+  groupMinSize: 2
+  groupMaxSize: 3
+  groupGatherRadius: 6
+  groupSpotSpacing: 0.3
+  groupJoinTimeout: 8
+  groupChatDuration: 4
+  groupChatAnimTrigger: Chat

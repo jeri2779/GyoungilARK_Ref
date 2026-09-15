@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e0080f8591eb64a85cf70cb0887831, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: Assembly-CSharp::HealSkillDataSO
+  skillName: Skill_Heal
+  cooldown: 1
+  duration: 0
+  range: 2
+  tickInterval: 0
+  value: 5
+  valueScale: 1
+  AoEField: {fileID: 5040099766186436840, guid: e39bf05fc618982489b8434c8a009aea, type: 3}

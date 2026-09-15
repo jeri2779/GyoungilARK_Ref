@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0dc31f1e64bd946ae2541c874c4761, type: 3}
+  m_Name: DebuffEffectSet
+  m_EditorClassIdentifier: Assembly-CSharp::DebuffEffectSetSO
+  effects:
+  - type: 128
+    prefab: {fileID: 4559387069821353362, guid: b0b4a08ca40fb814c8bc564c3abae1cd, type: 3}
+    anchor: 0
+    soundKey: DebuffStun
+    offset: {x: 0, y: 0, z: 0}
+  - type: 32
+    prefab: {fileID: 619307698193062030, guid: 1b0fac918ec00cb4583671b43efe4de9, type: 3}
+    anchor: 1
+    soundKey: DebuffIgnite
+    offset: {x: 0, y: 0, z: 0}
+  - type: 256
+    prefab: {fileID: 3572908927145077862, guid: e73c4d0e9e609ab4cb585cdb885b562e, type: 3}
+    anchor: 2
+    soundKey: 
+    offset: {x: 0, y: 0, z: 0}
+  - type: 16
+    prefab: {fileID: 9067360258435573752, guid: 2ed192d47094c5144b00d5b47bb736ba, type: 3}
+    anchor: 1
+    soundKey: 
+    offset: {x: 0, y: 0, z: 0}
+  - type: 6
+    prefab: {fileID: 8420494518240603768, guid: f81b9e1679b95e34e881e438ce10150e, type: 3}
+    anchor: 1
+    soundKey: 
+    offset: {x: 0, y: 0, z: 0}
+  - type: 1
+    prefab: {fileID: 8420494518240603768, guid: f81b9e1679b95e34e881e438ce10150e, type: 3}
+    anchor: 2
+    soundKey: 
+    offset: {x: 0, y: 0, z: 0}
+  - type: 2048
+    prefab: {fileID: 2287432175179821239, guid: 9dc393efa0f7af74ebe088e28bbeca6c, type: 3}
+    anchor: 1
+    soundKey: DebuffFrost
+    offset: {x: 0, y: 0, z: 0}
+  - type: 64
+    prefab: {fileID: 2129147133950755890, guid: c32530d8f675daa45ac4116198208985, type: 3}
+    anchor: 1
+    soundKey: DebuffBleed
+    offset: {x: 0, y: 0, z: 0}
+  - type: 512
+    prefab: {fileID: 5153820425896324983, guid: f58f3f74bc399ab4b8e4e5f60f24b72e, type: 3}
+    anchor: 1
+    soundKey: DebuffExhaust
+    offset: {x: 0, y: 0, z: 0}
+  - type: 8
+    prefab: {fileID: 3607829793244223273, guid: 003476c0b79906148b28c54622a2ae17, type: 3}
+    anchor: 1
+    soundKey: 
+    offset: {x: 0, y: 0, z: 0}
+  - type: 1024
+    prefab: {fileID: 5322790836013582004, guid: aa587c5a7d06073439d93c5cc89d2d4a, type: 3}
+    anchor: 1
+    soundKey: 
+    offset: {x: 0, y: 0, z: 0}
+  - type: 4096
+    prefab: {fileID: 5042308380918026046, guid: 683cdd71b06515e48a54162616930ebd, type: 3}
+    anchor: 1
+    soundKey: DebuffSandStom
+    offset: {x: 0, y: 0, z: 0}
