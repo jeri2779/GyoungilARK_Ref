@@ -1,183 +1,202 @@
-# PioneerOfFelucia
+# 파이오니아 오브 펠루시아
 
-> 낮에는 마을을 세우고, 밤에는 그리드에 배치한 영웅으로 웨이브를 막는 타워 디펜스 게임
+<p align="center">
+  <img src="Docs/Images/타이틀_화면.png" width="720" alt="파이오니아 오브 펠루시아 타이틀 화면">
+</p>
 
-![Unity](https://img.shields.io/badge/Unity-6000.3.15f1-black?logo=unity)
-![Language](https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white)
-![Team](https://img.shields.io/badge/Team-4인-blue)
-![Period](https://img.shields.io/badge/2026.07–09-lightgrey)
-![Render](https://img.shields.io/badge/URP-17.3-blue)
-
-<!-- ▶️ 플레이 가능한 빌드가 있으면 이 줄에 itch.io 등 링크를 최상단에 배치 -->
-
-<!-- 게임플레이 GIF (ShareX 녹화, docs/ 에 넣고 아래 표 주석 해제)
-| 낮 ↔ 밤 전환 | 영웅 전투 VFX (장판 · 빔 · 체인) | 유닛 합성 |
-| :---: | :---: | :---: |
-| ![day-night](docs/day-night.gif) | ![combat](docs/combat.gif) | ![merge](docs/merge.gif) |
--->
-
-<sup>저장소명 `GyoungYilARK` 는 개발 초기 코드네임이며, 프로덕트명은 `PioneerOfFelucia` 입니다.</sup>
+> 낮에 배치하고 밤에 방어합니다.
 
 ---
 
-## 프로젝트 개요
+## 게임 소개
 
-| 항목 | 내용 |
-| --- | --- |
-| 장르 | 타워디펜스 |
-| 플랫폼 | PC |
-| 팀 구성 | 프로그래머 4인 |
-| 개발 기간 | 2026.07 ~ 2026.09 |
-| 엔진 | Unity `6000.3.15f1` (Unity 6.3) / URP `17.3` |
+| 항목        | 내용                                                  |
+| ----------- | ----------------------------------------------------- |
+| 장르        | 타워 디펜스                                           |
+| 핵심 플레이 | 웨이브 방어 · Day가 오를수록 적 강화 · 배치·자원 관리 |
+| 진행        | 생존하면 다음 낮으로 반복                             |
+
+---
+
+## 프로젝트 소개
+
+| 항목      | 내용                    |
+| --------- | ----------------------- |
+| 제작 형태 | 4인 팀 프로젝트         |
+| 담당      | 맵 시스템 · 세이브/로드 |
+| 기간      | 2026.07.08 – 09.04      |
 
 ---
 
 ## 기술 스택
 
-`Unity 6.3` · `C#` · `URP 17.3` · `Shader Graph` · `VFX Graph`
-[`VContainer`](https://github.com/hadashiA/VContainer) (DI) · [`UniTask`](https://github.com/Cysharp/UniTask) (비동기) · `NuGetForUnity`
-
-상태 전이는 게임/영웅 모두 직접 구현한 FSM, 이벤트는 C# `event` 기반이다.
-
----
-
-## 게임 구성
-
-### 생산 구역
-**생산 건물**
-- 제재소(목재), 채석장(돌), 제철소(철), 광산(금), 농장(식량), 주택(최대 인구 수 증가)
-- 자원을 소모하여 업그레이드할 수 있습니다. 업그레이드 시 자원 획득량이 증가합니다.
-
-**시민 투입**
-- 시민은 식량을 소모하여 생성합니다.
-- 생산 건물에 시민을 투입해야 자원을 획득할 수 있습니다.
-- 투입된 시민 수에 비례하여 자원을 획득합니다.
-
-**자원 획득**
-- 밤(웨이브)가 끝날 때마다 생산 건물에서 자원을 획득합니다.
-
-### 전투 구역
-**영웅**
-- 자원을 소모하여 영웅을 생성할 수 있습니다.
-- 같은 영웅 3명이 있을 때 합성할 수 있습니다. 다음 티어의 랜덤한 영웅으로 합성됩니다.
-- 자원을 소모하여 업그레이드할 수 있습니다. 업그레이드 시 스탯이 증가합니다.
-
-**적**
-- 스폰 지점으로부터 본진까지 경로를 따라 이동합니다.
-- 사거리 안의 영웅과 전투하고 본진에 침투하면 본진 체력이 감소되며 소멸합니다.
-
-## 기술적 하이라이트
-
-### 1. 데이터 주도 공격 시스템
-
-**공격 ScriptableObject**로 모든 영웅의 공격 데이터 작성
-- 탐지 범위, 형태, 타격 종류, 멀티샷, 타겟 분배, 타이밍, 버프, 디버프, 장판, 이펙트, 사운드를 모두 필드로 노출
-
-실행은 **서로 독립된 두 축의 전략**으로 분리
-
-**공격 타이밍**
-- `DiscreteAttackStrategy` : 애니메이션 이벤트 윈도우 기반 1회
-- `ContinuousBeamStrategy` : tick 주기로 채널링
-
-**실행자**
-- MeleeAttackExecutor(근거리), RangedAttackExecutor(원거리)
-
-**영웅 트레잇**
-- 트레잇은 SO가 아니라 같은 프리팹에 붙은 컴포넌트
-- 영웅이 공격할 때, 트레잇 컴포넌트를 참조하여 함수 실행
-코드 변경 없이 만들어진 AttackData 에셋 51개
-
-
-```mermaid
-graph LR
-    ASO[AttackDataSO<br/>데이터 1개 = 공격 1종] --> RUN[HeroAttackRunner]
-    RUN -->|timingMode| D{delivery}
-    D -->|Discrete| D1[DiscreteAttackStrategy]
-    D -->|Continuous| D2[ContinuousBeamStrategy]
-    D1 --> E{executor}
-    D2 --> E
-    E -->|근접| E1[MeleeAttackExecutor]
-    E -->|원거리| E2[RangedAttackExecutor]
-    RUN -.훅.-> T[HeroTrait × N<br/>컴포넌트 조합]
-```
-
-### 2. 영웅 스탯, 업그레이드 파이프라인 - 레이어 분리로 가산 그룹 오염 방지
-
-**스탯 변화**
-- 클래스 업그레이드 - 근거리, 원거리 업그레이드, 게임 진행 중 자원 사용
-- 기초 업그레이드– 게임 외 재화로 업그레이드, 게임 시작 시 적용
-- 런타임 버프 – 플레이어 스킬로 인한 버프, 적들의 공격으로 인한 디버프
-
-**구현**
-- 스탯 레이어 분리 - 서로 다른 출처가 한 합에 섞이지 않게 함(업그레이드, 버프)
-- 스탯 연산 순서 고정 - base + (Flat 합) --> x (1 + 업그레이드 가산) --> x ( 1 + 버프 가산) --> x (1 + 곱연산)
-- 수정자 - 스탯 변화는 수정자를 추가/제거로 적용
-- 소스 태깅 - 특정 소스가 준 수정자만 정확히 제거
-- 더티 플래그 - 수정자가 바뀔 때만 재계산, 그 외엔 캐시값 반환
-- 스탯 관리자가 업그레이드가 반영된 base 스탯을 영웅 데이터 단위로 미리 계산, 캐싱하고 갱신 시 base만 교체
-
-### 3. 영웅 합성
-
-**키 기반 분류**
-- 영웅 종류마다 MergeKey가 다름. MergeKey로 같은 영웅인지 판정
-- 보유한 영웅들 동일한 MergeKey를 가진 영웅들을 묶어서 보관
-
-**합성**
-- 대상 영웅과 MergeKey가 같은 영웅들 확인
-- 합성 가능 시, 다음 티어 영웅 랜덤 선택 후 합성
-
-### 4. 전투 VFX 파이프라인 & 파티클 최적화
-
-**문제**
-- 영웅, 적 수십 개체가 전투하며 공격 이펙트, 장판, 빔, 디버프 아이콘이 동시에 재생
-- 화면 밖 파티클까지 전부 인스턴스화, 재생되면 프레임이 떨어짐
-
-**화면 밖 파티클 제거**
-- 순수 연출용 이펙트는 화면 밖이면 인스턴스화 자체를 생략
-- 매 프레임 렌더러/파티클 가시성만 토글
-- 동일 대상 중복 없음, 최대 3개의 파티클 재생
+| 항목        | 내용       |
+| ----------- | ---------- |
+| 엔진        | Unity 6.3  |
+| 구현 언어   | C#         |
+| 의존성 주입 | VContainer |
+| 비동기 처리 | UniTask    |
 
 ---
 
-## 아키텍처
+## 게임 플로우
 
 ```mermaid
-graph TD
-    subgraph 게임흐름["게임 흐름 · DI (팀원)"]
-        GM[GameManager<br/>Day / Night / Result / GameOver FSM]
-        DI[VContainer<br/>GameLifeTimeScope]
-        ENV[EnviromentManager<br/>낮·밤 조명·스카이박스·BGM]
-    end
-    subgraph 맵["맵 · 그리드 · 경로 (팀원)"]
-        MB[MapBoard / Tile<br/>타일 이웃 그래프]
-        LANE[EnemyLanes + RouteConfig<br/>저작 경로 → 레인]
-        SAVE[SaveManager<br/>암호화 자동 저장]
-    end
-    subgraph 적["적 · 웨이브 (팀원)"]
-        WS[WaveSpawner]
-        EB[EnemyBase<br/>특성 9종 비트플래그]
-        DT[DataTable<br/>CSV 파이프라인]
-    end
-    subgraph 영웅["영웅 전투 · 성장 (담당)"]
-        HERO[Hero + FSM<br/>Idle/Attack/Death/Stun/Skill]
-        ATK[AttackDataSO<br/>delivery ⟂ executor]
-        TRAIT[HeroTrait × N]
-        MERGE[HeroCombineManager<br/>MergeKey]
-        UP[HeroStatManager<br/>업그레이드 캐싱]
-        VFX[VfxVisibility<br/>이펙트 풀 · 컬링]
-    end
-
-    GM --> HERO
-    GM --> WS
-    DI -.-> GM & MB & HERO & WS
-    MB --> LANE --> WS
-    WS --> EB
-    DT --> EB & HERO
-    HERO --> ATK --> TRAIT
-    ATK --> VFX
-    MERGE --> HERO
-    UP --> HERO
-    MB -->|타일 사거리·타겟팅| HERO
-
-    style 영웅 fill:#1f6feb22,stroke:#1f6feb
+flowchart LR
+    Day["낮 · 준비<br/>배치 · 자원 관리"] --> Night["밤 · 방어<br/>웨이브 방어"]
+    Night -->|생존하면 다음 낮으로 반복| Day
 ```
+
+---
+
+## 조작 방법
+
+| 입력                      | 동작             |
+| ------------------------- | ---------------- |
+| 마우스 왼쪽 클릭 · 드래그 | 타일 선택 · 배치 |
+| 마우스 오른쪽 드래그      | 카메라 이동(팬)  |
+| W / A / S / D             | 카메라 수평 이동 |
+| 마우스 휠                 | 카메라 줌        |
+
+---
+
+## 인게임 스크린샷
+
+### 낮
+
+<p align="center">
+  <img src="Docs/Images/건설화면.png" width="32%" alt="건설 화면">
+  <img src="Docs/Images/영웅_생성.png" width="32%" alt="영웅 생성 화면">
+  <img src="Docs/Images/영웅_로스터_패널.png" width="32%" alt="영웅 로스터 패널">
+</p>
+
+### 밤
+
+<p align="center">
+  <img src="Docs/Images/전투_밤.png" width="49%" alt="밤 전투 화면">
+  <img src="Docs/Images/전투_밤_플레이어스킬.png" width="49%" alt="밤 전투 중 플레이어 스킬">
+</p>
+
+### 생산
+
+<p align="center">
+  <img src="Docs/Images/생산시설.png" width="60%" alt="생산 시설 화면">
+</p>
+
+### 도감
+
+<p align="center">
+  <img src="Docs/Images/영웅_도감.png" width="49%" alt="영웅 도감">
+  <img src="Docs/Images/적_도감.png" width="49%" alt="적 도감">
+</p>
+
+### 업그레이드
+
+<p align="center">
+  <img src="Docs/Images/영웅_업그레이드.png" width="60%" alt="영웅 업그레이드 화면">
+</p>
+
+---
+
+## 담당 영역 — 맵 시스템
+
+### 타일 보드 구성
+
+- `Tile` = 좌표(Col/Row) · 점유자(Occupant/Enemies) · 이웃(NeighborTiles 최대 4)을 보유합니다.
+- `TileState` = 상태 4축(지형/통행/기믹/점유)을 보유합니다.
+- `MapBoard`는 모듈 Grid 하위 타일들을 `_cells : Dictionary<좌표, Tile>`에 등록합니다. 한 칸에 여러 타일이 겹치면 높은 타일이 대표가 됩니다.
+- 저지 판정에서 `MapBoard`는 적→Tile을 찾는 것까지만 담당합니다. 실제 판정 계산은 `BlockCalc.IsBlocked`가 수행합니다.
+
+### 맵 ↔ 유닛
+
+```mermaid
+flowchart TD
+    Tile["Tile<br/>OccupantObject/Hero · Enemies List"]
+    Tile --> Hero["Hero<br/>GetTiles(Board,origin,Range) → tile.Enemies 읽기"]
+    Tile --> Enemy["Enemy<br/>Board.MoveEnemy(go,pos) → tile.AddEnemy 쓰기"]
+```
+
+- 타일은 유닛 간 상호작용의 경유 지점입니다.
+- 적이 위치를 보고하면 보드가 타일에 등록합니다.
+- 영웅은 사거리 내 타일에 적 진입을 체크합니다.
+- 근접 영웅이 위치한 타일은 영웅의 저지수만큼 적을 저지합니다.
+- 저지수를 초과하면 적은 그 영웅을 통과합니다.
+
+### 커서 ↔ 타일 판정
+
+타일이 이미 자기 위 유닛을 알고 있습니다.
+
+```csharp
+public bool HasUnit => OccupantObject != null;
+if (!tile.HasUnit) return false;
+return tile.OccupantObject.TryGetComponent(out hero);
+```
+
+이전에는 레이가 유닛 충돌체에 먼저 닿아, 유닛에 가려진 뒤쪽 칸을 눌러도 유닛이 서 있는 칸으로만 판정되는 문제가 있었습니다. 판정 기준을 타일로 바꿔, 유닛 여부와 무관하게 레이가 지정한 타일에 그대로 도달하도록 해결했습니다.
+
+---
+
+## 담당 영역 — 세이브 / 로드
+
+### 저장 처리 구조
+
+아래 클래스들이 저장 시점 · 상태 변환 · 파일 기록을 나눠 맡습니다.
+
+```mermaid
+flowchart LR
+    SM["SaveManager · LoadManager<br/>저장/로드 트리거"] <--> SC["SaveCapture · SaveRestore<br/>읽기/쓰기 전용"]
+    SC <--> SS["SaveSlot<br/>경로 · 세대 관리"]
+    SS <--> SIO["SaveIO<br/>파일 입출력"]
+    SIO <--> SCI["SaveCipher · SaveKey<br/>암호화 · 서명 · 키 보관"]
+```
+
+- 저장 트리거 = ① `ChangeToDay`/`ChangeToNight`(하루 2번) + ② `SaveChangeTracker`(낮 동안 자동 감지). ①은 밤에도 작동하는 유일한 저장입니다. ②는 자원·시민·영웅이 변경될 때마다 다음 프레임에 저장합니다.
+- 상태 = `Capture`읽기 / `Restore`쓰기로 분리해, 저장값과 실제 상태가 어긋나는 현상을 막습니다.
+
+### 저장 파일 쓰기 3단계
+
+실패해도 기존 파일은 그대로인 3단 쓰기 구조입니다.
+
+```mermaid
+flowchart LR
+    Write["STEP 1 · SaveIO<br/>TryWriteTemp()<br/>.tmp 파일에 먼저 씀"] --> Verify["STEP 2 · SaveCheck (핵심)<br/>IsValidSave()<br/>다시 읽어서 검증"]
+    Verify --> Promote["STEP 3 · SaveSlot<br/>PromoteToCurrent()<br/>검증 통과분만 승격"]
+```
+
+- 쓰기는 실패해도 무해한 구간입니다. 승격은 되돌릴 수 없는 구간입니다. 그 경계에 검증을 세워 깨진 파일이 정식 저장본으로 승격되는 것을 막습니다.
+
+### 로드 복원 핵심
+
+배치를 복원하려면, 그 영웅이 담긴 로스터가 먼저 있어야 합니다.
+
+```mermaid
+flowchart LR
+    Heroes["1. RestoreHeroes<br/>로스터부터 채운다"] --> Placements["2. RestorePlacements<br/>rosterId로 찾아서 맵에 세운다"]
+```
+
+배치 데이터엔 영웅 실체 없이 `rosterId` 하나뿐입니다.
+
+```csharp
+// SaveRestore.RestorePlacements
+if (!restoredEntries.TryGetValue(save.rosterId, out entry))
+    continue;
+```
+
+1. `rosterId`로 사전을 조회합니다.
+2. 못 찾으면 이번 순회를 건너뜁니다.
+3. 찾으면 `entry`에 담아 다음 로직으로 넘어갑니다.
+
+순서가 깨지면 조회 대상 로스터가 없어 찾기에 실패하고, 맵엔 없고 로스터엔 남는 유령 상태가 됩니다.
+
+### 저장 타이밍 설계
+
+게임 로직 코드와 세이브 절차 분리
+
+```mermaid
+flowchart LR
+    Logic["게임 로직<br/>자원 · 영웅 · 낮밤전환<br/>독립 동작"] <--> Tracker["SaveChangeTracker<br/>구독만 함 / SaveManager<br/>조건 충족 시 실행"]
+    Tracker <--> Cap["SaveCapture<br/>읽기만 / SaveIO<br/>파일 쓰기"]
+```
+
+- 구독 = 이미 있는 이벤트(`ProductUpdate` · `CitizenChanged` · `HeroRoster.Changed` · `LevelChanged` 등)를 구독합니다.
+- 저장 = 신호가 다 모인 뒤 한 번만 실행합니다. 예를 들어 영웅을 일괄 생성(`BulkCreate`)하면 비용차감 → 영웅추가 → 실패분환불 → 생성수반영이 연쇄로 발생합니다. 신호마다 저장하면 환불 전 중간 상태가 그대로 기록되므로, 프레임 끝에 한 번만 모아서 저장합니다.
