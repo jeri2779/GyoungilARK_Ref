@@ -13494,7 +13494,6 @@ GameObject:
   - component: {fileID: 8634429776923064968}
   - component: {fileID: 8719301790896272070}
   - component: {fileID: -3547879118163182433}
-  - component: {fileID: 7423437774529506930}
   - component: {fileID: 270820853538002849}
   - component: {fileID: 265876308867208705}
   - component: {fileID: 943046215621715421}
@@ -13571,20 +13570,6 @@ MonoBehaviour:
   minActivePortals: 1
   maxActivePortals: 3
   enemyRoutes: {fileID: 11400000, guid: f1e30fe1d9b3a8646b6d7b9666b5d114, type: 2}
---- !u!114 &7423437774529506930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8328397223932432046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31478ffa6d3e4dd4a8b4e366106fa1a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyPathView
-  enemyLanes: {fileID: 0}
-  pathVisible: 0
 --- !u!114 &270820853538002849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13602,7 +13587,6 @@ MonoBehaviour:
   moveSpeed: 30
   trailLift: 0.15
   loopGap: 1.2
-  isAutoPlay: 1
 --- !u!114 &265876308867208705
 MonoBehaviour:
   m_ObjectHideFlags: 0
