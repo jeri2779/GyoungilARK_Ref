@@ -4,11 +4,11 @@ using UnityEngine;
 // 밤마다 계산된 노출 칸에 이펙트를 배치합니다. 판단은 하지 않고 배치만 합니다. 낮엔 전부 치웁니다.
 public class DesertLineEffect
 {
-    private readonly MapBoard board;
+    private readonly Map board;
     private readonly GameObject windPrefab;
     private readonly List<GameObject> spawned = new();
 
-    public DesertLineEffect(MapBoard board, GameObject windPrefab)
+    public DesertLineEffect(Map board, GameObject windPrefab)
     {
         this.board = board;
         this.windPrefab = windPrefab;

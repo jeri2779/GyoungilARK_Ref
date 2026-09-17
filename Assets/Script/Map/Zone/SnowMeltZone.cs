@@ -12,7 +12,7 @@ public class SnowMeltZone
     public IReadOnlyList<Collider> Zones => zones;
 
     // 이 얼음 보드의 모닥불 자리마다 보호 반경만 한 구역을 만들어 담는다.
-    public SnowMeltZone(MapBoard iceBoard, int campfireRange)
+    public SnowMeltZone(Map iceBoard, int campfireRange)
     {
         Transform holder = ReadHolder(iceBoard);
         CampfireLight[] fires = holder.GetComponentsInChildren<CampfireLight>(true);
@@ -25,7 +25,7 @@ public class SnowMeltZone
     }
 
     // 모닥불 불빛이 매달린 상위 자리를 돌려준다.
-    private static Transform ReadHolder(MapBoard iceBoard)
+    private static Transform ReadHolder(Map iceBoard)
     {
         if (iceBoard.transform.parent == null)
         {

@@ -47,7 +47,7 @@ public class PlayerGroundZoneEffect : MonoBehaviour
     [Tooltip("장판이 대상에게 데미지/힐을 적용할 때 재생할 EnemySoundManager 키. 비워두면 재생하지 않음")]
     public string hitSoundKey;
 
-    private MapBoard board;
+    private Map board;
     private BuffManager buffManager;
     private Action<GameObject> release;
     private CancellationTokenSource cts;
@@ -60,7 +60,7 @@ public class PlayerGroundZoneEffect : MonoBehaviour
     private AudioSource sustainVoice;
 
     // 스폰 직후 호출한다. release가 null이면 만료 시 스스로 Destroy된다(풀링 없음).
-    public void Init(MapBoard board, BuffManager buffManager, Action<GameObject> release = null, GameManager gameManager = null)
+    public void Init(Map board, BuffManager buffManager, Action<GameObject> release = null, GameManager gameManager = null)
     {
         this.board = board;
         this.buffManager = buffManager;

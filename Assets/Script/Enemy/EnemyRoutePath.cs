@@ -9,7 +9,7 @@ using UnityEngine;
 /// 끌어 그린 경로는 이웃 칸이 이어져 있어 그린 대로 나오고, 한 칸씩 찍은 경로는 사이가 자동으로 채워진다.
 /// 마지막 노드에서 본진까지도 자동으로 잇는다.
 ///
-/// MapBoard는 공개 API(Cells/TryGetCell)만 읽고 절대 수정하지 않는다 —
+/// Map은 공개 API(Cells/TryGetCell)만 읽고 절대 수정하지 않는다 —
 /// FlyingPathfinder·SwimPathfinder와 같은 전제(맵은 다른 담당 영역).
 /// </summary>
 public static class EnemyRoutePath
@@ -20,13 +20,13 @@ public static class EnemyRoutePath
 
     /// <summary>이 경로의 웨이포인트(런타임). 경로를 만들 수 없으면 빈 목록.
     /// skipped를 주면 그 방식으로 못 지나는 저작 칸을 담아 준다.</summary>
-    public static List<Vector3> Build(MapBoard board, EnemyRouteSet.Entry entry, List<Vector2Int> skipped = null)
+    public static List<Vector3> Build(Map board, EnemyRouteSet.Entry entry, List<Vector2Int> skipped = null)
     {
         if (board == null) return new List<Vector3>();
         return Build(board.Cells, entry, skipped);
     }
 
-    /// <summary>격자 사전을 직접 받는 판. 저작 창은 MapBoard.Build를 거치지 않아 board.Cells가 비어 있으므로
+    /// <summary>격자 사전을 직접 받는 판. 저작 창은 Map.Build를 거치지 않아 board.Cells가 비어 있으므로
     /// ModuleScan.MapCells가 만든 사전을 그대로 넘긴다(LaneQuery가 LaneBuilder에 넘기는 것과 같은 방식).</summary>
     public static List<Vector3> Build(IReadOnlyDictionary<Vector2Int, Tile> cells, EnemyRouteSet.Entry entry,
         List<Vector2Int> skipped = null)
@@ -53,7 +53,7 @@ public static class EnemyRoutePath
     /// <summary>이 경로의 타일 목록(스폰→본진). 스폰 칸이 없거나 본진까지 못 이으면 null.
     /// 저작 창이 격자에 그리는 데도 쓴다 — 런타임과 같은 해석기를 봐야 그린 대로 나오는지 알 수 있다.
     ///
-    /// 이웃 연결(Tile.NeighborTiles)이 이미 되어 있어야 한다. 런타임은 MapBoard.Build가 해 주고,
+    /// 이웃 연결(Tile.NeighborTiles)이 이미 되어 있어야 한다. 런타임은 Map.Build가 해 주고,
     /// 에디터는 호출부가 TileLink.LinkNeighbors를 먼저 불러야 한다(LaneQuery와 같은 전제).</summary>
     public static List<Tile> BuildTiles(IReadOnlyDictionary<Vector2Int, Tile> cells, EnemyRouteSet.Entry entry,
         List<Vector2Int> skipped = null)

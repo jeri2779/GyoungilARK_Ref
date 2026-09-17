@@ -26,7 +26,7 @@ public class EnemyMovement
     private bool _animMoving; // Animator에 보고한 마지막 이동 상태 — 바뀐 프레임에만 SetBool 호출
     private bool _animSwim;   // 그때 보고한 대상이 IsSwim이었는지(false면 IsMoving)
 
-    public MapBoard Board { get; private set; }
+    public Map Board { get; private set; }
     public bool HasPath => _path.Count > 0;
     public IReadOnlyList<Vector3> Path => _path;          // 대시 등 경로 기준 스킬이 참조
     public int PathIndex => _pathIndex;
@@ -114,7 +114,7 @@ public class EnemyMovement
     } // 현재 칸에서 빠짐
 
     // 스폰→본진 경로를 세팅하고 이동을 시작한다.
-    public void EnterMap(MapBoard board, IReadOnlyList<Vector3> waypoints, bool snapToStart, float moveSpeed, string enemyKey)
+    public void EnterMap(Map board, IReadOnlyList<Vector3> waypoints, bool snapToStart, float moveSpeed, string enemyKey)
     {
         Board = board;
         _path.Clear();
@@ -123,7 +123,7 @@ public class EnemyMovement
 
         if (board == null)
         {
-            Debug.LogWarning($"[{_go.name}] MapBoard가 주입되지 않아 이동할 수 없습니다.", _go);
+            Debug.LogWarning($"[{_go.name}] Map가 주입되지 않아 이동할 수 없습니다.", _go);
             return;
         }
 

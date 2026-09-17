@@ -1,7 +1,7 @@
  using System.Collections.Generic;
 using UnityEngine;
 
-public class MapBoard : MonoBehaviour
+public class Map : MonoBehaviour
 {
     private readonly Dictionary<Vector2Int, Tile> _cells = new();
     private readonly List<Tile> _cellList = new();

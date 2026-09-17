@@ -11,7 +11,7 @@ public sealed class PlaceEdgeView : IDisposable
     private readonly float edgeLift;
     private readonly List<Vector3> vertices = new();
     private readonly List<int> indices = new();
-    private readonly List<MapBoard> boards = new();
+    private readonly List<Map> boards = new();
 
     private GameObject edgeObject;
     private Mesh edgeMesh;
@@ -28,7 +28,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 외곽선을 계산할 맵 보드 목록을 보관합니다.
-    public void Setup(List<MapBoard> source)
+    public void Setup(List<Map> source)
     {
         boards.Clear();
         boards.AddRange(source);
@@ -95,7 +95,7 @@ public sealed class PlaceEdgeView : IDisposable
     {
         for (int boardIndex = 0; boardIndex < boards.Count; boardIndex++)
         {
-            MapBoard board = boards[boardIndex];
+            Map board = boards[boardIndex];
             if (board.IsUnlocked)
             {
                 AddBoard(board, kind);
@@ -104,7 +104,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 한 보드의 배치 가능 타일 경계 변을 추가합니다.
-    private void AddBoard(MapBoard board, OccupantKind kind)
+    private void AddBoard(Map board, OccupantKind kind)
     {
         IReadOnlyList<Tile> tiles = board.CellList;
         for (int tileIndex = 0; tileIndex < tiles.Count; tileIndex++)
@@ -118,7 +118,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 배치 가능한 타일의 노출된 네 변을 추가합니다.
-    private void AddTile(MapBoard board, Tile tile, OccupantKind kind)
+    private void AddTile(Map board, Tile tile, OccupantKind kind)
     {
         Vector2Int cell = tile.Coord;
         float inset = edgeWidth / board.CellSize;
@@ -130,7 +130,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 왼쪽 이웃이 배치 불가일 때 지상 또는 고지 높이에 선을 추가합니다.
-    private void AddLeft(MapBoard board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
+    private void AddLeft(Map board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
     {
         if (HasPlaceable(board, cell + Vector2Int.left, kind))
         {
@@ -141,7 +141,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 오른쪽 이웃이 배치 불가일 때 지상 또는 고지 높이에 선을 추가합니다.
-    private void AddRight(MapBoard board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
+    private void AddRight(Map board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
     {
         if (HasPlaceable(board, cell + Vector2Int.right, kind))
         {
@@ -152,7 +152,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 아래 이웃이 배치 불가일 때 지상 또는 고지 높이에 선을 추가합니다.
-    private void AddBottom(MapBoard board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
+    private void AddBottom(Map board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
     {
         if (HasPlaceable(board, cell + Vector2Int.down, kind))
         {
@@ -163,7 +163,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 위 이웃이 배치 불가일 때 지상 또는 고지 높이에 선을 추가합니다.
-    private void AddTop(MapBoard board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
+    private void AddTop(Map board, Tile tile, OccupantKind kind, Vector2Int cell, float inset)
     {
         if (HasPlaceable(board, cell + Vector2Int.up, kind))
         {
@@ -174,7 +174,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 지정 좌표의 타일이 같은 유닛을 배치할 수 있는지 반환합니다.
-    private static bool HasPlaceable(MapBoard board, Vector2Int cell, OccupantKind kind)
+    private static bool HasPlaceable(Map board, Vector2Int cell, OccupantKind kind)
     {
         if (board.TryGetCell(cell, out Tile tile))
         {
@@ -191,7 +191,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 타일 윗면 높이에 경계선 사각형을 추가합니다.
-    private void AddQuad(MapBoard board, Tile tile, Vector2 outerA, Vector2 outerB, Vector2 innerA, Vector2 innerB)
+    private void AddQuad(Map board, Tile tile, Vector2 outerA, Vector2 outerB, Vector2 innerA, Vector2 innerB)
     {
         float height = tile.WorldTop.y + edgeLift;
         int start = vertices.Count;
@@ -210,7 +210,7 @@ public sealed class PlaceEdgeView : IDisposable
     }
 
     // 셀 좌표를 외곽선 루트 기준 좌표로 변환합니다.
-    private Vector3 LocalPoint(MapBoard board, Vector2 point, float height)
+    private Vector3 LocalPoint(Map board, Vector2 point, float height)
     {
         Vector3 world = board.CellPointToWorld(point);
         world.y = height;

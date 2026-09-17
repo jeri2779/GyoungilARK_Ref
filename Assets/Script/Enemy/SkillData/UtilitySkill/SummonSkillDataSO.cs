@@ -22,7 +22,7 @@ public class SummonSkillDataSO : UtilitySkillDataSO
 
         if (owner.Board == null)
         {
-            Debug.LogWarning($"SummonSkill '{skillName}': 소환자에 MapBoard가 없어 소환수가 이동할 수 없습니다.");
+            Debug.LogWarning($"SummonSkill '{skillName}': 소환자에 Map가 없어 소환수가 이동할 수 없습니다.");
             return;
         }
 

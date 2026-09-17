@@ -17,7 +17,7 @@ public static class GridCalculator
 
     public static readonly Vector2Int[] Directions = { Right, Left, Up, Down };
 
-    // 월드↔칸 변환은 여기 없다 — 씬 Grid(MapBoard.WorldToCell)가 담당한다.
+    // 월드↔칸 변환은 여기 없다 — 씬 Grid(Map.WorldToCell)가 담당한다.
     // 셀 크기·원점·Swizzle을 Grid가 쥐고 있어, 코드가 따로 알면 어긋날 뿐이다.
 
     //칸 좌표를 1차원 배열 인덱스로 변환

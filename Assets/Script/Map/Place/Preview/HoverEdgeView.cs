@@ -78,7 +78,7 @@ public sealed class HoverEdgeView : IDisposable
     // 타일 한 칸의 네 변을 모두 추가합니다.
     private void AddTile(Tile tile)
     {
-        MapBoard board = tile.Board;
+        Map board = tile.Board;
         Vector2Int cell = tile.Coord;
         float inset = edgeWidth / board.CellSize;
 
@@ -89,31 +89,31 @@ public sealed class HoverEdgeView : IDisposable
     }
 
     // 왼쪽 변에 선을 추가합니다.
-    private void AddLeft(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddLeft(Map board, Tile tile, Vector2Int cell, float inset)
     {
         AddQuad(board, tile, new Vector2(cell.x, cell.y), new Vector2(cell.x, cell.y + 1f), new Vector2(cell.x + inset, cell.y), new Vector2(cell.x + inset, cell.y + 1f));
     }
 
     // 오른쪽 변에 선을 추가합니다.
-    private void AddRight(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddRight(Map board, Tile tile, Vector2Int cell, float inset)
     {
         AddQuad(board, tile, new Vector2(cell.x + 1f, cell.y + 1f), new Vector2(cell.x + 1f, cell.y), new Vector2(cell.x + 1f - inset, cell.y + 1f), new Vector2(cell.x + 1f - inset, cell.y));
     }
 
     // 아래쪽 변에 선을 추가합니다.
-    private void AddBottom(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddBottom(Map board, Tile tile, Vector2Int cell, float inset)
     {
         AddQuad(board, tile, new Vector2(cell.x + 1f, cell.y), new Vector2(cell.x, cell.y), new Vector2(cell.x + 1f, cell.y + inset), new Vector2(cell.x, cell.y + inset));
     }
 
     // 위쪽 변에 선을 추가합니다.
-    private void AddTop(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddTop(Map board, Tile tile, Vector2Int cell, float inset)
     {
         AddQuad(board, tile, new Vector2(cell.x, cell.y + 1f), new Vector2(cell.x + 1f, cell.y + 1f), new Vector2(cell.x, cell.y + 1f - inset), new Vector2(cell.x + 1f, cell.y + 1f - inset));
     }
 
     // 타일 윗면 높이에 경계선 사각형을 추가합니다.
-    private void AddQuad(MapBoard board, Tile tile, Vector2 outerA, Vector2 outerB, Vector2 innerA, Vector2 innerB)
+    private void AddQuad(Map board, Tile tile, Vector2 outerA, Vector2 outerB, Vector2 innerA, Vector2 innerB)
     {
         float height = tile.WorldTop.y + edgeLift;
         int start = vertices.Count;
@@ -132,7 +132,7 @@ public sealed class HoverEdgeView : IDisposable
     }
 
     // 셀 좌표를 외곽선 루트 기준 좌표로 변환합니다.
-    private Vector3 LocalPoint(MapBoard board, Vector2 point, float height)
+    private Vector3 LocalPoint(Map board, Vector2 point, float height)
     {
         Vector3 world = board.CellPointToWorld(point);
         world.y = height;

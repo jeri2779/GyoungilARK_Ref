@@ -60,7 +60,7 @@ public class FogController : MonoBehaviour
                 break;
             }
 
-            MapBoard board = module.GetComponent<MapBoard>();
+            Map board = module.GetComponent<Map>();
             if (board == null)
             {
                 continue;
@@ -107,7 +107,7 @@ public class FogController : MonoBehaviour
     }
 
     // 점유 셀 중심들의 격자 정렬 사각형(±반 칸). 렌더러 바운드가 아니라 칸에만 의존한다.
-    private Vector4 MeasureCellArea(MapBoard board)
+    private Vector4 MeasureCellArea(Map board)
     {
         bool has = false;
         float minX = 0f, maxX = 0f, minZ = 0f, maxZ = 0f;
@@ -143,7 +143,7 @@ public class FogController : MonoBehaviour
         int index = _modules.IndexOf(module);
         if (index < 0) return;
 
-        MapBoard board = module.GetComponent<MapBoard>();
+        Map board = module.GetComponent<Map>();
         _areas[index] = ApplyModuleBackground(module, MeasureCellArea(board));
         ApplyAreas();
     }

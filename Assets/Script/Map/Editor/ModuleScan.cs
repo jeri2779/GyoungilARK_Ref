@@ -89,7 +89,7 @@ public static class ModuleScan
 
     /// <summary>
     /// 타일을 좌표별로 배치해 격자를 만든다. 한 칸에 여럿이 겹치면 가장 높은 타일을 대표로 삼는다
-    /// (MapBoard.Build와 같은 규칙 — 바닥 위에 고지 큐브를 쌓은 경우 위쪽이 실제로 보이는 면이다).
+    /// (Map.Build와 같은 규칙 — 바닥 위에 고지 큐브를 쌓은 경우 위쪽이 실제로 보이는 면이다).
     /// </summary>
     public static Dictionary<Vector2Int, Tile> MapCells(List<Tile> tiles, out int cols, out int rows)
     {
@@ -128,9 +128,9 @@ public static class ModuleScan
 
     /// <summary>
     /// 이 타일의 윗면 높이. Tile.WorldTop을 쓰지 않는다 —
-    /// 그 값은 MapBoard.Build가 SetTop으로 채워주는 런타임 캐시라 에디터에서는 모든 타일이 0이다.
+    /// 그 값은 Map.Build가 SetTop으로 채워주는 런타임 캐시라 에디터에서는 모든 타일이 0이다.
     /// 0끼리 비교하면 전부 동점이 되어 계층 순서상 먼저 나온 밑판이 대표로 뽑힌다.
-    /// 그래서 MapBoard.Build가 캐시에 넣는 값(렌더러 바운즈의 max.y)을 여기서 직접 구한다.
+    /// 그래서 Map.Build가 캐시에 넣는 값(렌더러 바운즈의 max.y)을 여기서 직접 구한다.
     /// 렌더러가 없는 타일은 비교할 면이 없으므로 피벗 높이를 쓴다.
     /// </summary>
     private static float TopY(Tile tile)

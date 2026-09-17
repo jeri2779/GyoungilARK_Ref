@@ -105,14 +105,14 @@ public class TilePaintSync
         PlayerSkillSlot armedSkill,
         Tile playerSkillOrigin)
     {
-        ResolveAreaOrigin(area, out MapBoard board, out Vector2Int origin);
+        ResolveAreaOrigin(area, out Map board, out Vector2Int origin);
 
         return new TileDisplayData(
             mode, board, origin, unit, kind, canPlace, rangeVersion,
             skillCaster, skill, skillOrigin, armedSkill, playerSkillOrigin);
     }
 
-    private static void ResolveAreaOrigin(PlacementArea area, out MapBoard board, out Vector2Int origin)
+    private static void ResolveAreaOrigin(PlacementArea area, out Map board, out Vector2Int origin)
     {
         board = null;
         origin = default;

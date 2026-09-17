@@ -74,8 +74,8 @@ public class Hero : MonoBehaviour, IDamageAble, IUnit, IStunAble, IDebuffCarrier
     public float PreviewAttackPower => HeroStatManager.GetStat(heroData, StatType.ATK);
     public float PreviewDefence => HeroStatManager.GetStat(heroData, StatType.DEF);
 
-    [SerializeField] private MapBoard board;
-    public MapBoard Board => board;
+    [SerializeField] private Map board;
+    public Map Board => board;
     protected Vector2Int origin;
     protected Tile currentTile;
     public Tile CurrentTile => currentTile;
@@ -694,7 +694,7 @@ public class Hero : MonoBehaviour, IDamageAble, IUnit, IStunAble, IDebuffCarrier
         context.target = null;
     }
 
-    public void SetBoard(MapBoard board) => this.board = board;
+    public void SetBoard(Map board) => this.board = board;
 
     public void Resurrection()
     {

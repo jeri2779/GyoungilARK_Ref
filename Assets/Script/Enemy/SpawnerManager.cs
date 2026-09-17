@@ -337,7 +337,7 @@ public class SpawnerManager : MonoBehaviour
     }
 
     // 클릭한 칸과 같은 격자 좌표에 서 있는 포탈을 찾는다. 없으면 null(그 칸은 이번 라운드에 안 뽑힌 스폰 지점).
-    private static GameObject FindPortalAt(MapBoard board, List<GameObject> portals, Tile clickedTile)
+    private static GameObject FindPortalAt(Map board, List<GameObject> portals, Tile clickedTile)
     {
         if (board == null || clickedTile == null) return null;
 

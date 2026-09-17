@@ -11,8 +11,8 @@ public class WaveSpawner : MonoBehaviour
 {
 
     [Tooltip("적이 따라갈 격자 맵. 인스펙터에서 주입(Find 함수 미사용 지침).")]
-    [SerializeField] private MapBoard board;
-    public MapBoard Board => board;
+    [SerializeField] private Map board;
+    public Map Board => board;
     [Tooltip("이 스포너가 담당하는 지역(레인) 번호. SpawnerManager가 이 값으로 매핑한다.")]
     [SerializeField] private int region = 1;
     public int Region => region;
@@ -88,7 +88,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
         if (board == null)
-            Debug.LogWarning("WaveSpawner: MapBoard가 주입되지 않았습니다. 적이 이동하지 않습니다.", this);
+            Debug.LogWarning("WaveSpawner: Map가 주입되지 않았습니다. 적이 이동하지 않습니다.", this);
         else
         {
             waypoints = board.GetWaypoints(0f); // 레인 정보가 없을 때 쓰는 단일 경로 폴백

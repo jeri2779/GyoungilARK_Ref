@@ -259,7 +259,7 @@ public class EnemyRouteWindow : EditorWindow
         List<Tile> tiles = ModuleScan.CollectTiles(module);
         _cells = ModuleScan.MapCells(tiles, out _, out _);
 
-        // 창은 MapBoard.Build를 거치지 않아 이웃 연결이 비어 있다 — A*가 한 칸도 못 나아간다.
+        // 창은 Map.Build를 거치지 않아 이웃 연결이 비어 있다 — A*가 한 칸도 못 나아간다.
         // LaneQuery가 LaneBuilder를 부르기 전에 하는 것과 같은 처리다(직렬화되지 않는 런타임 캐시라 안전).
         TileLink.LinkNeighbors(_cells);
     }

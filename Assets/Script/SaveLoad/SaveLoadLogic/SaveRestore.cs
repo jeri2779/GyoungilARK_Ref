@@ -184,7 +184,7 @@ public class SaveRestore
             if (!restoredEntries.TryGetValue(save.rosterId, out HeroRosterEntry entry)) continue;
             if (!mapRegistry.TryGetModuleLogic(save.moduleId, out ModuleLogic module)) continue;
 
-            MapBoard board = module.GetComponent<MapBoard>();
+            Map board = module.GetComponent<Map>();
 
             PlacementArea area = BuildArea(board, save.cellOrigin, save.cellSize);
             Vector3 position = AreaPlace.Position(area, entry.Slot.kind, mapAssemble.PlaceYOffset, out bool canPlace);
@@ -270,7 +270,7 @@ public class SaveRestore
     }
 
     // 저장된 칸 원점·크기로 배치 자리를 만든다 (RestorePlacements 전용)
-    private static PlacementArea BuildArea(MapBoard board, Vector2Int origin, Vector2Int size)
+    private static PlacementArea BuildArea(Map board, Vector2Int origin, Vector2Int size)
     {
         List<Vector2Int> cells = AreaCalc.GetCells(origin, size);
         Vector2 mid = new Vector2(origin.x + size.x * 0.5f, origin.y + size.y * 0.5f);

@@ -52,7 +52,7 @@ public static class TileAuthorRule
 
     /// <summary>
     /// 런타임이 실제로 판정에 쓰는 상태. 옛 씬 데이터는 배치 허용을 명시 필드가 아니라 Flags 비트에
-    /// 담고 있고, MapBoard.Build가 ImportFlags로 그걸 합친 뒤에야 배치가 된다.
+    /// 담고 있고, Map.Build가 ImportFlags로 그걸 합친 뒤에야 배치가 된다.
     /// 감사도 같은 값을 봐야 하므로 여기서 사본에 합친다 — 원본 타일은 건드리지 않는다.
     /// </summary>
     private static TileState EffectiveState(Tile tile)

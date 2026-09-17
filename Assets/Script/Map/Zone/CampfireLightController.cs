@@ -5,10 +5,10 @@ using UnityEngine;
 public class CampfireLightController : IZoneEffect
 {
     private readonly List<CampfireLight> lights = new();
-    private readonly List<MapBoard> lightBoards = new();
+    private readonly List<Map> lightBoards = new();
 
     // 이 얼음 보드의 장식 자리를 훑어 모닥불 불빛을 모으고, 보호 반경(월드 단위)으로 범위를 맞춘다.
-    public void Collect(MapBoard iceBoard, int campfireRange)
+    public void Collect(Map iceBoard, int campfireRange)
     {
         Transform holder = iceBoard.transform.parent != null ? iceBoard.transform.parent : iceBoard.transform;
         CampfireLight[] found = holder.GetComponentsInChildren<CampfireLight>(true);

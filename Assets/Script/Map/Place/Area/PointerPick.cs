@@ -7,12 +7,12 @@ using UnityEngine.InputSystem;
 // 배치물이 여러 칸을 차지할 때는 타일 하나로 부족하므로 놓일 자리(PlacementArea)까지 내준다.
 public class PointerPick
 {
-    private readonly List<MapBoard> boards;
+    private readonly List<Map> boards;
     private readonly HoveredTileData hoverData;
     private int hoverFrame = -1;
     private Vector2 mousePos;
 
-    public PointerPick(List<MapBoard> boards, HoveredTileData hoverData)
+    public PointerPick(List<Map> boards, HoveredTileData hoverData)
     {
         this.boards = boards;
         this.hoverData = hoverData;
@@ -104,7 +104,7 @@ public class PointerPick
         float frontSqr = float.MaxValue;
         for (int i = 0; i < boards.Count; i++)
         {
-            MapBoard board = boards[i];
+            Map board = boards[i];
             if (!IsUsable(board)) continue;
 
             Tile tile = board.CellFromRay(ray);
@@ -121,7 +121,7 @@ public class PointerPick
     }
 
     // 화면에 켜져 있고 잠금이 풀린 모듈인지.
-    private bool IsUsable(MapBoard board)
+    private bool IsUsable(Map board)
     {
         return board.gameObject.activeInHierarchy && board.IsUnlocked;
     }
@@ -138,7 +138,7 @@ public class PointerPick
         float nearestDistance = float.MaxValue;
         for (int i = 0; i < boards.Count; i++)
         {
-            MapBoard board = boards[i];
+            Map board = boards[i];
             if (!IsUsable(board)) continue;
 
             Tile tile = board.NearestCellFromRay(ray);

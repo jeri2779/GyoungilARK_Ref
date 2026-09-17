@@ -5,7 +5,7 @@ using UnityEngine;
 // 낮 동안 바람이 들어오는 외곽 면 전체에 안내 화살표를 표시합니다.
 public class WindPreview : IDisposable
 {
-    private readonly MapBoard board;
+    private readonly Map board;
     private readonly float arrowSize;
     private readonly float arrowHeight;
     private readonly Color arrowColor;
@@ -26,7 +26,7 @@ public class WindPreview : IDisposable
 
     // 사막 보드의 네 외곽 면과 재사용할 화살표를 한 번 준비합니다.
     public WindPreview(
-        MapBoard board,
+        Map board,
         Transform parent,
         float size,
         float height,

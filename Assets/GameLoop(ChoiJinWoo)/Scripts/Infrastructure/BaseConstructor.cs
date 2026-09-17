@@ -1,4 +1,4 @@
-// 기반시설 UI에서 곧장 건물을 짓는 담당. 맵 배치가 없고(PlacementArea/MapBoard 불필요),
+// 기반시설 UI에서 곧장 건물을 짓는 담당. 맵 배치가 없고(PlacementArea/Map 불필요),
 // ProductionFacility/House가 이제 POCO라 풀링/프리팹 인스턴스화도 필요 없다 - BuildableFacility의
 // 설정 SO(facilityValue/houseConfig)로 곧장 만든다.
 public class BaseConstructor

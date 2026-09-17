@@ -3,14 +3,14 @@ using UnityEngine;
 // 사막 지대 전용 — 밤마다 보드를 훑어 노출 칸을 강한/약한 이펙트로 분류합니다.
 public class DesertEffectCalc
 {
-    private MapBoard board;
+    private Map board;
     private WindShelterData terrain;
     private UnitShelter units;
     private WindwallData walls;
     private Vector2Int wind;
 
     // 이 밤의 바람과 배치 기준으로 노출 칸마다 강한/약한 결과를 채운 데이터를 돌려준다.
-    public DesertEffectData BuildData(MapBoard board, WindShelterData terrain, UnitShelter units, WindwallData walls, Vector2Int wind)
+    public DesertEffectData BuildData(Map board, WindShelterData terrain, UnitShelter units, WindwallData walls, Vector2Int wind)
     {
         this.board = board;
         this.terrain = terrain;

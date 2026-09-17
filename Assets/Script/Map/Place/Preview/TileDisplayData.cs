@@ -4,7 +4,7 @@ using UnityEngine;
 public readonly struct TileDisplayData
 {
     public readonly HoverMode Mode;
-    public readonly MapBoard Board;
+    public readonly Map Board;
     public readonly Vector2Int Origin;
     public readonly GameObject Unit;
     public readonly OccupantKind Kind;
@@ -18,7 +18,7 @@ public readonly struct TileDisplayData
 
     public TileDisplayData(
         HoverMode mode,
-        MapBoard board,
+        Map board,
         Vector2Int origin,
         GameObject unit,
         OccupantKind kind,

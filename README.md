@@ -104,8 +104,8 @@ flowchart LR
 
 - `Tile` = 좌표(Col/Row) · 점유자(Occupant/Enemies) · 이웃(NeighborTiles 최대 4)을 보유합니다.
 - `TileState` = 상태 4축(지형/통행/기믹/점유)을 보유합니다.
-- `MapBoard`는 모듈 Grid 하위 타일들을 `_cells : Dictionary<좌표, Tile>`에 등록합니다. 한 칸에 여러 타일이 겹치면 높은 타일이 대표가 됩니다.
-- 저지 판정에서 `MapBoard`는 적→Tile을 찾는 것까지만 담당합니다. 실제 판정 계산은 `BlockCalc.IsBlocked`가 수행합니다.
+- `Map`은 모듈 Grid 하위 타일들을 `_cells : Dictionary<좌표, Tile>`에 등록합니다. 한 칸에 여러 타일이 겹치면 높은 타일이 대표가 됩니다.
+- 저지 판정에서 `Map`은 적→Tile을 찾는 것까지만 담당합니다. 실제 판정 계산은 `BlockCalc.IsBlocked`가 수행합니다.
 
 ### 맵 ↔ 유닛
 

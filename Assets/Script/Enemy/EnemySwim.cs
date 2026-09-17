@@ -16,7 +16,7 @@ using UnityEngine;
 /// EnemyMovement.SwimAnim만 갈아끼우는 이유 — 이동 상태를 쓰는 곳을 하나로 두어
 /// IsMoving과 IsSwim이 동시에 true로 남는 상태를 원천적으로 만들지 않는다.
 ///
-/// Map은 공개 읽기 API(MapBoard.WorldToCell/TryGetCell, Tile.State.Pass)만 본다 — 수정하지 않는다.
+/// Map은 공개 읽기 API(Map.WorldToCell/TryGetCell, Tile.State.Pass)만 본다 — 수정하지 않는다.
 /// </summary>
 public class EnemySwim
 {
@@ -66,7 +66,7 @@ public class EnemySwim
     /// <summary>매 프레임 호출. 이동(EnemyMovement.Tick)이 끝난 뒤에 불러야 이번 프레임 위치로 칸을 판정한다.
     /// suppress(사망)면 물거품만 거둔다 — 사망 애니가 도는 동안에도 Update는 계속 돌기 때문에,
     /// 여기서 막지 않으면 밖에서 반납한 거품을 다음 프레임에 이 함수가 다시 꺼낸다.</summary>
-    public void Tick(MapBoard board, Vector3 position, bool suppress)
+    public void Tick(Map board, Vector3 position, bool suppress)
     {
         if (!IsSetup) return;
 
@@ -159,7 +159,7 @@ public class EnemySwim
     }
 
     // 이 칸이 헤엄으로만 지나는 칸인가. 격자 밖이면 지상으로 본다(물 위에서 멈춰 있는 것보다 안전).
-    private static bool IsSwimCell(MapBoard board, Vector2Int cell)
+    private static bool IsSwimCell(Map board, Vector2Int cell)
     {
         return board.TryGetCell(cell, out Tile tile) && tile.State.Pass == PassType.Swim;
     }

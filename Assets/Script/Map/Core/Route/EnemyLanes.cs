@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(MapBoard))]
+[RequireComponent(typeof(Map))]
 [DefaultExecutionOrder(100)]
 public class EnemyLanes : MonoBehaviour
 {
-    [SerializeField] private MapBoard board;
+    [SerializeField] private Map board;
     [SerializeField] private RouteConfig routes;
 
     private readonly List<LaneData> lanes = new();
@@ -27,10 +27,10 @@ public class EnemyLanes : MonoBehaviour
 
     public event Action Changed;
 
-    // 같은 GameObject의 MapBoard와 RouteConfig를 인스펙터 참조에 자동 할당합니다.
+    // 같은 GameObject의 Map과 RouteConfig를 인스펙터 참조에 자동 할당합니다.
     private void Reset()
     {
-        board = GetComponent<MapBoard>();
+        board = GetComponent<Map>();
         routes = GetComponent<RouteConfig>();
     }
 
@@ -41,7 +41,7 @@ public class EnemyLanes : MonoBehaviour
         RefreshLanes();
     }
 
-    // 기존 레인을 비우고 현재 MapBoard 상태를 기준으로 전체 레인을 다시 계산합니다.
+    // 기존 레인을 비우고 현재 Map 상태를 기준으로 전체 레인을 다시 계산합니다.
     public void RefreshLanes()
     {
         IsReady = false;
@@ -125,10 +125,10 @@ public class EnemyLanes : MonoBehaviour
         return spawnLanes[spawnIndex][branchIndex].GetPoints(pass, yOffset);
     }
 
-    // MapBoard 참조와 기본 LaneBuilder가 준비되었는지 확인합니다.
+    // Map 참조와 기본 LaneBuilder가 준비되었는지 확인합니다.
     private void Prepare()
     {
-        board = GetComponent<MapBoard>();
+        board = GetComponent<Map>();
         routes = GetComponent<RouteConfig>();
 
         if (builder == null)
@@ -137,13 +137,13 @@ public class EnemyLanes : MonoBehaviour
         }
     }
 
-    // 레인을 계산할 MapBoard와 셀이 준비되었는지 확인합니다.
+    // 레인을 계산할 Map과 셀이 준비되었는지 확인합니다.
     private bool CanBuild()
     {
         return board.CellCount > 0;
     }
 
-    // MapBoard의 셀에서 스폰과 코어를 수집합니다.
+    // Map의 셀에서 스폰과 코어를 수집합니다.
     private void CollectEndpoints(out List<Tile> spawns, out List<Tile> cores)
     {
         spawns = new List<Tile>();

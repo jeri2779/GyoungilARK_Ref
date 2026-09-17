@@ -19,9 +19,9 @@ public partial class Tile : MonoBehaviour
     // ---- 런타임 캐시(직렬화하지 않음) ----
     private float _topY;
 
-    /// <summary>이 타일이 속한 모듈 보드(아파트 문패의 동 번호). MapBoard.Build가 새긴다.
+    /// <summary>이 타일이 속한 모듈 보드(아파트 문패의 동 번호). Map.Build가 새긴다.
     /// 좌표는 모듈 로컬 0-base라 (Col,Row)만으로는 모듈을 특정할 수 없다 — 보드까지 있어야 완전한 주소.</summary>
-    public MapBoard Board { get; private set; }
+    public Map Board { get; private set; }
 
     //타일을 점유한 오브젝트
     public GameObject OccupantObject { get; private set; }
@@ -91,14 +91,14 @@ public partial class Tile : MonoBehaviour
 
     public Vector3 WorldTop => new(transform.position.x, _topY, transform.position.z);
 
-    /// <summary>MapBoard가 스캔 시 윗면 높이를 캐시해 준다(WorldTop·배치·경로 기준).</summary>
+    /// <summary>Map이 스캔 시 윗면 높이를 캐시해 준다(WorldTop·배치·경로 기준).</summary>
     public void SetTop(float topY)
     {
         _topY = topY;
     }
 
-    /// <summary>MapBoard.Build가 스캔 시 자기 자신을 새긴다(소유 보드 도장).</summary>
-    public void SetBoard(MapBoard board)
+    /// <summary>Map.Build가 스캔 시 자기 자신을 새긴다(소유 보드 도장).</summary>
+    public void SetBoard(Map board)
     {
         Board = board;
     }

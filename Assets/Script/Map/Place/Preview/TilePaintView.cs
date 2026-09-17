@@ -26,7 +26,7 @@ public class TilePaintView : MonoBehaviour
     private HoverEdgeView hoverEdgeView;
 
     // 외곽선 출력기와 대상 맵 보드를 준비합니다.
-    public void SetupEdges(List<MapBoard> boards)
+    public void SetupEdges(List<Map> boards)
     {
         edgeView = new PlaceEdgeView(transform, edgeMat, edgeWidth, edgeLift);
         edgeView.Setup(boards);

@@ -40,7 +40,7 @@ public class MapAssemble : MonoBehaviour
     private List<IceZoneEffect> iceZoneEffects;
     private List<IceSnowfall> iceSnowfalls;
     private CampfireLightController campfireLights;
-    private MapBoard desertBoard;
+    private Map desertBoard;
     // 씬 로딩 중 게임을 끄면 Start가 끝나기 전에 OnDestroy가 불릴 수 있어, 이때 아래 필드들이
     // 아직 null이라 OnDestroy가 터진다. 이 플래그로 Start 완료 여부를 확인하고 조기 종료한다.
     private bool started;
@@ -49,7 +49,7 @@ public class MapAssemble : MonoBehaviour
     {
         trailNight = new TrailNightController(mapGame.DayNightData);
 
-        List<MapBoard> boards;
+        List<Map> boards;
         CollectModuleComponents(out boards, out pathTrails, out laneModules);
         BuildCampfires(boards);
 
@@ -59,7 +59,7 @@ public class MapAssemble : MonoBehaviour
         PointerPick pointerPick = new PointerPick(boards, hoverData);
         PlaceFinder finder = new PlaceFinder(pointerPick, palette, placeYOffset);
 
-        desertBoard = desertZone.GetComponent<MapBoard>();
+        desertBoard = desertZone.GetComponent<Map>();
         WindShelterData shelterData = new WindShelterCalc().BuildData(desertBoard.Cells);
         WindwallData windwallData = new WindwallCalc().BuildData(desertBoard.Cells, desertZone.WindwallReach);
         desertZone.SetWindwall(windwallData);
@@ -281,19 +281,19 @@ public class MapAssemble : MonoBehaviour
         mapGame.Rule.ChangeToNight -= effect.OnNightChanged;
     }
 
-    // 레지스트리에 등록된 모듈들의 보드·트레일·레인 목록을 한 번의 순회로 모은다. 모듈 루트에 ModuleLogic과 MapBoard가 함께 산다.
+    // 레지스트리에 등록된 모듈들의 보드·트레일·레인 목록을 한 번의 순회로 모은다. 모듈 루트에 ModuleLogic과 Map가 함께 산다.
     private void CollectModuleComponents(
-        out List<MapBoard> boards,
+        out List<Map> boards,
         out List<PathTrail> trails,
         out List<EnemyLanes> lanes)
     {
-        boards = new List<MapBoard>();
+        boards = new List<Map>();
         trails = new List<PathTrail>();
         lanes = new List<EnemyLanes>();
 
         foreach (ModuleLogic logic in registry.AllModules.Values)
         {
-            boards.Add(logic.GetComponent<MapBoard>());
+            boards.Add(logic.GetComponent<Map>());
 
             PathTrail trail = logic.GetComponent<PathTrail>();
             if (trail != null)
@@ -311,7 +311,7 @@ public class MapAssemble : MonoBehaviour
     }
 
     // 모든 얼음 보드의 고정 모닥불 보호 영역과 그 자리에 놓인 불빛, 지대 효과를 시작할 때 한 번 만듭니다.
-    private void BuildCampfires(List<MapBoard> boards)
+    private void BuildCampfires(List<Map> boards)
     {
         CampfireCalc calc = new();
         campfireLights = new CampfireLightController();
@@ -320,7 +320,7 @@ public class MapAssemble : MonoBehaviour
         GameObject snowPrefab = Resources.Load<GameObject>("ZoneEffectPrefab/IceSnowfallVFX");
         for (int index = 0; index < boards.Count; index++)
         {
-            MapBoard board = boards[index];
+            Map board = boards[index];
             IceZone iceZone = board.GetComponent<IceZone>();
             if (iceZone != null)
             {

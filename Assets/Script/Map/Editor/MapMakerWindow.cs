@@ -14,7 +14,7 @@ using UnityEngine;
 ///
 /// 지형을 칠해도 Col/Row는 변하지 않는다(좌표는 TilePosBaker가 월드 위치에서 뽑는다).
 /// 그래서 칠한 뒤 재베이크가 필요 없고, 매 리페인트마다 경로를 다시 계산해도 부담이 없다.
-/// EnemyLane은 저작하지 않는다(런타임에 MapBoard.SetLanes가 경로에서 파생시키는 값).
+/// EnemyLane은 저작하지 않는다(런타임에 Map.SetLanes가 경로에서 파생시키는 값).
 /// </summary>
 public class MapMakerWindow : EditorWindow
 {
@@ -1509,7 +1509,7 @@ public class MapMakerWindow : EditorWindow
         RouteConfig config = RouteEdit.Ensure(_modules[_moduleIndex]);
         if (config == null)
         {
-            Debug.LogWarning("[Map Maker] 이 모듈에 MapBoard가 없어 경로를 저장할 자리가 없습니다.",
+            Debug.LogWarning("[Map Maker] 이 모듈에 Map가 없어 경로를 저장할 자리가 없습니다.",
                 _modules[_moduleIndex]);
             return;
         }

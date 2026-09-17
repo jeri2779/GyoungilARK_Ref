@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // 고정된 언덕 가림막을 읽어 바람 방향별 보호 칸을 맵 로드 때 한 번 계산합니다.
-// 칸 딕셔너리만 있으면 계산 가능하다 — 런타임(MapBoard.Cells)과 저작 창(에디터 스캔) 둘 다 같은 함수를 쓴다.
+// 칸 딕셔너리만 있으면 계산 가능하다 — 런타임(Map.Cells)과 저작 창(에디터 스캔) 둘 다 같은 함수를 쓴다.
 public class WindwallCalc
 {
     // 안쪽 칸을 한 번 훑어 가림막마다 네 방향 팔을 채운 결과를 돌려줍니다.

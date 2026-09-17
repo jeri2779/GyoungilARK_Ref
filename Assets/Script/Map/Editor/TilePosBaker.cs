@@ -137,15 +137,15 @@ public static class TilePosBaker
             EditorUtility.SetDirty(tile);
         }
 
-        // 3) 모듈 min값 자체도 버리지 않고 MapBoard에 저장 — 런타임이 되짚어 추측하지 않고 이 값을 그대로 읽는다.
+        // 3) 모듈 min값 자체도 버리지 않고 Map에 저장 — 런타임이 되짚어 추측하지 않고 이 값을 그대로 읽는다.
         SaveBoardOffset(grid, minCol, minRow);
     }
 
-    // 방금 구한 모듈 min을 같은 모듈의 MapBoard에 건네준다. MapBoard가 없으면 조용히 건너뛴다(타일만 있는 임시 씬 등).
-    // MapBoard는 Grid와 같은 오브젝트가 아니라 모듈 루트(부모)에 있다 — GetComponentInParent로 찾는다.
+    // 방금 구한 모듈 min을 같은 모듈의 Map에 건네준다. Map가 없으면 조용히 건너뛴다(타일만 있는 임시 씬 등).
+    // Map은 Grid와 같은 오브젝트가 아니라 모듈 루트(부모)에 있다 — GetComponentInParent로 찾는다.
     private static void SaveBoardOffset(Grid grid, int minCol, int minRow)
     {
-        MapBoard board = grid.GetComponentInParent<MapBoard>();
+        Map board = grid.GetComponentInParent<Map>();
         if (board == null)
         {
             return;

@@ -4,13 +4,13 @@ using UnityEngine;
 // 지대 디버프의 공통 적용/제거/잠금 규칙을 담당하는 베이스입니다.
 public abstract class ZoneDebuffEffect : IZoneEffect
 {
-    protected readonly MapBoard board;
+    protected readonly Map board;
     private readonly PlacedUnitData unitList;
     private readonly DebuffSO[] debuffs;
     private readonly object[] sources;
 
     // 이 지대의 보드와 디버프 목록을 보관하고, 디버프마다 독립적인 적용 출처를 만듭니다.
-    protected ZoneDebuffEffect(MapBoard board, PlacedUnitData unitList, DebuffSO[] debuffs)
+    protected ZoneDebuffEffect(Map board, PlacedUnitData unitList, DebuffSO[] debuffs)
     {
         this.board = board;
         this.unitList = unitList;

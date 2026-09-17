@@ -184,7 +184,7 @@ public class ExpandFocus : MonoBehaviour
     // focus·거리 목표를 해당 모듈 중앙·화면 꽉 채움으로. 울타리는 OnModuleState에서 이미 꺼둔 상태다.
     private void StartMove(ModuleLogic module)
     {
-        Bounds bounds = module.GetComponent<MapBoard>().WorldBounds; // 새로 열린 지역의 경계를 구한다.
+        Bounds bounds = module.GetComponent<Map>().WorldBounds; // 새로 열린 지역의 경계를 구한다.
         moveTarget = bounds.center; // 이동 목표는 그 경계의 중심이다.
         moveTarget.y = rig.focus.y; // 줌 기준 높이는 유지하고 수평 위치만 새 지역으로 옮긴다.
         moveDistance = rig.FitDistance(moveTarget, bounds, fitFill); // 그 경계가 화면을 채우는 거리를 구한다.

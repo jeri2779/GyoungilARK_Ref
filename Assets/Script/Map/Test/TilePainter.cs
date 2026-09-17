@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 public class TilePainter : MonoBehaviour
 {
     //디버그용 타일 색상 변경
-    public MapBoard board; // 주입(자동탐색 금지)
+    public Map board; // 주입(자동탐색 금지)
 
     [Header("Colors")]
     public Color okColor = new(0.21f, 0.77f, 0.41f);
@@ -154,7 +154,7 @@ public class TilePainter : MonoBehaviour
         return rect.width <= 0 || rect.Contains(tile.Coord);
     }
 
-    // 판 하나를 꺼낸다. 타일의 자식으로 두면 MapBoard가 윗면 높이를 이 판까지 포함해 재므로 painter 아래에 붙인다.
+    // 판 하나를 꺼낸다. 타일의 자식으로 두면 Map이 윗면 높이를 이 판까지 포함해 재므로 painter 아래에 붙인다.
     private GameObject Take()
     {
         if (_pool.Count > 0)

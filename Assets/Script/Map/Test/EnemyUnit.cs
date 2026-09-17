@@ -7,7 +7,7 @@ public class EnemyUnit : MonoBehaviour
     public float speed = 2f;
     public float yOffset = 0.5f;
     public bool destroyOnArrive = true;
-    public MapBoard board;
+    public Map board;
 
     //적이 이동할 경로 List에 해당 타일을 넣고 경로를 SetPath로 주면, EnemyUnit이 자동으로 이동하며 도착 시 파괴된다.
     private readonly List<Vector3> _path = new();

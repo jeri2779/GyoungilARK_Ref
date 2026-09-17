@@ -9,7 +9,7 @@ public class IceSnowfall
     private const int MaxMeltZoneCount = 6;
 
     // 보드 전체를 덮도록 크기를 맞춰 얼음 보드 윗면 위에 만들고 모닥불 구역을 등록한다.
-    public IceSnowfall(MapBoard board, GameObject prefab, IReadOnlyList<Collider> meltZones)
+    public IceSnowfall(Map board, GameObject prefab, IReadOnlyList<Collider> meltZones)
     {
         Bounds bounds = board.WorldBounds;
         Vector3 spawnCenter = new Vector3(bounds.center.x, bounds.max.y + SnowHeightAboveBoard, bounds.center.z);

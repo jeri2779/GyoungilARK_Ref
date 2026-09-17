@@ -4,7 +4,7 @@ using UnityEngine;
 // 사막 지대의 지금 바람 차폐 상태(고지+유닛)를 타일 색으로 확인하는 임시 디버그 도구.
 public class WindShelterDebug : MonoBehaviour
 {
-    [SerializeField] private MapBoard desertBoard;
+    [SerializeField] private Map desertBoard;
     [SerializeField] private DesertZone desertZone;
     [SerializeField] private TilePainter painter;
 

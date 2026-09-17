@@ -155,7 +155,7 @@ public abstract class EnemyBase : MonoBehaviour,IDamageAble,IUnit,IStunAble,IDeb
     [Tooltip("웨이포인트 도달 판정 거리의 제곱(작을수록 정확). 기본값 유지 권장.")]
     [SerializeField] private float arriveSqr = 0.0004f;
 
-    public MapBoard Board => _move.Board;
+    public Map Board => _move.Board;
     public bool HasPath => _move.HasPath;
     public IReadOnlyList<Vector3> Path => _move.Path;
     public int PathIndex => _move.PathIndex;
@@ -275,7 +275,7 @@ public abstract class EnemyBase : MonoBehaviour,IDamageAble,IUnit,IStunAble,IDeb
     }
     /// <summary>authored=true면 받은 웨이포인트가 사람이 그린 경로라는 뜻 —
     /// 공중·수영 자동 재탐색을 건너뛰고 그대로 따른다(그린 의도가 자동 계산에 지면 저작이 무의미하다).</summary>
-    public void EnterMap(MapBoard board, IReadOnlyList<Vector3> waypoints = null, bool snapToStart = true,
+    public void EnterMap(Map board, IReadOnlyList<Vector3> waypoints = null, bool snapToStart = true,
         bool authored = false)
     {
         _move.Flying = IsFly; // 공중 특성이면 지형 무시(본진으로 직선). Map/길찾기는 건드리지 않음

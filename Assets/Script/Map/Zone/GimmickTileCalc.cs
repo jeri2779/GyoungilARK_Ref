@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public static class GimmickTileCalc
 {
     // 그 보드 안에서 기믹 칸만 모아 새 목록으로 돌려준다.
-    public static List<Tile> CollectTiles(MapBoard board)
+    public static List<Tile> CollectTiles(Map board)
     {
         List<Tile> found = new();
         IReadOnlyList<Tile> cells = board.CellList;

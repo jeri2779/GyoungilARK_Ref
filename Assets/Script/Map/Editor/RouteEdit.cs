@@ -8,7 +8,7 @@ using UnityEngine;
 /// SerializedObject로만 쓴다 — RouteConfig·RouteData의 필드는 private이고, 이쪽으로 고치면
 /// 되돌리기와 프리팹 오버라이드 처리를 유니티가 맡는다(런타임 코드에 저작용 API를 만들지 않는다).
 ///
-/// 저장 자리는 MapBoard가 붙은 오브젝트다. 모듈은 뿌리(MapModule_A)에 MapBoard·EnemyLanes를 두고
+/// 저장 자리는 Map가 붙은 오브젝트다. 모듈은 뿌리(MapModule_A)에 Map·EnemyLanes를 두고
 /// Grid는 그 자식이라, Grid에 붙이면 경로만 EnemyLanes와 다른 오브젝트로 갈라진다.
 /// </summary>
 public static class RouteEdit
@@ -38,7 +38,7 @@ public static class RouteEdit
     /// <summary>이 모듈의 RouteConfig. 아직 없으면 null.</summary>
     public static RouteConfig Find(Grid module)
     {
-        MapBoard board = Owner(module);
+        Map board = Owner(module);
         if (board == null)
         {
             return null;
@@ -47,10 +47,10 @@ public static class RouteEdit
         return board.GetComponent<RouteConfig>();
     }
 
-    /// <summary>저작할 RouteConfig를 확보한다. 없으면 MapBoard 옆에 새로 붙인다.</summary>
+    /// <summary>저작할 RouteConfig를 확보한다. 없으면 Map 옆에 새로 붙인다.</summary>
     public static RouteConfig Ensure(Grid module)
     {
-        MapBoard board = Owner(module);
+        Map board = Owner(module);
         if (board == null)
         {
             return null;
@@ -169,13 +169,13 @@ public static class RouteEdit
     }
 
     // 경로가 붙어 사는 오브젝트. 비활성 모듈에서도 찾아야 한다(잠긴 모듈도 저작 대상이다).
-    private static MapBoard Owner(Grid module)
+    private static Map Owner(Grid module)
     {
-        return module.GetComponentInParent<MapBoard>(true);
+        return module.GetComponentInParent<Map>(true);
     }
 
     // 씬 인스턴스에 컴포넌트를 새로 붙이면 그 씬에만 남는다. 값 오버라이드보다 눈에 안 띄어 미리 알린다.
-    private static void Warn(MapBoard board)
+    private static void Warn(Map board)
     {
         if (ModuleScan.IsPrefabStage())
         {

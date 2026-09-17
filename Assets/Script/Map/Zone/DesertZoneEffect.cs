@@ -15,7 +15,7 @@ public class DesertZoneEffect : ZoneDebuffEffect, IDisposable
     // 사막 판정에 필요한 고정 정보와 시각효과 담당을 보관합니다.
     public DesertZoneEffect(
         DesertZone desertZone,
-        MapBoard desertBoard,
+        Map desertBoard,
         WindShelterData shelterData,
         WindwallData windwallData,
         PlacedUnitData unitList,

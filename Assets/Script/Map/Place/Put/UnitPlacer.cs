@@ -26,7 +26,7 @@ public class UnitPlacer
     }
 
     // 슬롯의 프리팹으로 영웅 오브젝트를 만든다.
-    private GameObject Create(Placeable slot, MapBoard board)
+    private GameObject Create(Placeable slot, Map board)
     {
         CheckPrefab(slot);
 
@@ -46,7 +46,7 @@ public class UnitPlacer
     }
 
     // 유닛에게 자기가 놓인 모듈 보드를 알려준다.
-    private static void BindBoard(GameObject unit, MapBoard board)
+    private static void BindBoard(GameObject unit, Map board)
     {
         if (unit.TryGetComponent(out Hero hero))
         {

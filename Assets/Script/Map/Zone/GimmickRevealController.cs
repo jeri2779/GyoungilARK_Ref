@@ -109,7 +109,7 @@ public class GimmickRevealController : MonoBehaviour
         if (revealingModules.Contains(module.ModuleId)) return;
         if (!module.IsUnlocked) return;
         if (tileData.WasShown(module.ModuleId)) return;
-        if (GimmickTileCalc.CollectTiles(module.GetComponent<MapBoard>()).Count == 0) return;
+        if (GimmickTileCalc.CollectTiles(module.GetComponent<Map>()).Count == 0) return;
 
         tileData.MarkShown(module.ModuleId);
     }
@@ -126,7 +126,7 @@ public class GimmickRevealController : MonoBehaviour
             return;
         }
 
-        List<Tile> tiles = GimmickTileCalc.CollectTiles(module.GetComponent<MapBoard>());
+        List<Tile> tiles = GimmickTileCalc.CollectTiles(module.GetComponent<Map>());
         if (tiles.Count == 0)
         {
             return;

@@ -9,7 +9,7 @@ using UnityEngine;
 // 물에서는 EnemyBase.swimSpeedMultiplier만큼 빠르므로 물 칸의 이동 비용이 그만큼 싸다.
 // 그래서 조금 돌더라도 물을 타고 가는 편이 빠르면 그쪽으로 경로가 잡힌다.
 //
-// MapBoard는 공개 API(TryGetCell/WorldToCell)만 읽고 절대 수정하지 않는다(맵은 다른 담당 영역).
+// Map은 공개 API(TryGetCell/WorldToCell)만 읽고 절대 수정하지 않는다(맵은 다른 담당 영역).
 public static class SwimPathfinder
 {
     // 지상 한 칸의 기준 비용. 물 칸 비용을 정수로 나눌 때 소수점이 뭉개지지 않게 크게 잡는다
@@ -27,7 +27,7 @@ public static class SwimPathfinder
     /// 잠수(Pool)/상승(Up) 모션 동안 제자리에 멈추기 때문에, 이걸 안 넣으면 한 칸짜리 물웅덩이를
     /// 굳이 들렀다 나오면서 오히려 늦게 도착한다.</param>
     public static List<Vector3> BuildWaypoints(
-        MapBoard board, Vector3 startWorld, Vector3 goalWorld,
+        Map board, Vector3 startWorld, Vector3 goalWorld,
         float swimSpeedMultiplier = 1f, float transitionPenaltyTiles = 0f)
     {
         var list = new List<Vector3>();

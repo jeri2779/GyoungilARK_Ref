@@ -49,7 +49,7 @@ public class GroundZoneEffect : MonoBehaviour
     [Tooltip("장판이 대상에게 데미지/힐을 적용할 때 재생할 EnemySoundManager 키. 비워두면 재생하지 않음")]
     public string hitSoundKey;
 
-    private MapBoard board;
+    private Map board;
     private Hero owner;
     private bool followOwner;
     private Action<GameObject> release;
@@ -65,7 +65,7 @@ public class GroundZoneEffect : MonoBehaviour
     // Hero.SpawnGroundZone이 풀에서 꺼낸 직후 호출한다. followOwner는 오라(소유자를 따라다녀야 하는
     // 장판)인지, 스킬/공격이 심어놓고 떠나는 장판인지를 호출부가 명시한다(duration 값으로는 구분 불가 —
     // 실제 오라 프리팹도 duration을 999처럼 유한값으로 쓴다).
-    public void Init(MapBoard board, Hero owner, bool followOwner, Action<GameObject> release)
+    public void Init(Map board, Hero owner, bool followOwner, Action<GameObject> release)
     {
         this.board = board;
         this.owner = owner;

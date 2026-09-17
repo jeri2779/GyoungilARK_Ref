@@ -101,7 +101,7 @@ public class CampfireEdgeView : IDisposable
     // 범위 밖으로 노출된 네 변을 추가합니다.
     private void AddTile(Tile tile)
     {
-        MapBoard board = tile.Board;
+        Map board = tile.Board;
         Vector2Int cell = tile.Coord;
         float inset = edgeWidth / board.CellSize;
 
@@ -112,7 +112,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 왼쪽 이웃이 범위 밖일 때 그 변에 선을 추가합니다.
-    private void AddLeft(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddLeft(Map board, Tile tile, Vector2Int cell, float inset)
     {
         if (HasNeighbor(board, cell + Vector2Int.left))
         {
@@ -123,7 +123,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 오른쪽 이웃이 범위 밖일 때 그 변에 선을 추가합니다.
-    private void AddRight(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddRight(Map board, Tile tile, Vector2Int cell, float inset)
     {
         if (HasNeighbor(board, cell + Vector2Int.right))
         {
@@ -134,7 +134,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 아래 이웃이 범위 밖일 때 그 변에 선을 추가합니다.
-    private void AddBottom(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddBottom(Map board, Tile tile, Vector2Int cell, float inset)
     {
         if (HasNeighbor(board, cell + Vector2Int.down))
         {
@@ -145,7 +145,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 위 이웃이 범위 밖일 때 그 변에 선을 추가합니다.
-    private void AddTop(MapBoard board, Tile tile, Vector2Int cell, float inset)
+    private void AddTop(Map board, Tile tile, Vector2Int cell, float inset)
     {
         if (HasNeighbor(board, cell + Vector2Int.up))
         {
@@ -156,7 +156,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 지정 좌표의 타일이 지금 범위 안에 있는지 반환합니다.
-    private bool HasNeighbor(MapBoard board, Vector2Int cell)
+    private bool HasNeighbor(Map board, Vector2Int cell)
     {
         if (board.TryGetCell(cell, out Tile tile))
         {
@@ -167,7 +167,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 타일 윗면 높이에 경계선 사각형을 추가합니다.
-    private void AddQuad(MapBoard board, Tile tile, Vector2 outerA, Vector2 outerB, Vector2 innerA, Vector2 innerB)
+    private void AddQuad(Map board, Tile tile, Vector2 outerA, Vector2 outerB, Vector2 innerA, Vector2 innerB)
     {
         float height = tile.WorldTop.y + edgeLift;
         int start = vertices.Count;
@@ -186,7 +186,7 @@ public class CampfireEdgeView : IDisposable
     }
 
     // 셀 좌표를 외곽선 루트 기준 좌표로 변환합니다.
-    private Vector3 LocalPoint(MapBoard board, Vector2 point, float height)
+    private Vector3 LocalPoint(Map board, Vector2 point, float height)
     {
         Vector3 world = board.CellPointToWorld(point);
         world.y = height;

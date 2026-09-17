@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlacementArea
 {
     // 이 자리가 속한 모듈 보드. 칸 좌표가 모듈 로컬이라 보드까지 있어야 주소가 완성된다.
-    public MapBoard Board { get; }
+    public Map Board { get; }
 
     // 차지하는 칸들의 시작 칸(왼쪽 아래).
     public Vector2Int Origin { get; }
@@ -18,7 +18,7 @@ public class PlacementArea
     public Vector3 Center { get; }
 
     public PlacementArea(
-        MapBoard board,
+        Map board,
         Vector2Int origin,
         Vector2Int size,
         IReadOnlyList<Vector2Int> cells,

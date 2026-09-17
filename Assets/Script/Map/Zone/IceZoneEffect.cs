@@ -6,7 +6,7 @@ public class IceZoneEffect : ZoneDebuffEffect
     private readonly IceZone iceZone;
 
     // 이 얼음 보드와 소속 디버프를 보관합니다.
-    public IceZoneEffect(MapBoard board, PlacedUnitData unitList, IceZone iceZone)
+    public IceZoneEffect(Map board, PlacedUnitData unitList, IceZone iceZone)
         : base(board, unitList, iceZone.Debuffs)
     {
         this.iceZone = iceZone;

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// MapBoard.GetTiles(origin, range, bool square)만 사용해 Cross/Line 조회를 조합하는 헬퍼.
-// MapBoard 자체에는 새 필드/메서드를 추가하지 않는다.
+// Map.GetTiles(origin, range, bool square)만 사용해 Cross/Line 조회를 조합하는 헬퍼.
+// Map 자체에는 새 필드/메서드를 추가하지 않는다.
 public static class TileShapeQuery
 {
-    public static List<Tile> GetTiles(MapBoard board, Vector2Int origin, int range, RangeShape shape)
+    public static List<Tile> GetTiles(Map board, Vector2Int origin, int range, RangeShape shape)
     {
         if (shape == RangeShape.Diamond) return board.GetTiles(origin, range, false);
         if (shape == RangeShape.Square) return board.GetTiles(origin, range, true);
@@ -29,7 +29,7 @@ public static class TileShapeQuery
 
     // origin 다음 칸부터 direction(단위 벡터, 4방향)으로 length칸 조회. origin 자신은 포함하지 않는다.
     // width > 0이면 진행 방향의 수직 방향으로 좌우 width칸씩 넓혀(폭 2*width+1칸) 조회한다.
-    public static List<Tile> GetLineTiles(MapBoard board, Vector2Int origin, Vector2Int direction, int length, int width = 0)
+    public static List<Tile> GetLineTiles(Map board, Vector2Int origin, Vector2Int direction, int length, int width = 0)
     {
         Vector2Int perp = new Vector2Int(-direction.y, direction.x);
         var result = new List<Tile>(length * (2 * width + 1));
