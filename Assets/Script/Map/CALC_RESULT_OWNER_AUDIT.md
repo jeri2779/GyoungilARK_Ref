@@ -60,7 +60,7 @@
 아래 75·76행 표의 A1/A2(`AreaPlace.CanPlace`·`AreaPlace.TopY`)는 이번 갱신으로 **판정 자체가 바뀐다.**
 
 - **발견** = `area.Cells`가 다중 칸 폐지로 시스템 전체에서 항상 원소 1개임을 코드로 재확인함(`AreaCalc.GetCells`가 크기 (1,1)이면 무조건 1개만 생성, `PlaceSize.GetSize`가 항상 (1,1)만 반환). 즉 `TopY`의 `foreach`는 "여러 칸 중 최선을 고르는 반복"이 아니라 **`banned-syntax-if-null` 규칙이 말하는 "0/1회만 도는 for = if 위장"** 이었다
-- **덤 확인** = `area.Board.TryGetCell(cell, out tile)` 존재검사도 죽은 코드로 확인됨 — `MapBoard.CanPlace`가 내부에서 이미 `_cells.TryGetValue`를 거쳐야 `true`가 되므로(`MapBoard.cs:321~325`), `canPlace == true`인 칸은 `TryGetCell`도 항상 성공한다
+- **덤 확인** = `area.Board.TryGetCell(cell, out tile)` 존재검사도 죽은 코드로 확인됨 — `Map.CanPlace`가 내부에서 이미 `_cells.TryGetValue`를 거쳐야 `true`가 되므로(`Map.cs:321~325`), `canPlace == true`인 칸은 `TryGetCell`도 항상 성공한다
 - **적용한 안** = `TopY`·`Place`·`Remove` 3개 전부 `area.Origin`(=그 유일한 칸 좌표)을 직접 써서 `foreach`/`for`를 통째로 삭제. 남긴 `if` 1개는 "이 칸에 놓을 수 있는가"라는 실제 게임 상태 분기(점유된 칸 위 미리보기 등 실제로 일어남)라 그대로 둠, 삼항연산자는 `if`/`return`으로 교체
 - **재분류** = 이 항목은 "계산 결과 주인 없음"(이 문서의 원래 주제)이 아니라 **"반복 자체가 필요 없었다"**는 별개 문제였음이 드러남. 표의 원래 판정("중복 호출")은 스냅샷으로 남기고 여기 갱신 표시만 덧붙임
 - **검증** = 코드 반영 후 `refresh_unity` 강제 재컴파일 → `read_console`(error) 0건. 사용자가 에디터 플레이 모드에서 배치·제거 직접 테스트해 정상 동작 확인함
