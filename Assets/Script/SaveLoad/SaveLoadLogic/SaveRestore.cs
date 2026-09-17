@@ -185,7 +185,6 @@ public class SaveRestore
             if (!mapRegistry.TryGetModuleLogic(save.moduleId, out ModuleLogic module)) continue;
 
             MapBoard board = module.GetComponent<MapBoard>();
-            if (board == null) continue;
 
             PlacementArea area = BuildArea(board, save.cellOrigin, save.cellSize);
             Vector3 position = AreaPlace.Position(area, entry.Slot.kind, mapAssemble.PlaceYOffset, out bool canPlace);
